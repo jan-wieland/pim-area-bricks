@@ -4,37 +4,40 @@ namespace JanWieland\PimAreaBricks\Document\Areabrick\Example;
 
 use Pimcore\Extension\Document\Areabrick\AbstractTemplateAreabrick;
 use Pimcore\Model\Document\Editable\Area\Info;
+use Symfony\Component\HttpFoundation\Response;
 
 class ExampleBrick extends AbstractTemplateAreabrick
 {
     public function getId(): string
     {
-        return 'jw-example';
+        return "jw-example";
     }
 
     public function getName(): string
     {
-        return 'Example Brick';
+        return "Example Brick";
     }
 
     public function getDescription(): string
     {
-        return 'Ein einfacher Beispiel-Brick';
+        return "Ein einfacher Beispiel-Brick";
     }
 
     public function getVersion(): string
     {
-        return '1.0.0';
+        return "1.0.0";
     }
 
     /**
      * Wird aufgerufen bevor das Template gerendert wird.
      * Hier können Daten vorbereitet und ans Template übergeben werden.
      */
-    public function action(Info $info): void
+    public function action(Info $info): ?Response
     {
-        $info->setParam('headline', 'Hallo aus dem Example Brick!');
-        $info->setParam('subline', 'Hier kannst du deine Daten übergeben.');
+        $info->setParam("headline", "Hallo aus dem Example Brick!");
+        $info->setParam("subline", "Hier kannst du deine Daten übergeben.");
+
+        return null;
     }
 
     /**
