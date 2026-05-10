@@ -1,6 +1,8 @@
+> ⚠️ **Work in progress – Please do not use this bundle yet!** ⚠️
+
 # jan-wieland/pim-area-bricks
 
-Pimcore Area Bricks Bundle mit Webpack Encore, SCSS, Tailwind CSS 4 und JS.
+Pimcore Area Bricks Bundle with Webpack Encore, SCSS, Tailwind CSS 4 and JS.
 
 ## Installation
 
@@ -8,25 +10,25 @@ Pimcore Area Bricks Bundle mit Webpack Encore, SCSS, Tailwind CSS 4 und JS.
 composer require jan-wieland/pim-area-bricks
 ```
 
-## Assets bauen
+## Build Assets
 
 ```bash
-npm install
-npm run build
+yarn install
+yarn build
 ```
 
-Oder während der Entwicklung:
+Or during development:
 
 ```bash
-npm run watch
+yarn watch
 ```
 
-## Anforderungen
+## Requirements
 
-- PHP >= 8.1
+- PHP >= 8.3
 - Pimcore ^11.0
 - Node.js >= 18
 
-## Lizenz
+## License
 
 MIT
