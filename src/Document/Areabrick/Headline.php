@@ -17,7 +17,7 @@ class Headline extends AbstractTemplateAreabrick implements
      */
     public function getName(): string
     {
-        return BricksService::transAdmin("jwPimAreabrick.headline.name");
+        return BricksService::transAdmin('jwPimAreas.headline.name');
     }
 
     /**
@@ -25,7 +25,7 @@ class Headline extends AbstractTemplateAreabrick implements
      */
     public function getDescription(): string
     {
-        return "";
+        return '';
     }
 
     /**
@@ -33,7 +33,7 @@ class Headline extends AbstractTemplateAreabrick implements
      */
     public function getTemplatePath(): string
     {
-        return "areas/headline/view.html.twig";
+        return 'areas/headline/view.html.twig';
     }
 
     /**
@@ -41,7 +41,7 @@ class Headline extends AbstractTemplateAreabrick implements
      */
     public function getIcon(): string
     {
-        return "/bundles/pimareatbricks/images/editmode/format-header.svg";
+        return '/bundles/pimareatbricks/images/editmode/format-header.svg';
     }
 
     /**
@@ -52,27 +52,27 @@ class Headline extends AbstractTemplateAreabrick implements
     {
         $document = $info->getDocument();
 
-        $size = $document->getEditable("headlineSize")?->getData() ?: "h2";
-        $style = $document->getEditable("headlineStyle")?->getData() ?: "auto";
+        $size = $document->getEditable('headlineSize')?->getData() ?: 'h2';
+        $style = $document->getEditable('headlineStyle')?->getData() ?: 'auto';
         $subStyle =
-            $document->getEditable("headlineSubSize")?->getData() ?: "auto";
+            $document->getEditable('headlineSubSize')?->getData() ?: 'auto';
 
-        $info->setParam("size", $size);
-        $info->setParam("subSize", "h" . ((int) substr($size, 1) + 1));
+        $info->setParam('size', $size);
+        $info->setParam('subSize', 'h' . ((int) substr($size, 1) + 1));
         $info->setParam(
-            "hClass",
-            $style !== "auto" ? sprintf(' class="%s"', $style) : "",
+            'hClass',
+            $style !== 'auto' ? sprintf(' class="%s"', $style) : '',
         );
         $info->setParam(
-            "subClass",
-            $style !== "auto"
+            'subClass',
+            $style !== 'auto'
                 ? sprintf(
                     ' class="%s"',
-                    $subStyle === "auto"
-                        ? "h" . ((int) substr($style, 1) + 1)
+                    $subStyle === 'auto'
+                        ? 'h' . ((int) substr($style, 1) + 1)
                         : $subStyle,
                 )
-                : "",
+                : '',
         );
 
         return null;
@@ -102,15 +102,15 @@ class Headline extends AbstractTemplateAreabrick implements
         $config->setHeight(480);
         $config->setReloadOnClose(true);
         $config->setItems([
-            "type" => "tabpanel",
-            "items" => array_merge(
+            'type' => 'tabpanel',
+            'items' => array_merge(
                 [
                     [
-                        "type" => "panel",
-                        "title" => BricksService::transAdmin(
-                            "jwPimAreabrick.groups.options",
+                        'type' => 'panel',
+                        'title' => BricksService::transAdmin(
+                            'jwPimAreas.groups.options',
                         ),
-                        "items" => BricksService::itemsHeadline(),
+                        'items' => BricksService::itemsHeadline(),
                     ],
                 ],
                 BricksService::tabLayout(),
