@@ -20,13 +20,13 @@ Encore.setOutputPath("src/Resources/public/")
   .enableSassLoader()
 
   // PostCSS (for tailwind CSS 4)
-  .enablePostCssLoader();
+  .enablePostCssLoader()
 
   // Copy files from assets into build and make them usable
   .copyFiles({
-      from: './assets/editmode',
-      to: 'images/editmode/[path][name].[ext]',
+    from: "./assets/editmode",
+    to: "images/editmode/[path][name].[ext]",
   })
-  .setPublicPath('/bundles/pimareatbricks')
+  .setPublicPath("/bundles/pimareatbricks");
 
 module.exports = Encore.getWebpackConfig();
