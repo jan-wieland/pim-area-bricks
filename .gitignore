@@ -5,3 +5,19 @@ src/Resources/public/
 .env.local
 .yarn/cache
 .pnp.*
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# windows
+ehthumbs.db
+Thumbs.db
+
+# Vim etc.
+*.swp
+*.swo
+.zed/
