@@ -25,7 +25,7 @@ yarn watch
 
 ## Requirements
 
-- PHP >= 8.3
+- PHP >= 8.2 (developed and tested with PHP 8.3)
 - Pimcore ^11.0
 - Node.js >= 18
 

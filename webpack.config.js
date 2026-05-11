@@ -1,28 +1,25 @@
-const Encore = require('@symfony/webpack-encore');
+const Encore = require("@symfony/webpack-encore");
 
 if (!Encore.isRuntimeEnvironmentConfigured()) {
-    Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'development');
+  Encore.configureRuntimeEnvironment(process.env.NODE_ENV || "dev");
 }
 
-Encore
-    .setOutputPath('src/Resources/public/')
-    .setPublicPath('/bundles/pimareatbricks')
-    .setManifestKeyPrefix('bundles/pimareatbricks')
+Encore.setOutputPath("src/Resources/public/")
+  .setPublicPath("/bundles/pimareatbricks")
+  .setManifestKeyPrefix("bundles/pimareatbricks")
 
-    .addEntry('app', './assets/js/app.js')
-    .addStyleEntry('styles', './assets/scss/app.scss')
+  .addEntry("pimAreatBricks", "./assets/app.js")
 
-    .disableSingleRuntimeChunk()
-    .cleanupOutputBeforeBuild()
-    .enableBuildNotifications()
-    .enableSourceMaps(!Encore.isProduction())
-    .enableVersioning(Encore.isProduction())
+  .disableSingleRuntimeChunk()
+  .cleanupOutputBeforeBuild()
+  .enableBuildNotifications()
+  .enableSourceMaps(!Encore.isProduction())
+  .enableVersioning(Encore.isProduction())
 
-    // SCSS
-    .enableSassLoader()
+  // SCSS
+  .enableSassLoader()
 
-    // PostCSS (für Tailwind CSS 4)
-    .enablePostCssLoader()
-;
+  // PostCSS (für Tailwind CSS 4)
+  .enablePostCssLoader();
 
 module.exports = Encore.getWebpackConfig();
