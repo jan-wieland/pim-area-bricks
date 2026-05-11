@@ -1,5 +1,5 @@
 <?php
-namespace App\Document\Areabrick;
+namespace JanWieland\PimAreaBricks\Document\Areabrick;
 
 use Pimcore\Extension\Document\Areabrick\AbstractTemplateAreabrick;
 use Pimcore\Extension\Document\Areabrick\EditableDialogBoxConfiguration;

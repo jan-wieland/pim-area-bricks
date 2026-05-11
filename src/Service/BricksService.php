@@ -1,5 +1,5 @@
 <?php
-namespace App\Service;
+namespace JanWieland\PimAreaBricks\Service;
 
 class BricksService
 {
