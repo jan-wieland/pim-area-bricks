@@ -14,4 +14,9 @@ class PimAreaBricksBundle extends AbstractPimcoreBundle
     {
         return "1.0.0";
     }
+
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }
