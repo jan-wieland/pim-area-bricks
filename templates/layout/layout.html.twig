@@ -1,19 +1,46 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="de-DE">
+<html class="scroll-smooth" lang="{{ app.request.locale }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex,nofollow,noodp,noydir,noarchive">
+
+    {% set jwPimAreas_robots = ((jwPimAreas_noIndex | default(true)) ? 'no' : '') ~ 'index,' %}
+    {% set jwPimAreas_robots = jwPimAreas_robots ~ ((jwPimAreas_noFollow | default(true)) ? 'no' : '') ~ 'follow' %}
+    <meta name="robots" content="{{ jwPimAreas_robots }},noodp,noydir,noarchive">
+
     <meta name="imagetoolbar" content="false">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="{{ jwPimAreas_themeColor | default('#000') | raw }}">
 
-    {{ encore_entry_script_tags('alena') }}
-    {{ encore_entry_link_tags('alena') }}
-    {% if editmode %}
-        {{ encore_entry_link_tags('editmode') }}
+    {{ encore_entry_script_tags('pimAreatBricksApp') }}
+    {{ encore_entry_link_tags('pimAreatBricksApp') }}
+
+    {% if jwPimAreas_jsKey is defined and jwPimAreas_jsKey %}
+        {{ encore_entry_script_tags(jwPimAreas_jsKey) }}
     {% endif %}
+    {% if jwPimAreas_cssKey is defined and jwPimAreas_cssKey %}
+        {{ encore_entry_link_tags(jwPimAreas_cssKey) }}
+    {% endif %}
+
+    {% if editmode %}
+        {{ encore_entry_link_tags('pimAreatBricksEditmode') }}
+    {% endif %}
+
+    {% set jwPimAreas_title = document.getTitle() | trim %}
+    {% set jwPimAreas_description = document.getDescription() | trim %}
+    {% if jwPimAreas_title %}
+        {% do pimcore_head_title().set(jwPimAreas_title) %}
+        {% do pimcore_head_meta().setProperty('og:title', jwPimAreas_title) %}
+    {% endif %}
+    {% if jwPimAreas_description %}
+        {% do pimcore_head_meta().setDescription(jwPimAreas_description) %}
+        {% do pimcore_head_meta().setProperty('og:description', jwPimAreas_description) %}
+    {% endif %}
+
+    {% do pimcore_head_meta().setProperty('og:type', 'article') %}
+    {% do pimcore_head_meta().setProperty('og:locale', app.request.locale) %}
+    {% do pimcore_head_meta().setProperty('og:image', '') %}
 </head>
 <body class="antialiased {{ editmode ? 'editmode' : '' }}">
 {% block content %}{% endblock %}

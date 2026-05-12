@@ -14,7 +14,11 @@ class TemplateService
     {
         return [
             'jwPimAreas_navMain' => self::getNavMain($document),
+            'jwPimAreas_noIndex' => $document?->getProperty('jwPimAreas.noIndex'),
+            'jwPimAreas_noFollow' => $document?->getProperty('jwPimAreas.noFollow'),
             'jwPimAreas_themeColor' => $document?->getProperty('jwPimAreas.themeColor') ?? '#000',
+            'jwPimAreas_jsKey' => $document?->getProperty('jwPimAreas.jsKey'),
+            'jwPimAreas_cssKey' => $document?->getProperty('jwPimAreas.cssKey'),
         ];
     }
 
