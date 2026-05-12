@@ -5,11 +5,11 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 }
 
 Encore.setOutputPath('src/Resources/public/')
-  .setPublicPath('/bundles/pimareatbricks')
-  .setManifestKeyPrefix('bundles/pimareatbricks')
+  .setPublicPath('/bundles/pimareabricks')
+  .setManifestKeyPrefix('bundles/pimareabricks')
 
-  .addEntry('pimAreatBricksApp', './assets/app.js')
-  .addEntry('pimAreatBricksEditmode', './assets/editmode.js')
+  .addEntry('pimAreaBricksApp', './assets/app.js')
+  .addEntry('pimAreaBricksEditmode', './assets/editmode.js')
 
   .disableSingleRuntimeChunk()
   .cleanupOutputBeforeBuild()
@@ -28,6 +28,6 @@ Encore.setOutputPath('src/Resources/public/')
     from: './assets/editmode',
     to: 'images/editmode/[path][name].[ext]',
   })
-  .setPublicPath('/bundles/pimareatbricks')
+  .setPublicPath('/bundles/pimareabricks')
 
 module.exports = Encore.getWebpackConfig()

@@ -22,7 +22,7 @@ class PimAreaBricksExtension extends Extension implements PrependExtensionInterf
     {
         $container->prependExtensionConfig('webpack_encore', [
             'builds' => [
-                'pimareatbricks' => '%kernel.project_dir%/public/bundles/pimareatbricks',
+                'pimareabricks' => '%kernel.project_dir%/public/bundles/pimareabricks',
             ],
         ]);
     }

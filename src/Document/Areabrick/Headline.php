@@ -41,7 +41,7 @@ class Headline extends AbstractTemplateAreabrick implements
      */
     public function getIcon(): string
     {
-        return '/bundles/pimareatbricks/images/editmode/format-header.svg';
+        return '/bundles/pimareabricks/images/editmode/format-header.svg';
     }
 
     /**
