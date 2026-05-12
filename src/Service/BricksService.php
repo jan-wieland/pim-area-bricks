@@ -20,20 +20,20 @@ class BricksService
     {
         return [[
             'type' => 'panel',
-            'title' => self::transAdmin('areabrick.groups.layout'),
+            'title' => self::transAdmin('jwPimAreas.groups.layout'),
             'items' => array_merge(($short ? [] :
             [[
                 'type' => 'select',
                 'name' => 'gridColumns',
-                'label' => self::transAdmin('areabrick.groups.prams.gridColumns.label'),
+                'label' => self::transAdmin('jwPimAreas.groups.prams.gridColumns.label'),
                 'config' => [
                     'store' => [
-                        ['none', self::transAdmin('areabrick.groups.prams.gridColumns.options.none')],
-                        ['2', self::transAdmin('areabrick.groups.prams.gridColumns.options.2')],
-                        ['3', self::transAdmin('areabrick.groups.prams.gridColumns.options.3')],
-                        ['4', self::transAdmin('areabrick.groups.prams.gridColumns.options.4')],
-                        ['5', self::transAdmin('areabrick.groups.prams.gridColumns.options.5')],
-                        ['auto', self::transAdmin('areabrick.groups.prams.gridColumns.options.auto')],
+                        ['none', self::transAdmin('jwPimAreas.groups.prams.gridColumns.options.none')],
+                        ['2', self::transAdmin('jwPimAreas.groups.prams.gridColumns.options.2')],
+                        ['3', self::transAdmin('jwPimAreas.groups.prams.gridColumns.options.3')],
+                        ['4', self::transAdmin('jwPimAreas.groups.prams.gridColumns.options.4')],
+                        ['5', self::transAdmin('jwPimAreas.groups.prams.gridColumns.options.5')],
+                        ['auto', self::transAdmin('jwPimAreas.groups.prams.gridColumns.options.auto')],
                     ],
                     'defaultValue' => 'none',
                 ],
@@ -41,12 +41,12 @@ class BricksService
             [
                 'type' => 'select',
                 'name' => 'gridItemVertical',
-                'label' => self::transAdmin('areabrick.groups.prams.gridItemVertical.label'),
+                'label' => self::transAdmin('jwPimAreas.groups.prams.gridItemVertical.label'),
                 'config' => [
                     'store' => [
-                        ['none', self::transAdmin('areabrick.groups.prams.gridItemVertical.options.none')],
-                        ['top', self::transAdmin('areabrick.groups.prams.gridItemVertical.options.top')],
-                        ['bottom', self::transAdmin('areabrick.groups.prams.gridItemVertical.options.bottom')],
+                        ['none', self::transAdmin('jwPimAreas.groups.prams.gridItemVertical.options.none')],
+                        ['top', self::transAdmin('jwPimAreas.groups.prams.gridItemVertical.options.top')],
+                        ['bottom', self::transAdmin('jwPimAreas.groups.prams.gridItemVertical.options.bottom')],
                     ],
                     'defaultValue' => 'none',
                 ],
@@ -54,15 +54,15 @@ class BricksService
             [
                 'type' => 'select',
                 'name' => 'boxStyle',
-                'label' => self::transAdmin('areabrick.groups.prams.boxStyle.label'),
+                'label' => self::transAdmin('jwPimAreas.groups.prams.boxStyle.label'),
                 'config' => [
                     'store' => [
-                        ['none', self::transAdmin('areabrick.groups.prams.boxStyle.options.none')],
-                        ['default', self::transAdmin('areabrick.groups.prams.boxStyle.options.default')],
-                        ['image-left', self::transAdmin('areabrick.groups.prams.boxStyle.options.image-left')],
-                        ['image-right', self::transAdmin('areabrick.groups.prams.boxStyle.options.image-right')],
-                        ['tile', self::transAdmin('areabrick.groups.prams.boxStyle.options.tile')],
-                        ['rotating-tile', self::transAdmin('areabrick.groups.prams.boxStyle.options.rotating-tile')],
+                        ['none', self::transAdmin('jwPimAreas.groups.prams.boxStyle.options.none')],
+                        ['default', self::transAdmin('jwPimAreas.groups.prams.boxStyle.options.default')],
+                        ['image-left', self::transAdmin('jwPimAreas.groups.prams.boxStyle.options.image-left')],
+                        ['image-right', self::transAdmin('jwPimAreas.groups.prams.boxStyle.options.image-right')],
+                        ['tile', self::transAdmin('jwPimAreas.groups.prams.boxStyle.options.tile')],
+                        ['rotating-tile', self::transAdmin('jwPimAreas.groups.prams.boxStyle.options.rotating-tile')],
                     ],
                     'defaultValue' => 'none',
                     'width' => 300,
@@ -72,15 +72,15 @@ class BricksService
         [[
             'type' => 'select',
             'name' => 'spaceBefore',
-            'label' => self::transAdmin('areabrick.groups.prams.space.before'),
+            'label' => self::transAdmin('jwPimAreas.groups.prams.space.before'),
             'config' => [
                 'store' => [
-                    ['none', self::transAdmin('areabrick.groups.prams.space.options.none')],
-                    ['extra-small', self::transAdmin('areabrick.groups.prams.space.options.extra-small')],
-                    ['small', self::transAdmin('areabrick.groups.prams.space.options.small')],
-                    ['medium', self::transAdmin('areabrick.groups.prams.space.options.medium')],
-                    ['large', self::transAdmin('areabrick.groups.prams.space.options.large')],
-                    ['extra-large', self::transAdmin('areabrick.groups.prams.space.options.extra-large')],
+                    ['none', self::transAdmin('jwPimAreas.groups.prams.space.options.none')],
+                    ['extra-small', self::transAdmin('jwPimAreas.groups.prams.space.options.extra-small')],
+                    ['small', self::transAdmin('jwPimAreas.groups.prams.space.options.small')],
+                    ['medium', self::transAdmin('jwPimAreas.groups.prams.space.options.medium')],
+                    ['large', self::transAdmin('jwPimAreas.groups.prams.space.options.large')],
+                    ['extra-large', self::transAdmin('jwPimAreas.groups.prams.space.options.extra-large')],
                 ],
                 'defaultValue' => 'none',
             ],
@@ -88,15 +88,15 @@ class BricksService
         [
             'type' => 'select',
             'name' => 'spaceAfter',
-            'label' => self::transAdmin('areabrick.groups.prams.space.after'),
+            'label' => self::transAdmin('jwPimAreas.groups.prams.space.after'),
             'config' => [
                 'store' => [
-                    ['none', self::transAdmin('areabrick.groups.prams.space.options.none')],
-                    ['extra-small', self::transAdmin('areabrick.groups.prams.space.options.extra-small')],
-                    ['small', self::transAdmin('areabrick.groups.prams.space.options.small')],
-                    ['medium', self::transAdmin('areabrick.groups.prams.space.options.medium')],
-                    ['large', self::transAdmin('areabrick.groups.prams.space.options.large')],
-                    ['extra-large', self::transAdmin('areabrick.groups.prams.space.options.extra-large')],
+                    ['none', self::transAdmin('jwPimAreas.groups.prams.space.options.none')],
+                    ['extra-small', self::transAdmin('jwPimAreas.groups.prams.space.options.extra-small')],
+                    ['small', self::transAdmin('jwPimAreas.groups.prams.space.options.small')],
+                    ['medium', self::transAdmin('jwPimAreas.groups.prams.space.options.medium')],
+                    ['large', self::transAdmin('jwPimAreas.groups.prams.space.options.large')],
+                    ['extra-large', self::transAdmin('jwPimAreas.groups.prams.space.options.extra-large')],
                 ],
                 'defaultValue' => 'none',
             ],
@@ -104,7 +104,7 @@ class BricksService
         [
             'type' => 'input',
             'name' => 'anchor',
-            'label' => self::transAdmin('areabrick.anchor.otional'),
+            'label' => self::transAdmin('jwPimAreas.anchor.otional'),
         ],
         ]),
         ]];
@@ -118,32 +118,32 @@ class BricksService
         return [
             [
                 'type' => 'panel',
-                'title' => self::transAdmin('areabrick.groups.images'),
+                'title' => self::transAdmin('jwPimAreas.groups.images'),
                 'items' => [
                     [
                         'type' => 'input',
                         'name' => 'imageAlt',
-                        'label' => self::transAdmin('areabrick.image.alt.label'),
+                        'label' => self::transAdmin('jwPimAreas.image.alt.label'),
                     ],
                     [
                         'type' => 'input',
                         'name' => 'imageCaption',
-                        'label' => self::transAdmin('areabrick.image.caption.label'),
+                        'label' => self::transAdmin('jwPimAreas.image.caption.label'),
                     ],
                     [
                         'type' => 'select',
                         'name' => 'imagePos',
-                        'label' => self::transAdmin('areabrick.image.pos.label'),
+                        'label' => self::transAdmin('jwPimAreas.image.pos.label'),
                         'config' => [
                             'store' => [
-                                ['top-left', self::transAdmin('areabrick.image.pos.options.top-left')],
-                                ['top-center', self::transAdmin('areabrick.image.pos.options.top-center')],
-                                ['top-right', self::transAdmin('areabrick.image.pos.options.top-right')],
-                                ['bottom-left', self::transAdmin('areabrick.image.pos.options.bottom-left')],
-                                ['bottom-center', self::transAdmin('areabrick.image.pos.options.bottom-center')],
-                                ['bottom-right', self::transAdmin('areabrick.image.pos.options.bottom-right')],
-                                ['float-left', self::transAdmin('areabrick.image.pos.options.float-left')],
-                                ['float-right', self::transAdmin('areabrick.image.pos.options.float-right')],
+                                ['top-left', self::transAdmin('jwPimAreas.image.pos.options.top-left')],
+                                ['top-center', self::transAdmin('jwPimAreas.image.pos.options.top-center')],
+                                ['top-right', self::transAdmin('jwPimAreas.image.pos.options.top-right')],
+                                ['bottom-left', self::transAdmin('jwPimAreas.image.pos.options.bottom-left')],
+                                ['bottom-center', self::transAdmin('jwPimAreas.image.pos.options.bottom-center')],
+                                ['bottom-right', self::transAdmin('jwPimAreas.image.pos.options.bottom-right')],
+                                ['float-left', self::transAdmin('jwPimAreas.image.pos.options.float-left')],
+                                ['float-right', self::transAdmin('jwPimAreas.image.pos.options.float-right')],
                             ],
                             'defaultValue' => 'top-center',
                         ],
@@ -151,12 +151,12 @@ class BricksService
                     [
                         'type' => 'select',
                         'name' => 'imagePosRelativeH',
-                        'label' => self::transAdmin('areabrick.image.imagePosRelativeH.label'),
+                        'label' => self::transAdmin('jwPimAreas.image.imagePosRelativeH.label'),
                         'config' => [
                             'store' => [
-                                ['before', self::transAdmin('areabrick.image.imagePosRelativeH.options.before')],
-                                ['after', self::transAdmin('areabrick.image.imagePosRelativeH.options.after')],
-                                ['introduction', self::transAdmin('areabrick.image.imagePosRelativeH.options.introduction')],
+                                ['before', self::transAdmin('jwPimAreas.image.imagePosRelativeH.options.before')],
+                                ['after', self::transAdmin('jwPimAreas.image.imagePosRelativeH.options.after')],
+                                ['introduction', self::transAdmin('jwPimAreas.image.imagePosRelativeH.options.introduction')],
                             ],
                             'defaultValue' => 'introduction',
                         ],
@@ -164,20 +164,20 @@ class BricksService
                     [
                         'type' => 'select',
                         'name' => 'imageProportion',
-                        'label' => self::transAdmin('areabrick.image.proportion.label'),
+                        'label' => self::transAdmin('jwPimAreas.image.proportion.label'),
                         'config' => [
                             'store' => [
-                                ['16-9', self::transAdmin('areabrick.image.proportion.options.16-9')],
-                                ['21-9', self::transAdmin('areabrick.image.proportion.options.21-9')],
-                                ['32:9', self::transAdmin('areabrick.image.proportion.options.32-9')],
-                                ['5:7', self::transAdmin('areabrick.image.proportion.options.5-7')],
-                                ['1-1', self::transAdmin('areabrick.image.proportion.options.1-1')],
-                                ['3:2', self::transAdmin('areabrick.image.proportion.options.3-2')],
-                                ['2:3', self::transAdmin('areabrick.image.proportion.options.2-3')],
-                                ['4:5', self::transAdmin('areabrick.image.proportion.options.4-5')],
-                                ['none', self::transAdmin('areabrick.image.proportion.options.none')],
-                                ['round', self::transAdmin('areabrick.image.proportion.options.round')],
-                                ['round-large', self::transAdmin('areabrick.image.proportion.options.round-large')],
+                                ['16-9', self::transAdmin('jwPimAreas.image.proportion.options.16-9')],
+                                ['21-9', self::transAdmin('jwPimAreas.image.proportion.options.21-9')],
+                                ['32:9', self::transAdmin('jwPimAreas.image.proportion.options.32-9')],
+                                ['5:7', self::transAdmin('jwPimAreas.image.proportion.options.5-7')],
+                                ['1-1', self::transAdmin('jwPimAreas.image.proportion.options.1-1')],
+                                ['3:2', self::transAdmin('jwPimAreas.image.proportion.options.3-2')],
+                                ['2:3', self::transAdmin('jwPimAreas.image.proportion.options.2-3')],
+                                ['4:5', self::transAdmin('jwPimAreas.image.proportion.options.4-5')],
+                                ['none', self::transAdmin('jwPimAreas.image.proportion.options.none')],
+                                ['round', self::transAdmin('jwPimAreas.image.proportion.options.round')],
+                                ['round-large', self::transAdmin('jwPimAreas.image.proportion.options.round-large')],
                             ],
                             'defaultValue' => 'introduction',
                         ],
@@ -194,7 +194,7 @@ class BricksService
         return [[
             'type' => 'checkbox',
             'name' => 'imagesAsSlider',
-            'label' => self::transAdmin('areabrick.image.imagesAsSlider.label'),
+            'label' => self::transAdmin('jwPimAreas.image.imagesAsSlider.label'),
             'config' => [
                 'defaultValue' => false,
             ],
@@ -202,14 +202,14 @@ class BricksService
         [
             'type' => 'select',
             'name' => 'sliderToBreakpoint',
-            'label' => self::transAdmin('areabrick.image.sliderToBreakpoint.label'),
+            'label' => self::transAdmin('jwPimAreas.image.sliderToBreakpoint.label'),
             'config' => [
                 'store' => [
-                    ['always', self::transAdmin('areabrick.image.sliderToBreakpoint.options.always')],
-                    ['sm', self::transAdmin('areabrick.image.sliderToBreakpoint.options.sm')],
-                    ['md', self::transAdmin('areabrick.image.sliderToBreakpoint.options.md')],
-                    ['lg', self::transAdmin('areabrick.image.sliderToBreakpoint.options.lg')],
-                    ['xl', self::transAdmin('areabrick.image.sliderToBreakpoint.options.xl')],
+                    ['always', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.always')],
+                    ['sm', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.sm')],
+                    ['md', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.md')],
+                    ['lg', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.lg')],
+                    ['xl', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.xl')],
                 ],
                 'defaultValue' => 'always',
             ],
@@ -217,14 +217,14 @@ class BricksService
         [
             'type' => 'select',
             'name' => 'sliderImages',
-            'label' => self::transAdmin('areabrick.image.sliderImages.label'),
+            'label' => self::transAdmin('jwPimAreas.image.sliderImages.label'),
             'config' => [
                 'store' => [
-                    ['1', self::transAdmin('areabrick.image.sliderImages.options.1')],
-                    ['2', self::transAdmin('areabrick.image.sliderImages.options.2')],
-                    ['3', self::transAdmin('areabrick.image.sliderImages.options.3')],
-                    ['4', self::transAdmin('areabrick.image.sliderImages.options.4')],
-                    ['5', self::transAdmin('areabrick.image.sliderImages.options.5')],
+                    ['1', self::transAdmin('jwPimAreas.image.sliderImages.options.1')],
+                    ['2', self::transAdmin('jwPimAreas.image.sliderImages.options.2')],
+                    ['3', self::transAdmin('jwPimAreas.image.sliderImages.options.3')],
+                    ['4', self::transAdmin('jwPimAreas.image.sliderImages.options.4')],
+                    ['5', self::transAdmin('jwPimAreas.image.sliderImages.options.5')],
                 ],
                 'defaultValue' => '1',
             ],
@@ -238,11 +238,11 @@ class BricksService
          return [[
              'type' => 'select',
              'name' => 'headlineSize',
-             'label' => self::transAdmin('areabrick.headline.seo.label'),
+             'label' => self::transAdmin('jwPimAreas.headline.seo.label'),
              'config' => [
                  'store' => [
                      ['h1', 'H1'],
-                     ['h2', self::transAdmin('areabrick.headline.seo.options.h2')],
+                     ['h2', self::transAdmin('jwPimAreas.headline.seo.options.h2')],
                      ['h3', 'H3'],
                  ],
                  'defaultValue' => 'h2',
@@ -251,10 +251,10 @@ class BricksService
          [
              'type' => 'select',
              'name' => 'headlineStyle',
-             'label' => self::transAdmin('areabrick.headline.style.label'),
+             'label' => self::transAdmin('jwPimAreas.headline.style.label'),
              'config' => [
                  'store' => [
-                     ['auto', self::transAdmin('areabrick.headline.style.options.auto')],
+                     ['auto', self::transAdmin('jwPimAreas.headline.style.options.auto')],
                      ['h1', 'H1'],
                      ['h2', 'H2'],
                      ['h3', 'H3'],
@@ -266,10 +266,10 @@ class BricksService
          [
              'type' => 'select',
              'name' => 'headlineSubSize',
-             'label' => self::transAdmin('areabrick.headline.subSize.label'),
+             'label' => self::transAdmin('jwPimAreas.headline.subSize.label'),
              'config' => [
                  'store' => [
-                     ['auto', self::transAdmin('areabrick.headline.subSize.options.auto')],
+                     ['auto', self::transAdmin('jwPimAreas.headline.subSize.options.auto')],
                      ['h1', 'H1'],
                      ['h2', 'H2'],
                      ['h3', 'H3'],
