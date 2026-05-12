@@ -16,4 +16,13 @@ class PimAreaBricksExtension extends Extension
         );
         $loader->load('services.yaml');
     }
+
+    public function prepend(ContainerBuilder $container): void
+    {
+        $container->prependExtensionConfig('webpack_encore', [
+            'builds' => [
+                'pimareatbricks' => '%kernel.project_dir%/public/bundles/pimareatbricks',
+            ],
+        ]);
+    }
 }
