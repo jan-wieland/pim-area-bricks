@@ -1,6 +1,6 @@
 vendor/
 node_modules/
-src/Resources/public/
+# src/Resources/public/
 .env
 .env.local
 .yarn/cache

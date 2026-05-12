@@ -1,0 +1,20 @@
+{
+  "entrypoints": {
+    "pimAreatBricksApp": {
+      "css": [
+        "/bundles/pimareatbricks/pimAreatBricksApp.31d6cfe0.css"
+      ],
+      "js": [
+        "/bundles/pimareatbricks/pimAreatBricksApp.31d6cfe0.js"
+      ]
+    },
+    "pimAreatBricksEditmode": {
+      "css": [
+        "/bundles/pimareatbricks/pimAreatBricksEditmode.31d6cfe0.css"
+      ],
+      "js": [
+        "/bundles/pimareatbricks/pimAreatBricksEditmode.31d6cfe0.js"
+      ]
+    }
+  }
+}
