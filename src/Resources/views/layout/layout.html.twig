@@ -13,8 +13,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="{{ jwPimAreas_themeColor | default('#000') | raw }}">
 
-    {{ encore_entry_script_tags('pimAreatBricksApp') }}
-    {{ encore_entry_link_tags('pimAreatBricksApp') }}
+    {{ encore_entry_script_tags('pimAreatBricksApp', null, 'pimareatbricks') }}
+    {{ encore_entry_link_tags('pimAreatBricksApp', null, 'pimareatbricks') }}
 
     {% if jwPimAreas_jsKey is defined and jwPimAreas_jsKey %}
         {{ encore_entry_script_tags(jwPimAreas_jsKey) }}
