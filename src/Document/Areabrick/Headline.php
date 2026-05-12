@@ -6,8 +6,8 @@ use Pimcore\Extension\Document\Areabrick\EditableDialogBoxConfiguration;
 use Pimcore\Extension\Document\Areabrick\EditableDialogBoxInterface;
 use Pimcore\Model\Document\Editable;
 use Pimcore\Model\Document\Editable\Area\Info;
-use App\Service\BricksService;
 use Symfony\Component\HttpFoundation\Response;
+use JanWieland\PimAreaBricks\Service\BricksService;
 
 class Headline extends AbstractTemplateAreabrick implements
     EditableDialogBoxInterface

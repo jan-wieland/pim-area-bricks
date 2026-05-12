@@ -1,8 +1,9 @@
 <?php
 namespace JanWieland\PimAreaBricks\Controller;
 
-use Pimcore\Bundle\AdminBundle\Controller\Admin\LoginController;
 use Pimcore\Controller\FrontendController;
+use JanWieland\PimAreaBricks\Service\TemplateService;
+use Pimcore\Bundle\AdminBundle\Controller\Admin\LoginController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
