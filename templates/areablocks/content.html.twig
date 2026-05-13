@@ -1,0 +1,28 @@
+{% set showStructure = not(isStructure is defined and isStructure) %}
+{% set hasVueApps = document.getProperty('hasVueApps') %}
+
+{{ pimcore_areablock("content_" ~ infoId, {
+    'allowed': [
+        'jwpimareas-text-and-image',
+        'jwpimareas-headline',
+        'jwpimareas-texteditor',
+        (showStructure ? 'jwpimareas-article' : null),
+        (showStructure ? 'jwpimareas-aside' : null),
+    ],
+    'group': {
+        ('jwPimAreas.groups.pageContent' | trans({}, 'admin')): [
+            'jwpimareas-text-and-image',
+        ],
+        ('jwPimAreas.groups.layout' | trans({}, 'admin')): [
+            'jwpimareas-headline',
+            'jwpimareas-texteditor',
+        ],
+        ('jwPimAreas.groups.structure' | trans({}, 'admin')): [
+            'jwpimareas-article',
+            'jwpimareas-aside',
+        ],
+        ('jwPimAreas.groups.vueApp' | trans({}, 'admin')): [
+            'jwpimareas-vue-app',
+        ],
+    },
+}) }}

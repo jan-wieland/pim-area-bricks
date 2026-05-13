@@ -1,0 +1,8 @@
+{% if editmode %}
+    <div class="mt-3 mb-1 border-b">
+        <small>↳&nbsp; {{ 'jwPimAreas.aside.name' | trans({}, 'admin') }} (aside)</small>
+    </div>
+{% endif %}
+<aside>
+    {% include '@PimAreaBricks/areablocks/content.html.twig' with {'infoId': info.getId(), 'isStructure': true} %}
+</aside>

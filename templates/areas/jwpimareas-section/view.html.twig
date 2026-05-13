@@ -1,0 +1,10 @@
+{% set anchor = pimcore_input('anchor') ?: null %}
+
+{% if editmode %}
+    <div class="mt-3 mb-1 border-b">
+        <small>{{ 'jwPimAreas.section.name' | trans({}, 'admin') }}</small>
+    </div>
+{% endif %}
+<section{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
+    {% include '@PimAreaBricks/areablocks/content.html.twig' with {'infoId': info.getId()} %}
+</section>

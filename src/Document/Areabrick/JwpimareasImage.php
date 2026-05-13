@@ -6,17 +6,17 @@ use Pimcore\Extension\Document\Areabrick\EditableDialogBoxConfiguration;
 use Pimcore\Extension\Document\Areabrick\EditableDialogBoxInterface;
 use Pimcore\Model\Document\Editable;
 use Pimcore\Model\Document\Editable\Area\Info;
-use Symfony\Component\HttpFoundation\Response;
 use JanWieland\PimAreaBricks\Service\BricksService;
+use Symfony\Component\HttpFoundation\Response;
 
-class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
+class JwpimareaImage extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
 {
     /**
      * @return string
      */
     public function getName(): string
     {
-        return BricksService::transAdmin('jwPimAreas.headline.name');
+        return BricksService::transAdmin('jwPimAreas.image.plural');
     }
 
     /**
@@ -32,7 +32,7 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
      */
     public function getIcon(): string
     {
-        return '/bundles/pimareabricks/images/editmode/format-header-2.svg';
+        return '/bundles/pimareabricks/images/editmode/image-outline.svg';
     }
 
     /**
@@ -42,28 +42,6 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
     public function action(Info $info): ?Response
     {
         $document = $info->getDocument();
-
-        $size = $document->getEditable('headlineSize')?->getData() ?: 'h2';
-        $style = $document->getEditable('headlineStyle')?->getData() ?: 'auto';
-        $subStyle = $document->getEditable('headlineSubSize')?->getData() ?: 'auto';
-
-        $info->setParam('size', $size);
-        $info->setParam('subSize', 'h' . ((int) substr($size, 1) + 1));
-        $info->setParam(
-            'hClass',
-            $style !== 'auto' ? sprintf(' class="%s"', $style) : '',
-        );
-        $info->setParam(
-            'subClass',
-            $style !== 'auto'
-                ? sprintf(
-                    ' class="%s"',
-                    $subStyle === 'auto'
-                        ? 'h' . ((int) substr($style, 1) + 1)
-                        : $subStyle,
-                )
-                : '',
-        );
 
         return null;
     }
@@ -83,10 +61,8 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
      * @param Editable $area
      * @param Info|null $info
      */
-    public function getEditableDialogBoxConfiguration(
-        Editable $area,
-        ?Info $info,
-    ): EditableDialogBoxConfiguration {
+    public function getEditableDialogBoxConfiguration(Editable $area, ?Info $info): EditableDialogBoxConfiguration
+    {
         $config = new EditableDialogBoxConfiguration();
         $config->setWidth(640);
         $config->setHeight(480);
@@ -94,13 +70,12 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
         $config->setItems([
             'type' => 'tabpanel',
             'items' => array_merge(
+                BricksService::tabImages(),
                 [
                     [
                         'type' => 'panel',
-                        'title' => BricksService::transAdmin(
-                            'jwPimAreas.groups.options',
-                        ),
-                        'items' => BricksService::itemsHeadline(),
+                        'title' => BricksService::transAdmin('jwPimAreas.groups.options'),
+                        'items' => BricksService::itemsImageSlideOptions(),
                     ],
                 ],
                 BricksService::tabLayout(),

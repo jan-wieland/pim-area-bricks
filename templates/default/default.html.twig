@@ -2,15 +2,9 @@
 
 {%- block content -%}
 
-    {{ pimcore_areablock('content_jwPimAreaBricks', {
-        'allowed': [
-            'jwpimareas-headline',
-        ],
-        'group': {
-            ('jwPimAreas.groups.layout' | trans({}, 'admin')): [
-                'jwpimareas-headline',
-            ],
-        },
-    }) }}
+    {% include '@PimAreaBricks/areablocks/content.html.twig' with {
+        'infoId': info.getId(),
+        'isStructure': true
+    } %}
 
 {%- endblock -%}
