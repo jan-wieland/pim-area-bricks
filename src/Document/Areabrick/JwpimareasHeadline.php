@@ -40,7 +40,7 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
      */
     public function getIcon(): string
     {
-        return '/bundles/pimareabricks/images/editmode/format-header.svg';
+        return '/bundles/pimareabricks/images/editmode/format-header-2.svg';
     }
 
     /**
