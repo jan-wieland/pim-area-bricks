@@ -4,12 +4,11 @@
 
     {{ pimcore_areablock('content_jwPimAreaBricks', {
         'allowed': [
-            'headline',
+            'jwpimareas-headline',
         ],
         'group': {
-            ('areabrick.groups.layout' | trans({}, 'admin')): [
-                'headline',
-                'texteditor',
+            ('jwPimAreas.groups.layout' | trans({}, 'admin')): [
+                'jwpimareas-headline',
             ],
         },
     }) }}
