@@ -3,7 +3,7 @@
 {%- block content -%}
 
     {% include '@PimAreaBricks/areablocks/sections.html.twig' with {
-        'infoId': info.getId(),
+        'infoId': document.getId() | default('0'),
         'isStructure': true
     } %}
 
