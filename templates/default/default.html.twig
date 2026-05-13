@@ -2,5 +2,16 @@
 
 {%- block content -%}
 
-<div>hello world</div>
+    {{ pimcore_areablock("content_" ~ infoId, {
+        'allowed': [
+            'headline',
+        ],
+        'group': {
+            ('areabrick.groups.layout' | trans({}, 'admin')): [
+                'headline',
+                'texteditor',
+            ],
+        },
+    }) }}
+
 {%- endblock -%}

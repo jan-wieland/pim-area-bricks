@@ -1,0 +1,7 @@
+@use "tailwindcss";
+
+@source "../assets/**/*.js";
+@source "../assets/styles/**/*.scss";
+@source "../templates/**/*.twig";
+@source "../src/Controller/**/*.twig";
+@source "../src/Service/**/*.twig";
