@@ -10,6 +10,12 @@ Pimcore Area Bricks Bundle with Webpack Encore, SCSS, Tailwind CSS 4 and JS.
 composer require jan-wieland/pim-area-bricks
 ```
 
+After Installation you should do this once time:
+
+```bash
+
+```
+
 ## Build Assets
 
 ```bash
