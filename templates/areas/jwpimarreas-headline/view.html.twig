@@ -1,0 +1,15 @@
+{% set anchor = pimcore_input('anchor').getData() %}
+
+{% set headline = pimcore_input('headline', {
+    placeholder: 'jwPimAreas.headline.name' | trans({}, 'admin'),
+}) %}
+{% set headlineSub = pimcore_input('headlineSub', {
+    placeholder: 'jwPimAreas.headline.subheadline' | trans({}, 'admin'),
+}) %}
+
+<div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
+    <{{ size }}{{ hClass | raw }}>{{ headline | raw }}</{{ size }}>
+    {% if editmode or not headlineSub.isEmpty() %}
+        <{{ subSize }}{{ subClass | raw }}>{{ headlineSub | raw }}</{{ subSize }}>
+    {% endif %}
+</div>

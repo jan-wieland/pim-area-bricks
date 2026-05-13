@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @use "tailwindcss";
+@use "./styles/tailwind";
 
 @source "../assets/**/*.js";
 @source "../assets/styles/**/*.scss";
