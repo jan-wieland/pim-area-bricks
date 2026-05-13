@@ -1,9 +1,8 @@
 {% extends '@PimAreaBricks/layout/layout.html.twig' %}
-{% set infoId = info.getId %}
 
 {%- block content -%}
 
-    {{ pimcore_areablock("content_" ~ infoId, {
+    {{ pimcore_areablock('content_jwPimAreaBricks', {
         'allowed': [
             'headline',
         ],
