@@ -25,5 +25,11 @@ class PimAreaBricksExtension extends Extension implements PrependExtensionInterf
                 'pimareabricks' => '%kernel.project_dir%/public/bundles/pimareabricks',
             ],
         ]);
+
+        $container->prependExtensionConfig('twig', [
+            'paths' => [
+                \dirname(__DIR__, 2) . '/templates' => null,
+            ],
+        ]);
     }
 }
