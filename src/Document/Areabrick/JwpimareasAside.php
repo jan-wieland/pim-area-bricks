@@ -4,7 +4,7 @@ namespace JanWieland\PimAreaBricks\Document\Areabrick;
 use Pimcore\Extension\Document\Areabrick\AbstractTemplateAreabrick;
 use JanWieland\PimAreaBricks\Service\BricksService;
 
-class JwpimareaAside extends AbstractTemplateAreabrick
+class JwpimareasAside extends AbstractTemplateAreabrick
 {
 
     /**

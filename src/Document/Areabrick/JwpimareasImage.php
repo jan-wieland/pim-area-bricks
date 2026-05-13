@@ -9,7 +9,7 @@ use Pimcore\Model\Document\Editable\Area\Info;
 use JanWieland\PimAreaBricks\Service\BricksService;
 use Symfony\Component\HttpFoundation\Response;
 
-class JwpimareaImage extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
+class JwpimareasImage extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
 {
     /**
      * @return string
