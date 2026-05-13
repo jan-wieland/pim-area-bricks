@@ -8,7 +8,7 @@ use Pimcore\Model\Document\Editable;
 use Pimcore\Model\Document\Editable\Area\Info;
 use JanWieland\PimAreaBricks\Service\BricksService;
 
-class JwpimareaSection extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
+class JwpimareasSection extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
 {
 
     /**
