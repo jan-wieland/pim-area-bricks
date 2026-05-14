@@ -19,4 +19,9 @@ class PimAreaBricksBundle extends AbstractPimcoreBundle
     {
         return realpath(\dirname(__DIR__));
     }
+
+    public function getPublicDir(): string
+    {
+        return __DIR__ . '/../src/Resources/public';
+    }
 }
