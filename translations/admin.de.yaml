@@ -1,7 +1,7 @@
 jwPimAreas:
   groups:
     images: "Bilder"
-    layout: "Layout"
+    layout: "Layout-Elemente"
     options: "Optionen"
     pageContent: "Seiteninhalt"
     structure: "Struktur"
