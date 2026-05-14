@@ -1,5 +1,5 @@
-pimcore:
-  predefined_properties:
+predefined_properties:
+  items:
     - name: "jwPimAreas.predefinedProperties.noIndex.name"
       key: "jwPimAreas_noIndex"
       type: "bool"
