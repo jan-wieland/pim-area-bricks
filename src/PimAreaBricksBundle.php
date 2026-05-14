@@ -37,4 +37,12 @@ class PimAreaBricksBundle extends AbstractPimcoreBundle
         );
         $loader->load('properties.yaml');
     }
+
+    /**
+     * @return Installer
+     */
+    public function getInstaller(): Installer
+    {
+        return $this->container->get(Installer::class);
+    }
 }
