@@ -135,3 +135,22 @@ jwPimAreas:
   vueApp:
     name: "VUE-Anwendung"
     waitSpinner: "Mit Waiting-Spinner?"
+  predefinedProperties:
+    noIndex:
+      name: "Meta noindex"
+      description: "SEO-Meta-Tag robots: noindex"
+    noFollow:
+      name: "Meta nofollow"
+      description: "SEO-Meta-Tag robots: nofollow"
+    themeColor:
+      name: "Meta-Tag theme-color"
+      description: "Meta-Tag theme-color (#...)"
+    customTheme:
+      name: "Farbschema"
+      description: "Eigenes Themes über :root-Variablen"
+    jsKey:
+      name: "Encore JS"
+      description: "Eigenes JS per encore entry script"
+    cssKey:
+      name: "Encore CSS"
+      description: "Eigenes CSS per encore entry link"
