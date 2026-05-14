@@ -1,1 +1,10 @@
-{% set textblock = pimcore_wysiwyg('textblock') %}
+{% set columnCount = pimcore_checkbox('columnCount').isChecked() %}
+{% set anchor = pimcore_input('anchor').getData() %}
+
+{% set textblock = pimcore_wysiwyg('textblock', {
+    placeholder: 'jwPimAreas.texteditor.name' | trans({}, 'admin'),
+}) %}
+
+<div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}{{ columnCount ? ' class="jwpimareas-wysiwyg-column-count"' : '' }}>
+    {{ textblock | raw }}
+</div>

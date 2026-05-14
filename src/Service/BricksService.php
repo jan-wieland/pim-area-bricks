@@ -234,6 +234,28 @@ class BricksService
     /**
      * @return array
      */
+     public static function tabTexteditor(): array {
+         return [
+             [
+                'type' => 'panel',
+                'title' => BricksService::transAdmin('jwPimAreas.groups.options'),
+                'items' => [
+                    [
+                        'type' => 'checkbox',
+                        'name' => 'columnCount',
+                        'label' => BricksService::transAdmin('jwPimAreas.texteditor.columnCount'),
+                        'config' => [
+                            'defaultValue' => false,
+                        ],
+                    ],
+                ],
+             ],
+            ];
+     }
+
+    /**
+     * @return array
+     */
      public static function itemsHeadline(): array {
          return [[
              'type' => 'select',

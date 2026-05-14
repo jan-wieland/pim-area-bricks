@@ -135,6 +135,7 @@ jwPimAreas:
     name: "Text & image"
   texteditor:
     name: "Text WYSIWYG"
+    columnCount: "Automatically two columns on desktop?"
   vueApp:
     name: "VUE application"
     waitSpinner: "With a waiting spinner?"

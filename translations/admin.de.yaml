@@ -131,6 +131,7 @@ jwPimAreas:
     name: "Text & Bild"
   texteditor:
     name: "Text WYSIWYG"
+    columnCount: "Auf Desktop automatisch zweispaltig?"
   vueApp:
     name: "VUE-Anwendung"
     waitSpinner: "Mit Waiting-Spinner?"
