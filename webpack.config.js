@@ -3,8 +3,8 @@ const Encore = require('@symfony/webpack-encore')
 if (!Encore.isRuntimeEnvironmentConfigured()) {
   Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev')
 }
-
-Encore.setOutputPath('src/Resources/public/')
+/* /usr/www/users/urnaxf/pims/bundles/pim-area-bricks/ */
+Encore.setOutputPath('public/')
   .setPublicPath('/bundles/pimareabricks')
   .setManifestKeyPrefix('bundles/pimareabricks')
 
