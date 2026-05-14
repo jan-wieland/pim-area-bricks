@@ -63,4 +63,7 @@ class JwpimareasTexteditor extends AbstractTemplateAreabrick implements Editable
                 ),
             ],
         ]);
+
+        return $config;
+    }
 }

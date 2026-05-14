@@ -190,45 +190,53 @@ class BricksService
     /**
      * @return array
      */
-    public static function itemsImageSlideOptions(): array {
-        return [[
-            'type' => 'checkbox',
-            'name' => 'imagesAsSlider',
-            'label' => self::transAdmin('jwPimAreas.image.imagesAsSlider.label'),
-            'config' => [
-                'defaultValue' => false,
-            ],
-        ],
-        [
-            'type' => 'select',
-            'name' => 'sliderToBreakpoint',
-            'label' => self::transAdmin('jwPimAreas.image.sliderToBreakpoint.label'),
-            'config' => [
-                'store' => [
-                    ['always', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.always')],
-                    ['sm', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.sm')],
-                    ['md', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.md')],
-                    ['lg', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.lg')],
-                    ['xl', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.xl')],
+    public static function itemsImageSlide(): array {
+        return [
+            [
+                'type' => 'panel',
+                'title' => BricksService::transAdmin('jwPimAreas.groups.options'),
+                'items' => [
+                    []
+                        'type' => 'checkbox',
+                        'name' => 'imagesAsSlider',
+                        'label' => self::transAdmin('jwPimAreas.image.imagesAsSlider.label'),
+                        'config' => [
+                            'defaultValue' => false,
+                        ],
+                    ],
+                    [
+                        'type' => 'select',
+                        'name' => 'sliderToBreakpoint',
+                        'label' => self::transAdmin('jwPimAreas.image.sliderToBreakpoint.label'),
+                        'config' => [
+                            'store' => [
+                                ['always', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.always')],
+                                ['sm', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.sm')],
+                                ['md', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.md')],
+                                ['lg', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.lg')],
+                                ['xl', self::transAdmin('jwPimAreas.image.sliderToBreakpoint.options.xl')],
+                            ],
+                            'defaultValue' => 'always',
+                        ],
+                    ],
+                    [
+                        'type' => 'select',
+                        'name' => 'sliderImages',
+                        'label' => self::transAdmin('jwPimAreas.image.sliderImages.label'),
+                        'config' => [
+                            'store' => [
+                                ['1', self::transAdmin('jwPimAreas.image.sliderImages.options.1')],
+                                ['2', self::transAdmin('jwPimAreas.image.sliderImages.options.2')],
+                                ['3', self::transAdmin('jwPimAreas.image.sliderImages.options.3')],
+                                ['4', self::transAdmin('jwPimAreas.image.sliderImages.options.4')],
+                                ['5', self::transAdmin('jwPimAreas.image.sliderImages.options.5')],
+                            ],
+                            'defaultValue' => '1',
+                        ],
+                    ],
                 ],
-                'defaultValue' => 'always',
             ],
-        ],
-        [
-            'type' => 'select',
-            'name' => 'sliderImages',
-            'label' => self::transAdmin('jwPimAreas.image.sliderImages.label'),
-            'config' => [
-                'store' => [
-                    ['1', self::transAdmin('jwPimAreas.image.sliderImages.options.1')],
-                    ['2', self::transAdmin('jwPimAreas.image.sliderImages.options.2')],
-                    ['3', self::transAdmin('jwPimAreas.image.sliderImages.options.3')],
-                    ['4', self::transAdmin('jwPimAreas.image.sliderImages.options.4')],
-                    ['5', self::transAdmin('jwPimAreas.image.sliderImages.options.5')],
-                ],
-                'defaultValue' => '1',
-            ],
-        ]];
+        ];
     }
 
     /**
