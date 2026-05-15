@@ -30,6 +30,14 @@ class JwpimareasSection extends AbstractTemplateAreabrick implements EditableDia
     /**
      * @return string
      */
+    public function getTemplate(): string
+    {
+        return 'templates/areas/jwpimareas-snippet/view.html.twig';
+    }
+
+    /**
+     * @return string
+     */
     public function getIcon(): string
     {
         return '/bundles/pimareabricks/images/editmode/rectangle-outline.svg';
