@@ -141,20 +141,20 @@ jwPimAreas:
     waitSpinner: "With a waiting spinner?"
   predefinedProperties:
     noIndex:
-      name: "Meta noindex"
+      name: "JW Meta noindex"
       description: "SEO mata tag robots: noindex"
     noFollow:
-      name: "Meta nofollow"
+      name: "JW Meta nofollow"
       description: "SEO mata tag robots: nofollow"
     themeColor:
-      name: "Meta theme-color"
+      name: "JW Meta theme-color"
       description: "Meta tag theme-color (#...)"
     customTheme:
-      name: "Color theme"
+      name: "JW Color theme"
       description: "Custom them thru :root variables"
     jsKey:
-      name: "Encore JS"
+      name: "JW Encore JS"
       description: "Custom encore entry script tags"
     cssKey:
-      name: "Encore CSS"
+      name: "JW Encore CSS"
       description: "Custom encore entry link tags"
