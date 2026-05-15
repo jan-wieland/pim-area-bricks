@@ -12,4 +12,4 @@ services:
   JanWieland\PimAreaBricks\Installer:
     public: true
     arguments:
-      $bundle: "@=service('kernel').getBundle('JanWielandPimAreaBricksBundle')"
+      $bundle: "@=service('kernel').getBundle('PimAreaBricksBundle')"
