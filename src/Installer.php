@@ -3,6 +3,7 @@ namespace JanWieland\PimAreaBricks;
 
 use Pimcore\Extension\Bundle\Installer\SettingsStoreAwareInstaller;
 use Pimcore\Model\Property\Predefined;
+use Pimcore\Model\Document\DocType;
 
 class Installer extends SettingsStoreAwareInstaller
 {
@@ -18,12 +19,14 @@ class Installer extends SettingsStoreAwareInstaller
     public function install(): void
     {
         $this->createPredefinedProperties();
+        $this->createDocumentTypes();
         parent::install();
     }
 
     public function uninstall(): void
     {
         $this->removePredefinedProperties();
+        $this->removeDocumentTypes();
         parent::uninstall();
     }
 
@@ -98,6 +101,27 @@ class Installer extends SettingsStoreAwareInstaller
             $property = Predefined::getByKey($key);
             if ($property instanceof Predefined) {
                 $property->delete();
+            }
+        }
+    }
+
+    private function createDocumentTypes(): void
+    {
+        $docType = new DocType();
+        $docType->setName('JWpimAreas Default Page');
+        $docType->setController('JanWieland\PimAreaBricks\Controller\DefaultController::defaultAction');
+        $docType->setType('page');
+        $docType->setGroup('JWpimAreas');
+        $docType->save();
+    }
+
+    private function removeDocumentTypes(): void
+    {
+        $list = new DocType\Listing();
+        $list->load();
+        foreach ($list->getDocTypes() as $docType) {
+            if ($docType->getGroup() === 'JWpimAreas') {
+                $docType->delete();
             }
         }
     }
