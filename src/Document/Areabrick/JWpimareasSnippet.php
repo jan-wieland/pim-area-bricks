@@ -8,7 +8,7 @@ use Pimcore\Model\Document\Editable;
 use Pimcore\Model\Document\Editable\Area\Info;
 use JanWieland\PimAreaBricks\Service\BricksService;
 
-class JwpimareasSection extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
+class JWpimareasSnippet extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
 {
 
     /**
@@ -16,7 +16,7 @@ class JwpimareasSection extends AbstractTemplateAreabrick implements EditableDia
      */
     public function getName(): string
     {
-        return BricksService::transAdmin('jwPimAreas.section.name');
+        return BricksService::transAdmin('jwPimAreas.snippet.name');
     }
 
     /**
@@ -24,7 +24,7 @@ class JwpimareasSection extends AbstractTemplateAreabrick implements EditableDia
      */
     public function getDescription(): string
     {
-        return 'HTML section';
+        return BricksService::transAdmin('jwPimAreas.snippet.description');
     }
 
     /**
@@ -32,7 +32,7 @@ class JwpimareasSection extends AbstractTemplateAreabrick implements EditableDia
      */
     public function getIcon(): string
     {
-        return '/bundles/pimareabricks/images/editmode/rectangle-outline.svg';
+        return '/bundles/pimareabricks/images/editmode/code-braces-box.svg';
     }
 
     /**
@@ -59,6 +59,14 @@ class JwpimareasSection extends AbstractTemplateAreabrick implements EditableDia
         $config->setItems([
             'type' => 'tabpanel',
             'items' => [
+                [
+                    'type' => 'checkbox',
+                    'name' => 'asFlexboxGrid',
+                    'label' => self::transAdmin('jwPimAreas.snippet.asFlexboxGrid.label'),
+                    'config' => [
+                        'defaultValue' => true,
+                    ],
+                ],
                 [
                     'type' => 'panel',
                     'title' => 'Layout',

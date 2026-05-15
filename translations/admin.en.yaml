@@ -131,6 +131,12 @@ jwPimAreas:
       label: "Autoplay delay (in seconds / 5000)"
   section:
     name: "Section"
+  snippet:
+    name: "Snippet"
+    description: "Pimcore snippet"
+    label: "Pimcore snippet (drag & drop):"
+    asFlexboxGrid:
+      label: "Content as a Flexbox Grid (Recommended Default)?"
   textAndImage:
     name: "Text & image"
   texteditor:
