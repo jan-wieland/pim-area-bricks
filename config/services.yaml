@@ -11,3 +11,5 @@ services:
       - "../src/PimAreaBricksBundle.php"
   JanWieland\PimAreaBricks\Installer:
     public: true
+    arguments:
+      $bundle: "@=service('kernel').getBundle('JanWielandPimAreaBricksBundle')"
