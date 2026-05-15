@@ -62,7 +62,7 @@ class JWpimareasSnippet extends AbstractTemplateAreabrick implements EditableDia
                 [
                     'type' => 'checkbox',
                     'name' => 'asFlexboxGrid',
-                    'label' => self::transAdmin('jwPimAreas.snippet.asFlexboxGrid.label'),
+                    'label' => BricksService::transAdmin('jwPimAreas.snippet.asFlexboxGrid.label'),
                     'config' => [
                         'defaultValue' => true,
                     ],
