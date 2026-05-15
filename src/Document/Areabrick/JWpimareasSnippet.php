@@ -28,6 +28,14 @@ class JWpimareasSnippet extends AbstractTemplateAreabrick implements EditableDia
     }
 
     /**
+    * @return string
+    */
+    public function getTemplate(): string
+    {
+        return 'templates/areas/jwpimareas-snippet/view.html.twig';
+    }
+
+    /**
      * @return string
      */
     public function getIcon(): string
