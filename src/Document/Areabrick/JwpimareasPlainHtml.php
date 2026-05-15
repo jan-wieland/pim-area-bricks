@@ -66,7 +66,7 @@ class JwpimareasPlainHtml extends AbstractTemplateAreabrick implements EditableD
                             [
                                 'type' => 'textarea',
                                 'name' => '',
-                                'label' => self::transAdmin('jwPimAreas.plainHtml.label'),
+                                'label' => BricksService::transAdmin('jwPimAreas.plainHtml.label'),
                                 'config' => [
                                     'htmlspecialchars' => false,
                                 ],
@@ -74,7 +74,7 @@ class JwpimareasPlainHtml extends AbstractTemplateAreabrick implements EditableD
                             [
                                 'type' => 'input',
                                 'name' => 'anchor',
-                                'label' => self::transAdmin('jwPimAreas.anchor.optional'),
+                                'label' => BricksService::transAdmin('jwPimAreas.anchor.optional'),
                             ],
                         ],
                     ],
