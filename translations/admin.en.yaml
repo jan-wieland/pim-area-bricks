@@ -43,7 +43,7 @@ jwPimAreas:
           extra-large: "Very large"
   anchor:
     name: "Anchor"
-    otional: "Anchor (optional)"
+    optional: "Anchor (optional)"
   article:
     name: "Article"
   aside:
@@ -129,6 +129,9 @@ jwPimAreas:
       label: "Activate autoplay?"
     autoplayDelay:
       label: "Autoplay delay (in seconds / 5000)"
+  plainHtml:
+    name: "Plain HTML"
+    label: "Plain HTML (source code)"
   section:
     name: "Section"
   snippet:

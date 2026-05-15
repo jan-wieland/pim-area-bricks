@@ -56,22 +56,9 @@ class JwpimareasSection extends AbstractTemplateAreabrick implements EditableDia
         $config->setWidth(640);
         $config->setHeight(480);
         $config->setReloadOnClose(true);
-        $config->setItems([
-            'type' => 'tabpanel',
-            'items' => [
-                [
-                    'type' => 'panel',
-                    'title' => 'Layout',
-                    'items' => [
-                        [
-                            'type' => 'input',
-                            'name' => 'anchor',
-                            'label' => 'Anker (optional)',
-                        ],
-                    ],
-                ],
-            ],
-        ]);
+        $config->setItems(
+            BricksService::tabLayoutAnchor()
+        );
 
         return $config;
     }

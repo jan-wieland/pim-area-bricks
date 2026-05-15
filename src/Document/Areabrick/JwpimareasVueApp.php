@@ -78,7 +78,7 @@ class JwpimareasVueApp extends AbstractTemplateAreabrick implements EditableDial
                             [
                                 'type' => 'input',
                                 'name' => 'anchor',
-                                'label' => BricksService::transAdmin('jwPimAreas.anchor.otional'),
+                                'label' => BricksService::transAdmin('jwPimAreas.anchor.optional'),
                             ],
                         ],
                     ],

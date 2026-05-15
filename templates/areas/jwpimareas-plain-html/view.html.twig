@@ -1,0 +1,6 @@
+{% set plainHtml = pimcore_textarea('plainHtml', {
+    "htmlspecialchars": false
+}) %}
+{% set anchor = pimcore_input('anchor') ?: null %}
+
+<div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>{{ plainHtml.getData() | default('') | raw }}</div>

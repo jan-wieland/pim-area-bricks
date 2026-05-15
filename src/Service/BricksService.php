@@ -104,7 +104,7 @@ class BricksService
         [
             'type' => 'input',
             'name' => 'anchor',
-            'label' => self::transAdmin('jwPimAreas.anchor.otional'),
+            'label' => self::transAdmin('jwPimAreas.anchor.optional'),
         ],
         ]),
         ]];
@@ -302,5 +302,27 @@ class BricksService
                  'width' => 300,
              ],
          ]];
+    }
+
+    /**
+    * @return array
+    */
+    public static function tabLayoutAnchor(): array {
+        return [[
+            'type' => 'tabpanel',
+            'items' => [
+                [
+                    'type' => 'panel',
+                    'title' => self::transAdmin('jwPimAreas.groups.layout'),
+                    'items' => [
+                        [
+                            'type' => 'input',
+                            'name' => 'anchor',
+                            'label' => self::transAdmin('jwPimAreas.anchor.optional')',
+                        ],
+                    ],
+                ],
+            ],
+        ]];
     }
 }

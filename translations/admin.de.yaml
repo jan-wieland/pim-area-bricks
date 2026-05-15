@@ -43,7 +43,7 @@ jwPimAreas:
           extra-large: "Sehr groß"
   anchor:
     name: "Anker"
-    otional: "Anker (optional)"
+    optional: "Anker (optional)"
   article:
     name: "Artikel"
   aside:
@@ -133,6 +133,9 @@ jwPimAreas:
     label: "Pimcore Snippet (Drag & Drop):"
     asFlexboxGrid:
       label: "Inhalte als Flexbox-Grid (empfohlener Standard)?"
+  plainHtml:
+    name: "Reines HTML"
+    label: "Reines HTML (Quelltext)"
   textAndImage:
     name: "Text & Bild"
   texteditor:
