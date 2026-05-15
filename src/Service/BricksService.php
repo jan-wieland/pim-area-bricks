@@ -318,7 +318,7 @@ class BricksService
                         [
                             'type' => 'input',
                             'name' => 'anchor',
-                            'label' => self::transAdmin('jwPimAreas.anchor.optional')',
+                            'label' => self::transAdmin('jwPimAreas.anchor.optional'),
                         ],
                     ],
                 ],
