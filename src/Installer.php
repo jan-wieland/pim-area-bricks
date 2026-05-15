@@ -108,7 +108,7 @@ class Installer extends SettingsStoreAwareInstaller
     private function createDocumentTypes(): void
     {
         $docType = new DocType();
-        $docType->setName('JWpimAreas Default Page');
+        $docType->setName('Content Page');
         $docType->setController('JanWieland\PimAreaBricks\Controller\DefaultController::defaultAction');
         $docType->setType('page');
         $docType->setGroup('JWpimAreas');
