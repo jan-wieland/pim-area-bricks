@@ -43,6 +43,41 @@
     {% do pimcore_head_meta().setProperty('og:image', '') %}
 </head>
 <body class="antialiased {{ editmode ? 'editmode' : '' }}">
-{% block content %}{% endblock %}
+{% if not editmode or jwPimAreas_headFootInPim %}
+    <div class="fixed top-0 left-0 h-jwpimareas-header max-w-screen z-40 transition-[height] duration-500">
+        <header>
+            <div class="flex">
+                <div class="jwpimareas-page-side"></div>
+                <div class="jwpimareas-page-flex flex">Header
+                </div>
+            </div>
+        </header>
+    </div>
+{% endif %}
+<div class="absolute top-0 left-0 w-[min(100%,100vw)] max-w-[min(100%,100vw)] min-h-[min(100%,100vh)] flex flex-col">
+    <div class="h-jwpimareas-header"></div>
+    <div class="flex-auto">
+        <main>
+            <div class="flex">
+                <div class="jwpimareas-page-side"></div>
+                <div class="jwpimareas-page-flex jwpimareas-page-content flex">
+                    {% block content %}{% endblock %}
+                </div>
+                <div class="jwpimareas-page-side"></div>
+            </div>
+        </main>
+    </div>
+    {% if not editmode or jwPimAreas_headFootInPim %}
+        <div class="jwpimareas-page-footer">
+            <footer>
+            <div class="flex">
+                <div class="jwpimareas-page-side"></div>
+                <div class="jwpimareas-page-flex flex">Footer
+                </div>
+            </div>
+            </footer>
+        </div>
+    {% endif %}
+</div>
 </body>
 </html>

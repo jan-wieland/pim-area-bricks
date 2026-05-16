@@ -149,6 +149,12 @@ jwPimAreas:
     name: "VUE application"
     waitSpinner: "With a waiting spinner?"
   predefinedProperties:
+    navMainRoot:
+      name: "JW Nav Main"
+      description: "Root Document of the Main navigation"
+    hideNavs:
+      name: "JW Nav off"
+      description: "Hide header navigations"
     noIndex:
       name: "JW Meta noindex"
       description: "SEO mata tag robots: noindex"
@@ -167,3 +173,6 @@ jwPimAreas:
     cssKey:
       name: "JW Encore CSS"
       description: "Custom encore entry link tags"
+    headFootInPim:
+      name: "Header & Footer in the PIM"
+      description: "Display header and footer in Pimcore /admin"
