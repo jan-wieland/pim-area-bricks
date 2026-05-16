@@ -4,13 +4,13 @@
 }
 .jwpimareas-page-side {
     flex: 0 0 5vw;
-    @screen xl {
+    @variant xl {
         @apply flex-1;
     }
 }
 .jwpimareas-page-flex {
     @apply flex-1;
-    @screen xl {
+    @variant xl {
         flex: 0 0 1280px;
     }
 }
