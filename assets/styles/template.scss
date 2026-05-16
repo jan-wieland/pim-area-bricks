@@ -8,6 +8,11 @@
     --color-jwpimareas-footer-bg: #000;
     --color-jwpimareas-footer-text: #b0bec5;
 }
+.jwpimareas-page {
+    width: min(100%, 100vw);
+    max-width: min(100%, 100vw);
+    min-height: min(100%, 100vh);
+}
 .jwpimareas-page-side {
     flex: 0 0 5vw;
     @variant xl {
