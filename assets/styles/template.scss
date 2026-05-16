@@ -1,0 +1,16 @@
+@theme {
+    --height-jwpimareas-header: 80px;
+    --height-jwpimareas-header-scrolled: 56px;
+}
+.jwpimareas-page-side {
+    flex: 0 0 5vw;
+    @screen xl {
+        @apply flex-1;
+    }
+}
+.jwpimareas-page-flex {
+    @apply flex-1;
+    @screen xl {
+        flex: 0 0 1280px;
+    }
+}
