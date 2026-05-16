@@ -12,10 +12,8 @@
     --color-jwpimareas-footer-bg: #263238;
     --color-jwpimareas-footer-text: #cfd8dc;
 }
-@layer utilities {
-    .flex-full {
-        flex: 0 0 100%;
-    }
+@utility flex-full {
+    flex: 0 0 100%;
 }
 @layer components {
     .jwpimareas-page {
