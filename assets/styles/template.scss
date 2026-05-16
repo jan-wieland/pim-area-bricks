@@ -1,6 +1,12 @@
 @theme {
-    --height-jwpimareas-header: 80px;
-    --height-jwpimareas-header-scrolled: 56px;
+    --height-jwpimareas-header: 5rem;
+    --height-jwpimareas-header-scrolled: 3.5rem;
+    --spacing-jwpimareas-footer-space: 2.5rem;
+    --spacing-jwpimareas-footer-space: 2.5rem;
+    --spacing-jwpimareas-footer-t: 1.3125rem;
+    --spacing-jwpimareas-footer-b: 0.8125rem;
+    --color-jwpimareas-footer-bg: #000;
+    --color-jwpimareas-footer-text: #b0bec5;
 }
 .jwpimareas-page-side {
     flex: 0 0 5vw;
