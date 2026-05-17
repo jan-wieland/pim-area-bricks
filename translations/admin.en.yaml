@@ -174,5 +174,5 @@ jwPimAreas:
       name: "JW Encore CSS"
       description: "Custom encore entry link tags"
     headFootInPim:
-      name: "Header & Footer in the PIM"
+      name: "JW Header & Footer in the PIM"
       description: "Display header and footer in Pimcore /admin"
