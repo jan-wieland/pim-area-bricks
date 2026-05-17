@@ -31,5 +31,13 @@ class PimAreaBricksExtension extends Extension implements PrependExtensionInterf
                 \dirname(__DIR__, 2) . '/templates' => null,
             ],
         ]);
+
+        $container->prependExtensionConfig('framework', [
+            'translator' => [
+                'paths' => [
+                    \dirname(__DIR__, 2) . '/translations',
+                ],
+            ],
+        ]);
     }
 }
