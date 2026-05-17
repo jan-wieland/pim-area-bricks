@@ -1,3 +1,6 @@
+:root {
+    --jwpimareas-shadow-header: 0 -2 5px 3px #00000034;
+}
 @theme {
     --height-jwpimareas-header: 5rem;
     --height-jwpimareas-header-scrolled: 3.5rem;
@@ -37,6 +40,9 @@
     }
     .jwpimareas-container {
         @apply flex-full;
+    }
+    .jwpimareas-shadow-header {
+        box-shadow: var(--jwpimareas-shadow-header);
     }
     p {
         margin-bottom: var(--spacing-jwpimareas-p-tag);
