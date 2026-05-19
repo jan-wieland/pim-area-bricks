@@ -1,8 +1,6 @@
-@layer utilities {
-    .editmode {
-        .pimcore_editable_input {
-            background: #fff;
-            color: #263238;
-        }
+@layer components {
+    .editmode.pimcore_editable_input {
+        background: #fff;
+        color: #263238;
     }
 }
