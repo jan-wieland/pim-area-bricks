@@ -1,13 +1,15 @@
 <?php
 namespace JanWieland\PimAreaBricks\Service;
 
+use Pimcore\Model\Document\Editable\Area\Info;
+
 class BricksService
 {
     /**
      * @param string $transKey
      * @return string
      */
-    public static function transAdmin(string $transKey): string
+    protected static function transAdmin(string $transKey): string
     {
         return \Pimcore::getContainer()->get('translator')->trans($transKey, [], 'admin');
     }
@@ -16,7 +18,7 @@ class BricksService
      * @param bool $short
      * @return array
      */
-    public static function tabLayout(bool $short = false): array
+    protected static function tabLayout(bool $short = false): array
     {
         return [[
             'type' => 'panel',
@@ -113,7 +115,7 @@ class BricksService
     /**
      * @return array
      */
-    public static function tabImages(): array
+    protected static function tabImages(): array
     {
         return [[
             'type' => 'panel',
@@ -188,7 +190,7 @@ class BricksService
     /**
      * @return array
      */
-    public static function itemsImageSlide(): array {
+    protected static function itemsImageSlide(): array {
         return [[
             'type' => 'panel',
             'title' => BricksService::transAdmin('jwPimAreas.groups.options'),
@@ -238,7 +240,7 @@ class BricksService
     /**
      * @return array
      */
-     public static function tabTexteditor(): array {
+     protected static function tabTexteditor(): array {
          return [[
             'type' => 'panel',
             'title' => BricksService::transAdmin('jwPimAreas.groups.options'),
@@ -258,7 +260,7 @@ class BricksService
     /**
      * @return array
      */
-     public static function itemsHeadline(): array {
+     protected static function itemsHeadline(): array {
          return [[
              'type' => 'select',
              'name' => 'headlineSize',
@@ -307,7 +309,7 @@ class BricksService
     /**
     * @return array
     */
-    public static function tabLayoutAnchor(): array {
+    protected static function tabLayoutAnchor(): array {
         return [[
             'type' => 'tabpanel',
             'items' => [
@@ -324,5 +326,23 @@ class BricksService
                 ],
             ],
         ]];
+    }
+
+    /**
+     * @param Info $info
+     * @return string
+     */
+    protected static function buildHtmlTagOpen(Info $info): string
+    {
+        $gridColumns = $info->getDocument()->getEditable('gridColumns')?->getData() ?? 'none';
+
+        return sprintf(
+            '%s%s%s%s%s',
+            '<div class="pimcore_area_',
+            $info->getId(),
+            ' pimcore_area_content jwpimareas-flexbox-',
+            $gridColumns === 'none' ? '0' : $gridColumns,
+            '">'
+        );
     }
 }
