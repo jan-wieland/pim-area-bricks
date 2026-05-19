@@ -69,6 +69,23 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
     }
 
     /**
+     * @param Info $info
+     * @return string
+     */
+    public function getHtmlTagOpen(Info $info): string
+    {
+        $gridColumns = $info->getDocument()->getEditable('gridColumns')?->getData() ?? 'none';
+        return sprintf(
+            '%s%s%s%s%s',
+            '<div class="pimcore_area_',
+            $info->getId(),
+            ' pimcore_area_content jwpimareas-flexbox-',
+            $gridColumns === 'none' ? '0' : $gridColumns,
+            '">'
+        );
+    }
+
+    /**
      * @return bool
      */
     public function needsReload(): bool
