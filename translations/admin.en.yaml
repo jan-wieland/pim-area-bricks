@@ -182,7 +182,7 @@ jwPimAreas:
     cssKey:
       name: "JW Encore CSS"
       description: "Custom encore entry link tags"
-    cssKeyyBundle:
+    cssKeyBundle:
       name: "JW CSS bundle"
       description: "Bundle key for encore CSS"
     headFootInPim:
