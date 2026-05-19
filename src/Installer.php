@@ -11,12 +11,16 @@ class Installer extends SettingsStoreAwareInstaller
     private array $propertyKeys = [
         'jwPimAreas_navMainRoot',
         'jwPimAreas_hideNavs',
+        'jwPimAreas_noIndexAll',
         'jwPimAreas_noIndex',
         'jwPimAreas_noFollow',
         'jwPimAreas_themeColor',
         'jwPimAreas_customTheme',
+        'jwPimAreas_customThemeBundle',
         'jwPimAreas_jsKey',
+        'jwPimAreas_jsKeyBundle',
         'jwPimAreas_cssKey',
+        'jwPimAreas_cssKeyBundle',
         'jwPimAreas_headFootInPim',
     ];
 
@@ -62,6 +66,14 @@ class Installer extends SettingsStoreAwareInstaller
                 'ctype' => 'document',
             ],
             [
+                'name' => 'jwPimAreas.predefinedProperties.noIndexAll.name',
+                'key' => 'jwPimAreas_noIndexAll',
+                'type' => 'bool',
+                'description' => 'jwPimAreas.predefinedProperties.noIndexAll.description',
+                'inheritable' => true,
+                'ctype' => 'document',
+            ],
+            [
                 'name' => 'jwPimAreas.predefinedProperties.noIndex.name',
                 'key' => 'jwPimAreas_noIndex',
                 'type' => 'bool',
@@ -94,6 +106,14 @@ class Installer extends SettingsStoreAwareInstaller
                 'ctype' => 'document',
             ],
             [
+                'name' => 'jwPimAreas.predefinedProperties.customThemeBundle.name',
+                'key' => 'jwPimAreas_customThemeBundle',
+                'type' => 'text',
+                'description' => 'jwPimAreas.predefinedProperties.customThemeBundle.description',
+                'inheritable' => true,
+                'ctype' => 'document',
+            ],
+            [
                 'name' => 'jwPimAreas.predefinedProperties.jsKey.name',
                 'key' => 'jwPimAreas_jsKey',
                 'type' => 'text',
@@ -102,10 +122,26 @@ class Installer extends SettingsStoreAwareInstaller
                 'ctype' => 'document',
             ],
             [
+                'name' => 'jwPimAreas.predefinedProperties.jsKeyBundle.name',
+                'key' => 'jwPimAreas_jsKeyBundle',
+                'type' => 'text',
+                'description' => 'jwPimAreas.predefinedProperties.jsKeyBundle.description',
+                'inheritable' => true,
+                'ctype' => 'document',
+            ],
+            [
                 'name' => 'jwPimAreas.predefinedProperties.cssKey.name',
                 'key' => 'jwPimAreas_cssKey',
                 'type' => 'text',
                 'description' => 'jwPimAreas.predefinedProperties.cssKey.description',
+                'inheritable' => true,
+                'ctype' => 'document',
+            ],
+            [
+                'name' => 'jwPimAreas.predefinedProperties.cssKeyBundle.name',
+                'key' => 'jwPimAreas_cssKeyBundle',
+                'type' => 'text',
+                'description' => 'jwPimAreas.predefinedProperties.cssKeyBundle.description',
                 'inheritable' => true,
                 'ctype' => 'document',
             ],

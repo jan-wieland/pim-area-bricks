@@ -5,22 +5,33 @@ use Pimcore\Model\Document;
 use Pimcore\Model\Document\Link;
 
 class TemplateService
-{
-    /**
+{(object)
+
+        /**
      * @param Document $document
      * @return array
      */
     public static function getViewParams(Document $document): array
     {
-        return [
-            'jwPimAreas_navMain' => self::getNavMain($document),
-            'jwPimAreas_hideNavs' => (bool) ($document?->getProperty('jwPimAreas.hideNavs') ?? false),
-            'jwPimAreas_noIndex' => $document?->getProperty('jwPimAreas.noIndex'),
-            'jwPimAreas_noFollow' => $document?->getProperty('jwPimAreas.noFollow'),
-            'jwPimAreas_themeColor' => $document?->getProperty('jwPimAreas.themeColor') ?? '#000',
-            'jwPimAreas_jsKey' => $document?->getProperty('jwPimAreas.jsKey'),
-            'jwPimAreas_cssKey' => $document?->getProperty('jwPimAreas.cssKey'),
-            'jwPimAreas_headFootInPim' => (bool) ($document?->getProperty('jwPimAreas.headFootInPim') ?? false),
+        return (object) [
+            'jwPimAreas' => (object) [
+                # Data from page properties:
+                'navMain' => self::getNavMain($document),
+                'hideNavs' => (bool) ($document?->getProperty('jwPimAreas.hideNavs') ?? false),
+                'noIndexAll' => (bool) $document?->getProperty('jwPimAreas.noIndexAll') ?? false,
+                'noIndex' => (bool) $document?->getProperty('jwPimAreas.noIndex') ?? false,
+                'noFollow' => (bool) $document?->getProperty('jwPimAreas.noFollow') ?? false,
+                'themeColor' => (string) $document?->getProperty('jwPimAreas.themeColor') ?? '#000',
+                'customTheme' => (string) $document?->getProperty('jwPimAreas.customTheme'),
+                'customThemeBundle' => (string) $document?->getProperty('jwPimAreas.customTheme.bundle') ?? '_default',
+                'jsKey' => (string) $document?->getProperty('jwPimAreas.jsKey'),
+                'jsKeyBundle' => (string) $document?->getProperty('jwPimAreas.jsKey.bundle') ?? '_default',
+                'cssKey' => (string) $document?->getProperty('jwPimAreas.cssKey'),
+                'cssKeyBundle' => (string) $document?->getProperty('jwPimAreas.cssKey.bundle') ?? '_default',
+                'headFootInPim' => (bool) ($document?->getProperty('jwPimAreas.headFootInPim') ?? false),
+                # Generated data:
+                'isRootPage' => ($document?->getId() ?? '0') === $document->getProperty('jwPimAreas.rootNav')?->getId()
+            ];
         ];
     }
 

@@ -5,22 +5,37 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% set jwPimAreas_robots = ((jwPimAreas_noIndex | default(true)) ? 'no' : '') ~ 'index,' %}
-    {% set jwPimAreas_robots = jwPimAreas_robots ~ ((jwPimAreas_noFollow | default(true)) ? 'no' : '') ~ 'follow' %}
-    <meta name="robots" content="{{ jwPimAreas_robots }},noodp,noydir,noarchive">
+    {# Build the robots meta tag. #}
+    {% if jwPimAreas_noIndexAll %}
+        <meta name="robots" content="noindex,nofollow,noodp,noydir,noarchive">
+        <!-- {{ (jwPimAreas_noIndex | default(true)) ? 'no' : '') }}index, {{ (jwPimAreas.noFollow | default(true)) ? 'no' : '') }}follow -->
+    {% eles %}
+        {% set jwPimAreas_robots = ((jwPimAreas_noIndex | default(true)) ? 'no' : '') ~ 'index,' %}
+        {% set jwPimAreas_robots = jwPimAreas_robots ~ ((jwPimAreas.noFollow | default(true)) ? 'no' : '') ~ 'follow' %}
+        <meta name="robots" content="{{ jwPimAreas_robots }},noodp,noydir,noarchive">
+    {% endif %}
 
+    {# Disable some rogue tools—especially in MS Edge: #}
     <meta name="imagetoolbar" content="false">
     <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="{{ jwPimAreas_themeColor | default('#000') | raw }}">
+    <meta name="theme-color" content="{{ jwPimAreas.themeColor | default('#000') | raw }}">
 
     {{ encore_entry_script_tags('pimAreaBricksApp', null, 'pimareabricks') }}
     {{ encore_entry_link_tags('pimAreaBricksApp', null, 'pimareabricks') }}
 
-    {% if jwPimAreas_jsKey is defined and jwPimAreas_jsKey %}
-        {{ encore_entry_script_tags(jwPimAreas_jsKey) }}
+    {# Custom-built JS, optionally including its bundle name: #}
+    {% if jwPimAreas.jsKey is defined and jwPimAreas.jsKey %}
+        {{ encore_entry_script_tags(jwPimAreas.jsKey, null, jwPimAreas.jsKeyBundle) }}
     {% endif %}
-    {% if jwPimAreas_cssKey is defined and jwPimAreas_cssKey %}
-        {{ encore_entry_link_tags(jwPimAreas_cssKey) }}
+
+    {# Custom-built CSS, optionally including its bundle name: #}
+    {% if jwPimAreas.cssKey is defined and jwPimAreas.cssKey %}
+        {{ encore_entry_link_tags(jwPimAreas.cssKey, null, jwPimAreas.cssKeyBundle) }}
+    {% endif %}
+
+    {# Custom-built color thema and layout values, optionally including its bundle name: #}
+    {% if jwPimAreas.customTheme is defined and jwPimAreas.customTheme %}
+        {{ encore_entry_link_tags(jwPimAreas.customTheme, null, jwPimAreas.customThemeyBundle) }}
     {% endif %}
 
     {% if editmode %}
@@ -43,7 +58,7 @@
     {% do pimcore_head_meta().setProperty('og:image', '') %}
 </head>
 <body class="antialiased bg-jwpimareas-body text-jwpimareas-body-text {{ editmode ? 'editmode' : '' }}">
-{% if not editmode or jwPimAreas_headFootInPim %}
+{% if not editmode or jwPimAreas.headFootInPim %}
     <div class="fixed top-0 left-0 h-jwpimareas-header w-screen max-w-screen bg-jwpimareas-header text-jwpimareas-header-text jwpimareas-shadow-header z-40 transition-[height] duration-500">
         <header>
             <div class="flex">
@@ -67,7 +82,7 @@
             </div>
         </main>
     </div>
-    {% if not editmode or jwPimAreas_headFootInPim %}
+    {% if not editmode or jwPimAreas.headFootInPim %}
         <div class="jwpimareas-page-footer pt-jwpimareas-footer-space">
             <footer>
             <div class="flex pt-jwpimareas-footer  pt-jwpimareas-footer-t pb-jwpimareas-footer-b bg-jwpimareas-footer-bg text-jwpimareas-footer-text">
