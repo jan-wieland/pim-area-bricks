@@ -1,8 +1,8 @@
 {
-  "bundles/pimareabricks/pimAreaBricksApp.css": "/bundles/pimareabricks/pimAreaBricksApp.css",
-  "bundles/pimareabricks/pimAreaBricksApp.js": "/bundles/pimareabricks/pimAreaBricksApp.js",
-  "bundles/pimareabricks/pimAreaBricksEditmode.css": "/bundles/pimareabricks/pimAreaBricksEditmode.css",
-  "bundles/pimareabricks/pimAreaBricksEditmode.js": "/bundles/pimareabricks/pimAreaBricksEditmode.js",
+  "bundles/pimareabricks/pimAreaBricksApp.css": "/bundles/pimareabricks/pimAreaBricksApp.a91036e6.css",
+  "bundles/pimareabricks/pimAreaBricksApp.js": "/bundles/pimareabricks/pimAreaBricksApp.31d6cfe0.js",
+  "bundles/pimareabricks/pimAreaBricksEditmode.css": "/bundles/pimareabricks/pimAreaBricksEditmode.31d6cfe0.css",
+  "bundles/pimareabricks/pimAreaBricksEditmode.js": "/bundles/pimareabricks/pimAreaBricksEditmode.31d6cfe0.js",
   "bundles/pimareabricks/images/editmode/text-box-edit-outline.svg": "/bundles/pimareabricks/images/editmode/text-box-edit-outline.svg",
   "bundles/pimareabricks/images/editmode/code-braces-box.svg": "/bundles/pimareabricks/images/editmode/code-braces-box.svg",
   "bundles/pimareabricks/images/editmode/information-slab-box-outline.svg": "/bundles/pimareabricks/images/editmode/information-slab-box-outline.svg",

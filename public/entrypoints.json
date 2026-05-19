@@ -2,18 +2,18 @@
   "entrypoints": {
     "pimAreaBricksApp": {
       "css": [
-        "/bundles/pimareabricks/pimAreaBricksApp.css"
+        "/bundles/pimareabricks/pimAreaBricksApp.a91036e6.css"
       ],
       "js": [
-        "/bundles/pimareabricks/pimAreaBricksApp.js"
+        "/bundles/pimareabricks/pimAreaBricksApp.31d6cfe0.js"
       ]
     },
     "pimAreaBricksEditmode": {
       "css": [
-        "/bundles/pimareabricks/pimAreaBricksEditmode.css"
+        "/bundles/pimareabricks/pimAreaBricksEditmode.31d6cfe0.css"
       ],
       "js": [
-        "/bundles/pimareabricks/pimAreaBricksEditmode.js"
+        "/bundles/pimareabricks/pimAreaBricksEditmode.31d6cfe0.js"
       ]
     }
   }
