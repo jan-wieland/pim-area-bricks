@@ -33,7 +33,7 @@ class TemplateService
                 'isRootPage' => $document?->getId() !== null
                     && $document->getProperty('jwPimAreas.rootNav')?->getId() !== null
                     && $document->getId() === $document->getProperty('jwPimAreas.rootNav')->getId(),
-            ];
+            ],
         ];
     }
 
