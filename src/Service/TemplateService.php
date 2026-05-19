@@ -30,7 +30,9 @@ class TemplateService
                 'cssKeyBundle' => (string) $document?->getProperty('jwPimAreas.cssKey.bundle') ?? '_default',
                 'headFootInPim' => (bool) ($document?->getProperty('jwPimAreas.headFootInPim') ?? false),
                 # Generated data:
-                'isRootPage' => ($document?->getId() ?? '0') === $document->getProperty('jwPimAreas.rootNav')?->getId();
+                'isRootPage' => $document?->getId() !== null
+                    && $document->getProperty('jwPimAreas.rootNav')?->getId() !== null
+                    && $document->getId() === $document->getProperty('jwPimAreas.rootNav')->getId(),
             ];
         ];
     }
