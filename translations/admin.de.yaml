@@ -41,146 +41,146 @@ jwPimAreas:
         medium: "Mittel"
         large: "Groß"
         extra-large: "Sehr groß"
-anchor:
-  name: "Anker"
-  optional: "Anker (optional)"
-article:
-  name: "Artikel"
-aside:
-  name: "Ergänzung"
-headline:
-  name: "Überschrift"
-  subheadline: "Unterüberschrift (optional)"
-  seo:
-    label: "Überschrift SEO"
-    options:
-      h2: "H2 (default)"
-  style:
-    label: "anzeigen als"
-    options:
-      auto: "automatisch (wie SEO-Größe)"
-  subSize:
-    label: "Unterüberschrift als (optional)"
-    options:
-      auto: "automatisch (eine kleiner)"
-image:
-  name: "Bild"
-  plural: "Bilder"
-  imageAlt:
-    label: "Bild Alt-Text/Titel (aria-label / Pflicht)"
-  imageCaption:
-    label: "Bildunterschrift (optional, z.B. ©)"
-  imagePos:
-    label: "Positionierung des Bildes"
-    options:
-      top-left: "Oben links"
-      top-center: "Oben Mittig (deault)"
-      top-right: "Oben rechts"
-      bottom-left: "Unten links"
-      bottom-center: "Unten mittig"
-      bottom-right: "Unten rechts"
-      float-left: "Textfluss, Bild links"
-      float-right: "Textfluss, Bild rechts"
-  imagePosRelativeH:
-    label: "Positionierung zur Überschrift"
-    options:
-      before: "Ganz oben"
-      after: "Nach Überschrift"
-      introduction: "Nach Einleitung (empfohlener default)"
-  imageProportion:
-    label: "Bildproportionen (B x H)"
-    options:
-      16-9: "16:9 (default / TV)"
-      21-9: "21:9 (Cinematic)"
-      32:9: "32:9 (Super Ultrawide)"
-      5:7: "5:7 (Hochformat)"
-      1-1: "1-1 (Quadratisch)"
-      3:2: "3:2 (Kameraformat)"
-      2:3: "3:2 (Kamera Hochformat)"
-      4:5: "4:5 (Passbild)"
-      none: "Ohne (nur Breite)"
-      round: "Rund"
-      round-large: "Rund und groß"
-  imagesAsSlider:
-    label: "Bilder als Slider?"
-  sliderToBreakpoint:
-    label: "Breakpoints"
-    options:
-      always: "Immer als Slider (default)"
-      sm: "Bis Breakpoint sm"
-      md: "Bis Breakpoint md"
-      lg: "Bis Breakpoint lg"
-      xl: "Bis Breakpoint xl"
-  sliderImages:
-    label: "Bilder pro Slide (Desktop)"
-    options:
-      1: "1 Bild (default)"
-      2: "2 Bilder"
-      3: "3 Bilder"
-      4: "4 Bilder"
-      5: "5 Bilder"
-  sliderSpeed:
-    label: "Slide-Geschwindigkeit (in Millisekunden / 300)"
-  sliderAutoplay:
-    label: "Autoplay aktivieren?"
-  autoplayDelay:
-    label: "Autoplay Verzögerung (in Sekunden / 5000)"
-section:
-  name: "Sektion"
-snippet:
-  name: "Snippet"
-  description: "Pimcore Snippet"
-  label: "Pimcore Snippet (Drag & Drop):"
-  asFlexboxGrid:
-    label: "Inhalte als Flexbox-Grid (empfohlener Standard)?"
-plainHtml:
-  name: "Reines HTML"
-  label: "Reines HTML (Quelltext)"
-textAndImage:
-  name: "Text & Bild"
-texteditor:
-  name: "Text WYSIWYG"
-  columnCount: "Auf Desktop automatisch zweispaltig?"
-vueApp:
-  name: "VUE-Anwendung"
-  waitSpinner: "Mit Waiting-Spinner?"
-predefinedProperties:
-  navMainRoot:
-    name: "JW Nav Main"
-    description: "Root-Dokument der Main-Navigation"
-  hideNavs:
-    name: "JW Nav aus"
-    description: "Navigationen im Header ausblenden"
-  noIndexAll:
-    name: "JW Projekt auf noindex"
-    description: "Gesamtes Projekt auf robots, noindex & nofollow"
-  noIndex:
-    name: "JW Meta noindex"
-    description: "SEO-Meta-Tag robots: noindex"
-  noFollow:
-    name: "JW Meta nofollow"
-    description: "SEO-Meta-Tag robots: nofollow"
-  themeColor:
-    name: "JW Meta-Tag theme-color"
-    description: "Meta-Tag theme-color (#...)"
-  customTheme:
-    name: "JW Farbschema"
-    description: "Eigenes Themes über :root-Variablen"
-  customThemeBundle:
-    name: "JW Farbschema Bundle"
-    description: "Bundle-Key zum Farbschema (nur CSS)"
-  jsKey:
-    name: "JW Encore JS"
-    description: "Eigenes JS per encore entry script"
-  jsKeyBundle:
-    name: "JW Encore JS Bundle"
-    description: "Bundle-Key zum Encore JS"
-  cssKey:
-    name: "JW Encore CSS"
-    description: "Eigenes CSS per encore entry link"
-  cssKeyBundle:
-    name: "JW Encore CSS Bundle"
-    description: "Bundle-Key zum Encore CSS"
-  headFootInPim:
-    name: "JW Header & Footer im PIM"
-    description: "Header und Footer im Pimcore /admin anzeigen"
+  anchor:
+    name: "Anker"
+    optional: "Anker (optional)"
+  article:
+    name: "Artikel"
+  aside:
+    name: "Ergänzung"
+  headline:
+    name: "Überschrift"
+    subheadline: "Unterüberschrift (optional)"
+    seo:
+      label: "Überschrift SEO"
+      options:
+        h2: "H2 (default)"
+    style:
+      label: "anzeigen als"
+      options:
+        auto: "automatisch (wie SEO-Größe)"
+    subSize:
+      label: "Unterüberschrift als (optional)"
+      options:
+        auto: "automatisch (eine kleiner)"
+  image:
+    name: "Bild"
+    plural: "Bilder"
+    imageAlt:
+      label: "Bild Alt-Text/Titel (aria-label / Pflicht)"
+    imageCaption:
+      label: "Bildunterschrift (optional, z.B. ©)"
+    imagePos:
+      label: "Positionierung des Bildes"
+      options:
+        top-left: "Oben links"
+        top-center: "Oben Mittig (deault)"
+        top-right: "Oben rechts"
+        bottom-left: "Unten links"
+        bottom-center: "Unten mittig"
+        bottom-right: "Unten rechts"
+        float-left: "Textfluss, Bild links"
+        float-right: "Textfluss, Bild rechts"
+    imagePosRelativeH:
+      label: "Positionierung zur Überschrift"
+      options:
+        before: "Ganz oben"
+        after: "Nach Überschrift"
+        introduction: "Nach Einleitung (empfohlener default)"
+    imageProportion:
+      label: "Bildproportionen (B x H)"
+      options:
+        16-9: "16:9 (default / TV)"
+        21-9: "21:9 (Cinematic)"
+        32:9: "32:9 (Super Ultrawide)"
+        5:7: "5:7 (Hochformat)"
+        1-1: "1-1 (Quadratisch)"
+        3:2: "3:2 (Kameraformat)"
+        2:3: "3:2 (Kamera Hochformat)"
+        4:5: "4:5 (Passbild)"
+        none: "Ohne (nur Breite)"
+        round: "Rund"
+        round-large: "Rund und groß"
+    imagesAsSlider:
+      label: "Bilder als Slider?"
+    sliderToBreakpoint:
+      label: "Breakpoints"
+      options:
+        always: "Immer als Slider (default)"
+        sm: "Bis Breakpoint sm"
+        md: "Bis Breakpoint md"
+        lg: "Bis Breakpoint lg"
+        xl: "Bis Breakpoint xl"
+    sliderImages:
+      label: "Bilder pro Slide (Desktop)"
+      options:
+        1: "1 Bild (default)"
+        2: "2 Bilder"
+        3: "3 Bilder"
+        4: "4 Bilder"
+        5: "5 Bilder"
+    sliderSpeed:
+      label: "Slide-Geschwindigkeit (in Millisekunden / 300)"
+    sliderAutoplay:
+      label: "Autoplay aktivieren?"
+    autoplayDelay:
+      label: "Autoplay Verzögerung (in Sekunden / 5000)"
+  plainHtml:
+    name: "Reines HTML"
+    label: "Reines HTML (Quelltext)"
+  section:
+    name: "Sektion"
+  snippet:
+    name: "Snippet"
+    description: "Pimcore Snippet"
+    label: "Pimcore Snippet (Drag & Drop):"
+    asFlexboxGrid:
+      label: "Inhalte als Flexbox-Grid (empfohlener Standard)?"
+  textAndImage:
+    name: "Text & Bild"
+  texteditor:
+    name: "Text WYSIWYG"
+    columnCount: "Auf Desktop automatisch zweispaltig?"
+  vueApp:
+    name: "VUE-Anwendung"
+    waitSpinner: "Mit Waiting-Spinner?"
+  predefinedProperties:
+    navMainRoot:
+      name: "JW Nav Main"
+      description: "Root-Dokument der Main-Navigation"
+    hideNavs:
+      name: "JW Nav aus"
+      description: "Navigationen im Header ausblenden"
+    noIndexAll:
+      name: "JW Projekt auf noindex"
+      description: "Gesamtes Projekt auf robots, noindex & nofollow"
+    noIndex:
+      name: "JW Meta noindex"
+      description: "SEO-Meta-Tag robots: noindex"
+    noFollow:
+      name: "JW Meta nofollow"
+      description: "SEO-Meta-Tag robots: nofollow"
+    themeColor:
+      name: "JW Meta-Tag theme-color"
+      description: "Meta-Tag theme-color (#...)"
+    customTheme:
+      name: "JW Farbschema"
+      description: "Eigenes Themes über :root-Variablen"
+    customThemeBundle:
+      name: "JW Farbschema Bundle"
+      description: "Bundle-Key zum Farbschema (nur CSS)"
+    jsKey:
+      name: "JW Encore JS"
+      description: "Eigenes JS per encore entry script"
+    jsKeyBundle:
+      name: "JW Encore JS Bundle"
+      description: "Bundle-Key zum Encore JS"
+    cssKey:
+      name: "JW Encore CSS"
+      description: "Eigenes CSS per encore entry link"
+    cssKeyBundle:
+      name: "JW Encore CSS Bundle"
+      description: "Bundle-Key zum Encore CSS"
+    headFootInPim:
+      name: "JW Header & Footer im PIM"
+      description: "Header und Footer im Pimcore /admin anzeigen"

@@ -41,150 +41,150 @@ jwPimAreas:
         medium: "Medium"
         large: "Large"
         extra-large: "Very large"
-anchor:
-  name: "Anchor"
-  optional: "Anchor (optional)"
-article:
-  name: "Article"
-aside:
-  name: "Aside part"
-headline:
-  name: "Headline"
-  subheadline: "Subheading (optional)"
-  seo:
-    label: "Headline SEO"
-    options:
-      h1: "H1"
-      h2: "H2 (default)"
-      h3: "H3"
-  style:
-    label: "display as"
-    options:
-  subSize:
-    label: "Subheading as (optional)"
-    options:
-      auto: "automatically (like SEO size)"
-      h1: "H1"
-      h2: "H2"
-      h3: "H3"
-image:
-  name: "Image"
-  plural: "Images"
-  imageAlt:
-    label: "Image alt/title (aria-label / required)"
-  imageCaption:
-    label: "Image caption (optional, e.g. ©)"
-  imagePos:
-    label: "Positioning of the image"
-    options:
-      top-left: "Top left"
-      top-center: "Top center (deault)"
-      top-right: "Top right"
-      bottom-left: "Bottom left"
-      bottom-center: "Bottom center"
-      bottom-right: "Bottom right"
-      float-left: "Floating, image on left"
-      float-right: "Floating, image on right"
-  imagePosRelativeH:
-    label: "Positionierung zur Überschrift"
-    options:
-      before: "Ganz oben"
-      after: "Nach Überschrift"
-      introduction: "Nach Einleitung (empfohlener default)"
-  imageProportion:
-    label: "Bildproportionen (B x H)"
-    options:
-      16-9: "16:9 (default / TV)"
-      21-9: "21:9 (Cinematic)"
-      32:9: "32:9 (Super Ultrawide)"
-      5:7: "5:7 (Portrait format)"
-      1-1: "1-1 (Square)"
-      3:2: "3:2 (Camera format)"
-      2:3: "3:2 (Camera in portrait)"
-      4:5: "4:5 (Passport photo)"
-      none: "Without (width only)"
-      round: "Round"
-      round-large: "Round and large"
-  imagesAsSlider:
-    label: "Images as a slider?"
-  sliderToBreakpoint:
-    label: "Breakpoints"
-    options:
-      always: "Always as slider (default)"
-      sm: "Until breakpoint sm"
-      md: "Until breakpoint md"
-      lg: "Until breakpoint lg"
-      xl: "Until breakpoint xl"
-  sliderImages:
-    label: "Images per slide (Desktop)"
-    options:
-      1: "1 image (default)"
-      2: "2 images"
-      3: "3 images"
-      4: "4 images"
-      5: "5 images"
-  sliderSpeed:
-    label: "Slide speed (in milliseconds / 300)"
-  sliderAutoplay:
-    label: "Activate autoplay?"
-  autoplayDelay:
-    label: "Autoplay delay (in seconds / 5000)"
-plainHtml:
-  name: "Plain HTML"
-  label: "Plain HTML (source code)"
-section:
-  name: "Section"
-snippet:
-  name: "Snippet"
-  description: "Pimcore snippet"
-  label: "Pimcore snippet (drag & drop):"
-  asFlexboxGrid:
-    label: "Content as a Flexbox Grid (Recommended Default)?"
-textAndImage:
-  name: "Text & image"
-texteditor:
-  name: "Text WYSIWYG"
-  columnCount: "Automatically two columns on desktop?"
-vueApp:
-  name: "VUE application"
-  waitSpinner: "With a waiting spinner?"
-predefinedProperties:
-  navMainRoot:
-    name: "JW Nav Main"
-    description: "Root Document of the Main navigation"
-  hideNavs:
-    name: "JW Nav off"
-    description: "Hide header navigations"
-  noIndexAll:
-    name: "JW Set project to noindex"
-    description: "Entire project set to robots, noindex and nofollow."
-  noIndex:
-    name: "JW Meta noindex"
-    description: "SEO mata tag robots: noindex"
-  noFollow:
-    name: "JW Meta nofollow"
-    description: "SEO mata tag robots: nofollow"
-  themeColor:
-    name: "JW Meta theme-color"
-    description: "Meta tag theme-color (#...)"
-  customTheme:
-    name: "JW Color theme"
-    description: "Custom them thru :root variables"
-  customThemeBundle:
-    name: "JW Color theme bundle"
-    description: "Bundle key for custom theme (only CSS)"
-  jsKey:
-    name: "JW Encore JS"
-    description: "Custom encore entry script tags"
-  jsKeyBundle:
-    name: "JW Encore JS bundle"
-    description: "Bundle key for encore JS"
-  cssKey:
-    name: "JW Encore CSS"
-    description: "Custom encore entry link tags"
-  cssKeyBundle:
-    name: "JW Encore CSS bundle"
-    description: "Bundle key for encore CSS"
-  headFootInPim:
-    name: "JW Header & Footer in the PIM"
-    description: "Display header and footer in Pimcore /admin"
+  anchor:
+    name: "Anchor"
+    optional: "Anchor (optional)"
+  article:
+    name: "Article"
+  aside:
+    name: "Aside part"
+  headline:
+    name: "Headline"
+    subheadline: "Subheading (optional)"
+    seo:
+      label: "Headline SEO"
+      options:
+        h1: "H1"
+        h2: "H2 (default)"
+        h3: "H3"
+    style:
+      label: "display as"
+      options:
+    subSize:
+      label: "Subheading as (optional)"
+      options:
+        auto: "automatically (like SEO size)"
+        h1: "H1"
+        h2: "H2"
+        h3: "H3"
+  image:
+    name: "Image"
+    plural: "Images"
+    imageAlt:
+      label: "Image alt/title (aria-label / required)"
+    imageCaption:
+      label: "Image caption (optional, e.g. ©)"
+    imagePos:
+      label: "Positioning of the image"
+      options:
+        top-left: "Top left"
+        top-center: "Top center (deault)"
+        top-right: "Top right"
+        bottom-left: "Bottom left"
+        bottom-center: "Bottom center"
+        bottom-right: "Bottom right"
+        float-left: "Floating, image on left"
+        float-right: "Floating, image on right"
+    imagePosRelativeH:
+      label: "Positionierung zur Überschrift"
+      options:
+        before: "Ganz oben"
+        after: "Nach Überschrift"
+        introduction: "Nach Einleitung (empfohlener default)"
+    imageProportion:
+      label: "Bildproportionen (B x H)"
+      options:
+        16-9: "16:9 (default / TV)"
+        21-9: "21:9 (Cinematic)"
+        32:9: "32:9 (Super Ultrawide)"
+        5:7: "5:7 (Portrait format)"
+        1-1: "1-1 (Square)"
+        3:2: "3:2 (Camera format)"
+        2:3: "3:2 (Camera in portrait)"
+        4:5: "4:5 (Passport photo)"
+        none: "Without (width only)"
+        round: "Round"
+        round-large: "Round and large"
+    imagesAsSlider:
+      label: "Images as a slider?"
+    sliderToBreakpoint:
+      label: "Breakpoints"
+      options:
+        always: "Always as slider (default)"
+        sm: "Until breakpoint sm"
+        md: "Until breakpoint md"
+        lg: "Until breakpoint lg"
+        xl: "Until breakpoint xl"
+    sliderImages:
+      label: "Images per slide (Desktop)"
+      options:
+        1: "1 image (default)"
+        2: "2 images"
+        3: "3 images"
+        4: "4 images"
+        5: "5 images"
+    sliderSpeed:
+      label: "Slide speed (in milliseconds / 300)"
+    sliderAutoplay:
+      label: "Activate autoplay?"
+    autoplayDelay:
+      label: "Autoplay delay (in seconds / 5000)"
+  plainHtml:
+    name: "Plain HTML"
+    label: "Plain HTML (source code)"
+  section:
+    name: "Section"
+  snippet:
+    name: "Snippet"
+    description: "Pimcore snippet"
+    label: "Pimcore snippet (drag & drop):"
+    asFlexboxGrid:
+      label: "Content as a Flexbox Grid (Recommended Default)?"
+  textAndImage:
+    name: "Text & image"
+  texteditor:
+    name: "Text WYSIWYG"
+    columnCount: "Automatically two columns on desktop?"
+  vueApp:
+    name: "VUE application"
+    waitSpinner: "With a waiting spinner?"
+  predefinedProperties:
+    navMainRoot:
+      name: "JW Nav Main"
+      description: "Root Document of the Main navigation"
+    hideNavs:
+      name: "JW Nav off"
+      description: "Hide header navigations"
+    noIndexAll:
+      name: "JW Set project to noindex"
+      description: "Entire project set to robots, noindex and nofollow."
+    noIndex:
+      name: "JW Meta noindex"
+      description: "SEO mata tag robots: noindex"
+    noFollow:
+      name: "JW Meta nofollow"
+      description: "SEO mata tag robots: nofollow"
+    themeColor:
+      name: "JW Meta theme-color"
+      description: "Meta tag theme-color (#...)"
+    customTheme:
+      name: "JW Color theme"
+      description: "Custom them thru :root variables"
+    customThemeBundle:
+      name: "JW Color theme bundle"
+      description: "Bundle key for custom theme (only CSS)"
+    jsKey:
+      name: "JW Encore JS"
+      description: "Custom encore entry script tags"
+    jsKeyBundle:
+      name: "JW Encore JS bundle"
+      description: "Bundle key for encore JS"
+    cssKey:
+      name: "JW Encore CSS"
+      description: "Custom encore entry link tags"
+    cssKeyBundle:
+      name: "JW Encore CSS bundle"
+      description: "Bundle key for encore CSS"
+    headFootInPim:
+      name: "JW Header & Footer in the PIM"
+      description: "Display header and footer in Pimcore /admin"
