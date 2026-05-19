@@ -9,7 +9,7 @@ class BricksService
      * @param string $transKey
      * @return string
      */
-    protected static function transAdmin(string $transKey): string
+    public static function transAdmin(string $transKey): string
     {
         return \Pimcore::getContainer()->get('translator')->trans($transKey, [], 'admin');
     }
@@ -18,7 +18,7 @@ class BricksService
      * @param bool $short
      * @return array
      */
-    protected static function tabLayout(bool $short = false): array
+    public static function tabLayout(bool $short = false): array
     {
         return [[
             'type' => 'panel',
@@ -115,7 +115,7 @@ class BricksService
     /**
      * @return array
      */
-    protected static function tabImages(): array
+    public static function tabImages(): array
     {
         return [[
             'type' => 'panel',
@@ -190,7 +190,7 @@ class BricksService
     /**
      * @return array
      */
-    protected static function itemsImageSlide(): array {
+    public static function itemsImageSlide(): array {
         return [[
             'type' => 'panel',
             'title' => BricksService::transAdmin('jwPimAreas.groups.options'),
@@ -240,7 +240,7 @@ class BricksService
     /**
      * @return array
      */
-     protected static function tabTexteditor(): array {
+     public static function tabTexteditor(): array {
          return [[
             'type' => 'panel',
             'title' => BricksService::transAdmin('jwPimAreas.groups.options'),
@@ -260,7 +260,7 @@ class BricksService
     /**
      * @return array
      */
-     protected static function itemsHeadline(): array {
+     public static function itemsHeadline(): array {
          return [[
              'type' => 'select',
              'name' => 'headlineSize',
@@ -309,7 +309,7 @@ class BricksService
     /**
     * @return array
     */
-    protected static function tabLayoutAnchor(): array {
+    public static function tabLayoutAnchor(): array {
         return [[
             'type' => 'tabpanel',
             'items' => [
@@ -332,7 +332,7 @@ class BricksService
      * @param Info $info
      * @return string
      */
-    protected static function buildHtmlTagOpen(Info $info): string
+    public static function buildHtmlTagOpen(Info $info): string
     {
         $gridColumns = $info->getDocument()->getEditable('gridColumns')?->getData() ?? 'none';
 
