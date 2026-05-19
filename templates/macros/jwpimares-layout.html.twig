@@ -7,5 +7,5 @@
         {% set gridColumnsClass = 'jwpimareas-flexbox-' ~ gridColumns %}
     {% endif %}
 
-    {{ gridColumnsClass | raw | trim }}
+    {{- gridColumnsClass -}}
 {%- endmacro macro_gridColumns -%}
