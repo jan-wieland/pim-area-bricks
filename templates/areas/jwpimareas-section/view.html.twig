@@ -5,6 +5,6 @@
         <small>{{ 'jwPimAreas.section.name' | trans({}, 'admin') }}</small>
     </div>
 {% endif %}
-<section{{ anchor is not empty ? ' id=' ~ anchor : '' }} class="jwpimareas-flexbox-0 flex content-stretch">
+<section{{ anchor is not empty ? ' id=' ~ anchor : '' }} class="jwpimareas-flexbox-0 flex flex-wrap content-stretch">
     {% include '@PimAreaBricks/areablocks/content.html.twig' with {'infoId': info.getId()} %}
 </section>
