@@ -9,12 +9,12 @@ class TemplateService
 
     /**
      * @param Document $document
-     * @return object
+     * @return array
      */
-    public static function getViewParams(Document $document): object
+    public static function getViewParams(Document $document): array
     {
-        return (object) [
-            'jwPimAreas' => (object) [
+        return [
+            'jwPimAreas' => [
                 # Data from page properties:
                 'navMain' => self::getNavMain($document),
                 'hideNavs' => (bool) ($document?->getProperty('jwPimAreas.hideNavs') ?? false),
