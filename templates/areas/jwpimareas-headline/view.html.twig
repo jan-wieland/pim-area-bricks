@@ -7,9 +7,13 @@
     placeholder: 'jwPimAreas.headline.subheadline' | trans({}, 'admin'),
 }) %}
 
-<div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
+{% import 'macros/jwpimares-layout.html.twig' as macrosJwpimaresLayout %}
+
+<div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }} class="{{ macrosJwpimaresLayout.macro_gridColumns() }}">
     <{{ size }}{{ hClass | raw }}>{{ headline | raw }}</{{ size }}>
-    {% if editmode or not headlineSub.isEmpty() %}
+    {%- if editmode or not headlineSub.isEmpty() -%}
+        {{ editmode ? '<div class="pt-2">' : '' }}
         <{{ subSize }}{{ subClass | raw }}>{{ headlineSub | raw }}</{{ subSize }}>
-    {% endif %}
+        {{ editmode ? '</div>' : '' }}
+    {%- endif -%}
 </div>

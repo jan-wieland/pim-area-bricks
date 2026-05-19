@@ -1,0 +1,11 @@
+{%- macro macro_gridColumns() -%}
+    {% set gridColumnsData = pimcore_select('gridColumns') %}
+    {% set gridColumns = gridColumnsData and gridColumnsData.getData() ? gridColumnsData.getData() : 'none' %}
+
+    {% set gridColumnsClass = 'jwpimareas-flexbox-0' %}
+    {% if gridColumns is not same as('none') %}
+        {% set gridColumnsClass = 'jwpimareas-flexbox-' ~ gridColumns %}
+    {% endif %}
+
+    {{ gridColumnsClass | raw | trim }}
+{%- endmacro macro_gridColumns -%}
