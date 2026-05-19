@@ -20,35 +20,14 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="{{ jwPimAreas.themeColor | default('#000') | raw }}">
 
-    {# Bundle JS and CSS: #}
-    {{ encore_entry_script_tags('pimAreaBricksApp', null, 'pimareabricks') }}
-    {{ encore_entry_link_tags('pimAreaBricksApp', null, 'pimareabricks') }}
-
-    {# Custom-built JS, optionally including its bundle name: #}
-    {% if jwPimAreas.jsKey is defined and jwPimAreas.jsKey %}
-        {{ encore_entry_script_tags(jwPimAreas.jsKey, null, jwPimAreas.jsKeyBundle) }}
-    {% endif %}
-
-    {# Custom-built CSS, optionally including its bundle name: #}
-    {% if jwPimAreas.cssKey is defined and jwPimAreas.cssKey %}
-        {{ encore_entry_link_tags(jwPimAreas.cssKey, null, jwPimAreas.cssKeyBundle) }}
-    {% endif %}
-
-    {# Custom-built color thema and layout values, optionally including its bundle name: #}
-    {% if jwPimAreas.customTheme is defined and jwPimAreas.customTheme %}
-        {{ encore_entry_link_tags(jwPimAreas.customTheme, null, jwPimAreas.customThemeyBundle) }}
-    {% endif %}
-
-    {% if editmode %}
-        {{ encore_entry_link_tags('pimAreaBricksEditmode', null, 'pimareabricks') }}
-    {% endif %}
-
     {% set jwPimAreas_title = document.getTitle() | trim %}
     {% set jwPimAreas_description = document.getDescription() | trim %}
     {% if jwPimAreas_title %}
         {% do pimcore_head_title().set(jwPimAreas_title) %}
         {% do pimcore_head_meta().setProperty('og:title', jwPimAreas_title) %}
     {% endif %}
+    {{ pimcore_head_title() }}
+
     {% if jwPimAreas_description %}
         {% do pimcore_head_meta().setDescription(jwPimAreas_description) %}
         {% do pimcore_head_meta().setProperty('og:description', jwPimAreas_description) %}
@@ -57,6 +36,27 @@
     {% do pimcore_head_meta().setProperty('og:type', 'article') %}
     {% do pimcore_head_meta().setProperty('og:locale', app.request.locale) %}
     {% do pimcore_head_meta().setProperty('og:image', '') %}
+
+    {{ pimcore_head_meta() }}
+
+    {% block stylesheets %}
+        {# Bundle CSS: #}
+        {{ encore_entry_link_tags('pimAreaBricksApp', null, 'pimareabricks') }}
+
+        {# Custom-built CSS, optionally including its bundle name: #}
+        {% if jwPimAreas.cssKey is defined and jwPimAreas.cssKey %}
+            {{ encore_entry_link_tags(jwPimAreas.cssKey, null, jwPimAreas.cssKeyBundle) }}
+        {% endif %}
+
+        {# Custom-built color thema and layout values, optionally including its bundle name: #}
+        {% if jwPimAreas.customTheme is defined and jwPimAreas.customTheme %}
+            {{ encore_entry_link_tags(jwPimAreas.customTheme, null, jwPimAreas.customThemeBundle) }}
+        {% endif %}
+
+        {% if editmode %}
+            {{ encore_entry_link_tags('pimAreaBricksEditmode', null, 'pimareabricks') }}
+        {% endif %}
+    {% endblock %}
 </head>
 <body class="antialiased bg-jwpimareas-body text-jwpimareas-body-text {{ editmode ? 'editmode' : '' }}">
 {% if not editmode or jwPimAreas.headFootInPim %}
@@ -95,5 +95,16 @@
         </div>
     {% endif %}
 </div>
+
+{% block javascripts %}
+    {# Bundle JS: #}
+    {{ encore_entry_script_tags('pimAreaBricksApp', null, 'pimareabricks') }}
+
+    {# Custom-built JS, optionally including its bundle name: #}
+    {% if jwPimAreas.jsKey is defined and jwPimAreas.jsKey %}
+        {{ encore_entry_script_tags(jwPimAreas.jsKey, null, jwPimAreas.jsKeyBundle) }}
+    {% endif %}
+{% endblock %}
+
 </body>
 </html>
