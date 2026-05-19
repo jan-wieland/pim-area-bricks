@@ -20,7 +20,7 @@
 @utility flex-full {
     flex: 0 0 100%;
 }
-@layer components {
+@components {
     .jwpimareas-page {
         width: min(100%, 100vw);
         max-width: min(100%, 100vw);
