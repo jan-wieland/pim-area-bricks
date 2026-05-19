@@ -5,13 +5,13 @@ use Pimcore\Model\Document;
 use Pimcore\Model\Document\Link;
 
 class TemplateService
-{(object)
+{
 
-        /**
+    /**
      * @param Document $document
-     * @return array
+     * @return object
      */
-    public static function getViewParams(Document $document): array
+    public static function getViewParams(Document $document): object
     {
         return (object) [
             'jwPimAreas' => (object) [
