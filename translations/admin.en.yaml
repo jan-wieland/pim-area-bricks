@@ -177,13 +177,13 @@ jwPimAreas:
       name: "JW Encore JS"
       description: "Custom encore entry script tags"
     jsKeyBundle:
-      name: "JW JS bundle"
+      name: "JW Encore JS bundle"
       description: "Bundle key for encore JS"
     cssKey:
       name: "JW Encore CSS"
       description: "Custom encore entry link tags"
     cssKeyBundle:
-      name: "JW CSS bundle"
+      name: "JW Encore CSS bundle"
       description: "Bundle key for encore CSS"
     headFootInPim:
       name: "JW Header & Footer in the PIM"
