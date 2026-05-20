@@ -6,50 +6,60 @@ use Pimcore\Model\Document\Link;
 
 class TemplateService
 {
-
     /**
      * @param Document $document
      * @return array
      */
     public static function getViewParams(Document $document): array
     {
-        $customThemeBundle  = (string) $document?->getProperty('jwPimAreas.customTheme.bundle') ?: '_default';
+        # Check whether the bundles are (still) present:
+        $customThemeBundle  = (string) self::getPageProperty($document, 'customTheme.bundle') ?: '_default';
         $hasCustomThemeBundle  = $customThemeBundle !== '_default' && \Pimcore::getKernel()->hasBundle($customThemeBundle);
-
-        $jsKeyBundle  = (string) $document?->getProperty('jwPimAreas.jsKey.bundle') ?: '_default';
+        $jsKeyBundle  = (string) self::getPageProperty($document, 'jsKey.bundle') ?: '_default';
         $hasJsKeyBundle  = $jsKeyBundle !== '_default' && \Pimcore::getKernel()->hasBundle($jsKeyBundle);
-
-        $cssKeyBundle = (string) $document?->getProperty('jwPimAreas.cssKey.bundle') ?: '_default';
+        $cssKeyBundle = (string) self::getPageProperty($document, 'cssKey.bundle') ?: '_default';
         $hasCssKeyBundle = $cssKeyBundle !== '_default' && \Pimcore::getKernel()->hasBundle($cssKeyBundle);
 
         return [
             'jwPimAreas' => [
                 # Data from page properties:
                 'navMain' => self::getNavMain($document),
-                'hideNavs' => (bool) ($document?->getProperty('jwPimAreas.hideNavs') ?? false),
-                'noIndexAll' => (bool) ($document?->getProperty('jwPimAreas.noIndexAll') ?? false),
-                'noIndex' => (bool) ($document?->getProperty('jwPimAreas.noIndex') ?? false),
-                'noFollow' => (bool) ($document?->getProperty('jwPimAreas.noFollow') ?? false),
-                'themeColor' => (string) $document?->getProperty('jwPimAreas.themeColor') ?: '#000',
-                'customTheme' =>  $hasCustomThemeBundle ? ((string) $document?->getProperty('jwPimAreas.customTheme') ?: null) : null,
+                'hideNavs' => (bool) (self::getPageProperty($document, 'hideNavs') ?? false),
+                'noIndexAll' => (bool) (self::getPageProperty($document, 'noIndexAll') ?? false),
+                'noIndex' => (bool) (self::getPageProperty($document, 'noIndex') ?? false),
+                'noFollow' => (bool) (self::getPageProperty($document, 'noFollow') ?? false),
+                'themeColor' => (string) self::getPageProperty($document, 'themeColor') ?: '#000',
+                'customTheme' =>  $hasCustomThemeBundle ? ((string) self::getPageProperty($document, 'customTheme') ?: null) : null,
                 'customThemeBundle' => $hasCustomThemeBundle ? $customThemeBundle : null,
-                'fontFamilySans' => (string) $document?->getProperty('jwPimAreas.fontFamilySans') ?: 'Merriweather Sans',
-                'fontFamilySerif' => (string) $document?->getProperty('jwPimAreas.fontFamilySerif') ?: 'Merriweather',
-                'bodyFontFamily' => (string) $document?->getProperty('jwPimAreas.bodyFontFamily') ?: 'font-sans',
-                'bodyFontWeight' => (string) $document?->getProperty('jwPimAreas.bodyFontWeight') ?: 'font-light',
-                'bodyAntialiased' => (bool) ($document?->getProperty('jwPimAreas.bodyAntialiased') ?? true),
-                'jsKey' => $hasJsKeyBundle ? ((string) $document?->getProperty('jwPimAreas.jsKey') ?: null) : null,
+                'fontFamilySans' => (string) self::getPageProperty($document, 'fontFamilySans') ?: 'Merriweather Sans',
+                'fontFamilySerif' => (string) self::getPageProperty($document, 'fontFamilySerif') ?: 'Merriweather',
+                'bodyFontFamily' => (string) self::getPageProperty($document, 'bodyFontFamily') ?: 'font-sans',
+                'bodyFontWeight' => (string) self::getPageProperty($document, 'bodyFontWeight') ?: 'font-light',
+                'bodyAntialiased' => (bool) (self::getPageProperty($document, 'bodyAntialiased') ?? true),
+                'jsKey' => $hasJsKeyBundle ? ((string) self::getPageProperty($document, 'jsKey') ?: null) : null,
                 'jsKeyBundle' => $hasJsKeyBundle  ? $jsKeyBundle : null,
-                'cssKey' => $hasCssKeyBundle ? ((string) $document?->getProperty('jwPimAreas.cssKey') ?: null) : null,
+                'cssKey' => $hasCssKeyBundle ? ((string) self::getPageProperty($document, 'cssKey') ?: null) : null,
                 'cssKeyBundle' => $hasCssKeyBundle ? $cssKeyBundle : null,
-                'headFootInPim' => (bool) ($document?->getProperty('jwPimAreas.headFootInPim') ?? false),
+                'headFootInPim' => (bool) (self::getPageProperty($document, 'headFootInPim') ?? false),
                 # Generated data:
                 'isRootPage' => $document?->getId() !== null
-                    && $document->getProperty('jwPimAreas.rootNav')?->getId() !== null
-                    && $document->getId() === $document->getProperty('jwPimAreas.rootNav')->getId(),
+                    && self::getPageProperty($document, 'rootNav')?->getId() !== null
+                    && $document->getId() === self::getPageProperty($document, 'rootNav')?->getId(),
                 'pageId' => (string) ($document ? $document->getId() : '0')
             ],
         ];
+    }
+
+    /**
+     * @param Document|null $document
+     * @param string $key
+     * @return mixed
+     */
+    private static function getPageProperty(?Document $document, string $pagePropertyKey): mixed
+    {
+        return $document?->getProperty(
+            sprintf('jwPimAreas.%s', $pagePropertyKey)
+        );
     }
 
     /**
