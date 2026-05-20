@@ -20,24 +20,25 @@ class TemplateService
                 'hideNavs' => (bool) ($document?->getProperty('jwPimAreas.hideNavs') ?? false),
                 'noIndexAll' => (bool) $document?->getProperty('jwPimAreas.noIndexAll') ?? false,
                 'noIndex' => (bool) $document?->getProperty('jwPimAreas.noIndex') ?? false,
-                'noFollow' => (bool) $document?->getProperty('jwPimAreas.noFollow') ?? false,
-                'themeColor' => (string) $document?->getProperty('jwPimAreas.themeColor') ?? '#000',
-                'customTheme' => (string) $document?->getProperty('jwPimAreas.customTheme'),
-                'customThemeBundle' => (string) $document?->getProperty('jwPimAreas.customTheme.bundle') ?? '_default',
-                'fontFamilySans' => (string) $document?->getProperty('jwPimAreas.fontFamilySans') ?? 'Merriweather Sans',
-                'fontFamilySerif' => (string) $document?->getProperty('jwPimAreas.fontFamilySerif') ?? 'Merriweather',
-                'bodyFontFamily' => (string) $document?->getProperty('jwPimAreas.bodyFontFamily') ?? 'font-sans',
-                'bodyFontWeight' => (string) $document?->getProperty('jwPimAreas.bodyFontWeight') ?? 'font-light',
+                'noFollow' => (bool) $document?->getProperty('jwPimAreas.noFollow') ?: false,
+                'themeColor' => (string) $document?->getProperty('jwPimAreas.themeColor') ?: '#000',
+                'customTheme' => (string) $document?->getProperty('jwPimAreas.customTheme') ?: null,
+                'customThemeBundle' => (string) $document?->getProperty('jwPimAreas.customTheme.bundle') ?: '_default',
+                'fontFamilySans' => (string) $document?->getProperty('jwPimAreas.fontFamilySans') ?: 'Merriweather Sans',
+                'fontFamilySerif' => (string) $document?->getProperty('jwPimAreas.fontFamilySerif') ?: 'Merriweather',
+                'bodyFontFamily' => (string) $document?->getProperty('jwPimAreas.bodyFontFamily') ?: 'font-sans',
+                'bodyFontWeight' => (string) $document?->getProperty('jwPimAreas.bodyFontWeight') ?: 'font-light',
                 'bodyAntialiased' => (bool) $document?->getProperty('jwPimAreas.bodyFontWeight') ?? true,
-                'jsKey' => (string) $document?->getProperty('jwPimAreas.jsKey'),
-                'jsKeyBundle' => (string) $document?->getProperty('jwPimAreas.jsKey.bundle') ?? '_default',
-                'cssKey' => (string) $document?->getProperty('jwPimAreas.cssKey'),
-                'cssKeyBundle' => (string) $document?->getProperty('jwPimAreas.cssKey.bundle') ?? '_default',
+                'jsKey' => (string) $document?->getProperty('jwPimAreas.jsKey') ?: null,
+                'jsKeyBundle' => (string) $document?->getProperty('jwPimAreas.jsKey.bundle') ?: '_default',
+                'cssKey' => (string) $document?->getProperty('jwPimAreas.cssKey') ?: null,
+                'cssKeyBundle' => (string) $document?->getProperty('jwPimAreas.cssKey.bundle') ?: '_default',
                 'headFootInPim' => (bool) ($document?->getProperty('jwPimAreas.headFootInPim') ?? false),
                 # Generated data:
                 'isRootPage' => $document?->getId() !== null
                     && $document->getProperty('jwPimAreas.rootNav')?->getId() !== null
                     && $document->getId() === $document->getProperty('jwPimAreas.rootNav')->getId(),
+                'pageId' => (string) ($document ? $document->getId() : '0')
             ],
         ];
     }
