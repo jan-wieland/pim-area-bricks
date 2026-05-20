@@ -20,6 +20,8 @@ class TemplateService
         $cssKeyBundle = (string) self::getPageProperty($document, 'cssKey.bundle') ?: '_default';
         $hasCssKeyBundle = $cssKeyBundle !== '_default' && \Pimcore::getKernel()->hasBundle($cssKeyBundle);
 
+        dump($document);
+
         return [
             'jwPimAreas' => [
                 # Data from page properties:
@@ -45,7 +47,7 @@ class TemplateService
                 'isRootPage' => $document?->getId() !== null
                     && self::getPageProperty($document, 'rootNav')?->getId() !== null
                     && $document->getId() === self::getPageProperty($document, 'rootNav')?->getId(),
-                'pageId' => (string) ($document ? $document->getId() : '0')
+                'pageId' => (string) ($document ? $document->getId() : '0'),
             ],
         ];
     }

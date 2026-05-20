@@ -8,10 +8,10 @@
     {# Build the robots meta tag: #}
     {% if jwPimAreas.noIndexAll %}
         <meta name="robots" content="noindex,nofollow,noodp,noydir,noarchive">
-        <!-- This page: {{ (jwPimAreas.noIndex | default(true)) ? 'no' : '' }}index, {{ (jwPimAreas.noFollow | default(true)) ? 'no' : '' }}follow -->
+        <!-- This page: {{ jwPimAreas.noIndex ? 'no' : '' }}index, {{ jwPimAreas.noFollow ? 'no' : '' }}follow -->
     {% else %}
-        {% set jwPimAreas_robots = ((jwPimAreas_noIndex | default(true)) ? 'no' : '') ~ 'index,' %}
-        {% set jwPimAreas_robots = jwPimAreas_robots ~ ((jwPimAreas.noFollow | default(true)) ? 'no' : '') ~ 'follow' %}
+        {% set jwPimAreas_robots = (jwPimAreas_noIndex ? 'no' : '') ~ 'index,' %}
+        {% set jwPimAreas_robots = jwPimAreas_robots ~ (jwPimAreas.noFollow ? 'no' : '') ~ 'follow' %}
         <meta name="robots" content="{{ jwPimAreas_robots }},noodp,noydir,noarchive">
     {% endif %}
 
