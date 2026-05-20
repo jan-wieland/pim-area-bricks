@@ -58,7 +58,7 @@
         {% endif %}
     {% endblock %}
 </head>
-<body class="antialiased bg-jwpimareas-body text-jwpimareas-body-text {{ editmode ? 'editmode' : '' }}">
+<body class="{{ jwPimAreas.bodyFontFamily }} {{ jwPimAreas.bodyFontWeight }}{{ jwPimAreas.bodyAntialiased ? ' antialiased' : '' }} bg-jwpimareas-body text-jwpimareas-body-text {{ editmode ? 'editmode' : '' }}">
 {% if not editmode or jwPimAreas.headFootInPim %}
     <div class="fixed top-0 left-0 h-jwpimareas-header w-screen max-w-screen bg-jwpimareas-header text-jwpimareas-header-text jwpimareas-shadow-header z-40 transition-[height] duration-500">
         <header>

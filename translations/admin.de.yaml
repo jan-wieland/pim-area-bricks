@@ -169,6 +169,21 @@ jwPimAreas:
     customThemeBundle:
       name: "JW Farbschema Bundle"
       description: "Bundle-Key zum Farbschema (nur CSS)"
+    fontFamilySans:
+      name: "JW Family Sans"
+      description: "Name der font-family für font-sans (sans-serif)"
+    fontFamilySerif:
+      name: "JW Family Serif"
+      description: "Name der font-family für font-serif (serif)"
+    bodyFontFamily:
+      name: "JW Font auf body"
+      description: "Tailwind Font auf dem Body (default: font-sans)"
+    bodyFontWeight:
+      name: "JW Font-Weight auf body"
+      description: "Tailwind Weight auf dem Body (default: font-light = 300)"
+    bodyAntialiased:
+      name: "JW Antialiased auf body"
+      description: "Tailwind Antialiased auf dem Body?"
     jsKey:
       name: "JW Encore JS"
       description: "Eigenes JS per encore entry script"
