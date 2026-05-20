@@ -143,10 +143,10 @@ class Installer extends SettingsStoreAwareInstaller
                 'ctype' => 'document',
             ],
             [
-                'name' => 'jwPimAreas.predefinedProperties.bodyFontWeigh.name',
+                'name' => 'jwPimAreas.predefinedProperties.bodyFontWeight.name',
                 'key' => 'jwPimAreas.bodyFontWeight',
                 'type' => 'text',
-                'description' => 'jwPimAreas.predefinedProperties.bodyFontWeigh.description',
+                'description' => 'jwPimAreas.predefinedProperties.bodyFontWeight.description',
                 'inheritable' => true,
                 'ctype' => 'document',
             ],
