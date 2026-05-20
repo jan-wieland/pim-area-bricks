@@ -5,20 +5,22 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {# Build the robots meta tag. #}
+    {# Build the robots meta tag: #}
     {% if jwPimAreas.noIndexAll %}
         <meta name="robots" content="noindex,nofollow,noodp,noydir,noarchive">
-        <!-- {{ (jwPimAreas_noIndex | default(true)) ? 'no' : '' }}index, {{ (jwPimAreas.noFollow | default(true)) ? 'no' : '' }}follow -->
+        <!-- This page: {{ (jwPimAreas.noIndex | default(true)) ? 'no' : '' }}index, {{ (jwPimAreas.noFollow | default(true)) ? 'no' : '' }}follow -->
     {% else %}
         {% set jwPimAreas_robots = ((jwPimAreas_noIndex | default(true)) ? 'no' : '') ~ 'index,' %}
         {% set jwPimAreas_robots = jwPimAreas_robots ~ ((jwPimAreas.noFollow | default(true)) ? 'no' : '') ~ 'follow' %}
         <meta name="robots" content="{{ jwPimAreas_robots }},noodp,noydir,noarchive">
     {% endif %}
 
+    {# theme color and background color on iOS devices: #}
+    <meta name="theme-color" content="{{ jwPimAreas.themeColor | default('#000') | raw }}">
+
     {# Disable some rogue tools, especially in MS Edge: #}
     <meta name="imagetoolbar" content="false">
     <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="{{ jwPimAreas.themeColor | default('#000') | raw }}">
 
     {% set jwPimAreas_title = document.getTitle() | trim %}
     {% set jwPimAreas_description = document.getDescription() | trim %}

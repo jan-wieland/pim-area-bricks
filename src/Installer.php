@@ -217,7 +217,7 @@ class Installer extends SettingsStoreAwareInstaller
         $list = new PredefinedListing();
         $list->load();
         foreach ($list->getProperties() as $property) {
-            if (in_array($property->getKey(), $this->propertyKeys)|| str_starts_with($property->getKey(), 'jwPimAreas')) {
+            if (in_array($property->getKey(), $this->propertyKeys)) {
                 $property->delete();
             }
         }
