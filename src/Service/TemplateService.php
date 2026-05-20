@@ -46,7 +46,7 @@ class TemplateService
                     && self::getPageProperty($document, 'rootNav')?->getId() !== null
                     && $document->getId() === self::getPageProperty($document, 'rootNav')?->getId(),
                 'pageId' => (string) ($document ? $document->getId() : '0'),
-                'language' => (string) $document?->getProperty('language') ?: 'de-DE',
+                'language' => (string) $document?->getProperty('language') ?: 'de',
             ],
         ];
     }
