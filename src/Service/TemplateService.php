@@ -13,26 +13,35 @@ class TemplateService
      */
     public static function getViewParams(Document $document): array
     {
+        $customThemeBundle  = (string) $document?->getProperty('jwPimAreas.customTheme.bundle') ?: '_default';
+        $hasCustomThemeBundle  = $customThemeBundle !== '_default' && \Pimcore::getKernel()->hasBundle($customThemeBundle);
+
+        $jsKeyBundle  = (string) $document?->getProperty('jwPimAreas.jsKey.bundle') ?: '_default';
+        $hasJsKeyBundle  = $jsKeyBundle !== '_default' && \Pimcore::getKernel()->hasBundle($jsKeyBundle);
+
+        $cssKeyBundle = (string) $document?->getProperty('jwPimAreas.cssKey.bundle') ?: '_default';
+        $hasCssKeyBundle = $cssKeyBundle !== '_default' && \Pimcore::getKernel()->hasBundle($cssKeyBundle);
+
         return [
             'jwPimAreas' => [
                 # Data from page properties:
                 'navMain' => self::getNavMain($document),
                 'hideNavs' => (bool) ($document?->getProperty('jwPimAreas.hideNavs') ?? false),
-                'noIndexAll' => (bool) $document?->getProperty('jwPimAreas.noIndexAll') ?? false,
-                'noIndex' => (bool) $document?->getProperty('jwPimAreas.noIndex') ?? false,
-                'noFollow' => (bool) $document?->getProperty('jwPimAreas.noFollow') ?: false,
+                'noIndexAll' => (bool) ($document?->getProperty('jwPimAreas.noIndexAll') ?? false),
+                'noIndex' => (bool) ($document?->getProperty('jwPimAreas.noIndex') ?? false),
+                'noFollow' => (bool) ($document?->getProperty('jwPimAreas.noFollow') ?? false),
                 'themeColor' => (string) $document?->getProperty('jwPimAreas.themeColor') ?: '#000',
-                'customTheme' => (string) $document?->getProperty('jwPimAreas.customTheme') ?: null,
-                'customThemeBundle' => (string) $document?->getProperty('jwPimAreas.customTheme.bundle') ?: '_default',
+                'customTheme' =>  $hasCustomThemeBundle ? ((string) $document?->getProperty('jwPimAreas.customTheme') ?: null) : null,
+                'customThemeBundle' => $hasCustomThemeBundle ? $customThemeBundle : null,
                 'fontFamilySans' => (string) $document?->getProperty('jwPimAreas.fontFamilySans') ?: 'Merriweather Sans',
                 'fontFamilySerif' => (string) $document?->getProperty('jwPimAreas.fontFamilySerif') ?: 'Merriweather',
                 'bodyFontFamily' => (string) $document?->getProperty('jwPimAreas.bodyFontFamily') ?: 'font-sans',
                 'bodyFontWeight' => (string) $document?->getProperty('jwPimAreas.bodyFontWeight') ?: 'font-light',
-                'bodyAntialiased' => (bool) $document?->getProperty('jwPimAreas.bodyFontWeight') ?? true,
-                'jsKey' => (string) $document?->getProperty('jwPimAreas.jsKey') ?: null,
-                'jsKeyBundle' => (string) $document?->getProperty('jwPimAreas.jsKey.bundle') ?: '_default',
-                'cssKey' => (string) $document?->getProperty('jwPimAreas.cssKey') ?: null,
-                'cssKeyBundle' => (string) $document?->getProperty('jwPimAreas.cssKey.bundle') ?: '_default',
+                'bodyAntialiased' => (bool) ($document?->getProperty('jwPimAreas.bodyAntialiased') ?? true),
+                'jsKey' => $hasJsKeyBundle ? ((string) $document?->getProperty('jwPimAreas.jsKey') ?: null) : null,
+                'jsKeyBundle' => $hasJsKeyBundle  ? $jsKeyBundle : null,
+                'cssKey' => $hasCssKeyBundle ? ((string) $document?->getProperty('jwPimAreas.cssKey') ?: null) : null,
+                'cssKeyBundle' => $hasCssKeyBundle ? $cssKeyBundle : null,
                 'headFootInPim' => (bool) ($document?->getProperty('jwPimAreas.headFootInPim') ?? false),
                 # Generated data:
                 'isRootPage' => $document?->getId() !== null
