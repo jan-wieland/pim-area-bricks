@@ -337,12 +337,11 @@ class BricksService
         $gridColumns = $info->getDocument()->getEditable('gridColumns')?->getData() ?? 'none';
 
         return sprintf(
-            '%s%s%s%s%s',
-            '<div class="pimcore_area_',
+            '<div class="%s%s%s%s">',
+            'pimcore_area_',
             $info->getId(),
             ' pimcore_area_content jwpimareas-flexbox-',
-            $gridColumns === 'none' ? '0' : $gridColumns,
-            '">'
+            $gridColumns === 'none' ? '0' : $gridColumns
         );
     }
 }
