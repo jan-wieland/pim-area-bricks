@@ -122,7 +122,7 @@ class Installer extends SettingsStoreAwareInstaller
             [
                 'name' => 'jwPimAreas.predefinedProperties.customThemeDirectory.name',
                 'key' => 'jwPimAreas.customThemeDirectory',
-                'type' => 'document',
+                'type' => 'asset',
                 'description' => 'jwPimAreas.predefinedProperties.customThemeDirectory.description',
                 'inheritable' => true,
                 'ctype' => 'document',
