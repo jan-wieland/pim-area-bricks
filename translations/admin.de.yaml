@@ -169,6 +169,9 @@ jwPimAreas:
     customThemeBundle:
       name: "JW Farbschema Bundle"
       description: "Bundle-Key zum Farbschema (nur CSS)"
+    customThemeDirectory:
+      name: "JW Farbschema Verzeichnis"
+      description: "Verzeichnis in Assets für eigenes Farbschema (.properties)"
     fontFamilySans:
       name: "JW Family Sans"
       description: "Name der font-family für font-sans (sans-serif)"
