@@ -5,8 +5,10 @@ use Pimcore\Extension\Bundle\AbstractPimcoreBundle;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Pimcore\Extension\Bundle\PimcoreBundleAdminClassicInterface;
+use Pimcore\Extension\Bundle\Traits\BundleAdminClassicTrait;
 
-class PimAreaBricksBundle extends AbstractPimcoreBundle
+class PimAreaBricksBundle extends AbstractPimcoreBundle implements PimcoreBundleAdminClassicInterface
 {
     /**
      * @return string
@@ -38,7 +40,6 @@ class PimAreaBricksBundle extends AbstractPimcoreBundle
      */
     public function getJsPaths(): array
     {
-        file_put_contents('/tmp/bundle-debug.txt', $this->getPath());
         return [
             '/bundles/pimareabricks/js/admin/theme-context-menu.js'
         ];
