@@ -4,7 +4,6 @@ namespace JanWieland\PimAreaBricks\Service;
 use Pimcore\Model\Document;
 use Pimcore\Model\Document\Link;
 use Pimcore\Model\Asset\Folder;
-use Pimcore\Bundle\UuidBundle\Model\Tool\UUID;
 
 class TemplateService
 {
@@ -35,8 +34,7 @@ class TemplateService
                 'themeColor' => (string) self::getPageProperty($document, 'themeColor') ?: '#000',
                 'customTheme' =>  $hasCustomThemeBundle ? ((string) self::getPageProperty($document, 'customTheme') ?: null) : null,
                 'customThemeBundle' => $hasCustomThemeBundle ? $customThemeBundle : null,
-                'customThemeId' => $customThemeDirectory instanceof Folder
-                    ? (UUID::getByItem($customThemeDirectory)?->getUuid() ?? UUID::create($customThemeDirectory)->getUuid()) : null,
+                'customThemeId' => $customThemeDirectory instanceof Folder ? hash('crc32', 'asset-' . $customThemeDirectory->getId()) : null,
                 'fontFamilySans' => (string) self::getPageProperty($document, 'fontFamilySans') ?: 'Merriweather Sans',
                 'fontFamilySerif' => (string) self::getPageProperty($document, 'fontFamilySerif') ?: 'Merriweather',
                 'bodyFontFamily' => (string) self::getPageProperty($document, 'bodyFontFamily') ?: 'font-sans',
