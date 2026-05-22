@@ -28,6 +28,10 @@ Encore.setOutputPath('public/')
     from: './assets/editmode',
     to: 'images/editmode/[path][name].[ext]',
   })
+  .copyFiles({
+    from: './assets/admin',
+    to: 'js/admin/[name].[ext]',
+  })
   .setPublicPath('/bundles/pimareabricks')
 
 module.exports = Encore.getWebpackConfig()
