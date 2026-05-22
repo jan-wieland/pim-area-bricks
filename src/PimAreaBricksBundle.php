@@ -52,4 +52,19 @@ class PimAreaBricksBundle extends AbstractPimcoreBundle implements PimcoreBundle
     {
         return $this->container->get(Installer::class);
     }
+
+    public function getCssPaths(): array
+    {
+        return [];
+    }
+
+    public function getEditmodeJsPaths(): array
+    {
+        return [];
+    }
+
+    public function getEditmodeCssPaths(): array
+    {
+        return [];
+    }
 }
