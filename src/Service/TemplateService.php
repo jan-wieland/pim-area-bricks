@@ -21,7 +21,7 @@ class TemplateService
         $cssKeyBundle = (string) self::getPageProperty($document, 'cssKey.bundle') ?: '_default';
         $hasCssKeyBundle = $cssKeyBundle !== '_default' && \Pimcore::getKernel()->hasBundle($cssKeyBundle);
 
-        $customThemeDirectory = $page->getProperty('jwPimAreas.customThemeDirectory');
+        $customThemeDirectory = $document?->getProperty('jwPimAreas.customThemeDirectory');
 
         if ($property instanceof Folder) {
             $folderId = $property->getId();
