@@ -6,7 +6,7 @@ document.addEventListener(pimcore.events.prepareAssetTreeContextMenu, function (
 
   menu.add({
     text: t('jwPimAreas.contextMenuTheme.label'),
-    iconCls: 'pimcore_icon_asset',
+    iconCls: '/bundles/pimcoreadmin/img/flat-color-icons/rgbacolor.svg',
     handler: function () {
       Ext.Msg.confirm(t('jwPimAreas.contextMenuTheme.title'), t('jwPimAreas.contextMenuTheme.folder').replace('%folder%', asset.data.text), function (btn) {
         if (btn !== 'yes') return
