@@ -10,6 +10,8 @@ use Pimcore\Extension\Bundle\Traits\BundleAdminClassicTrait;
 
 class PimAreaBricksBundle extends AbstractPimcoreBundle implements PimcoreBundleAdminClassicInterface
 {
+    use BundleAdminClassicTrait;
+
     /**
      * @return string
      */
