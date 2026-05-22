@@ -29,7 +29,7 @@ Encore.setOutputPath('public/')
     to: 'images/editmode/[path][name].[ext]',
   })
   .copyFiles({
-    from: './assets/admin',
+    from: './src/Resources/js/admin',
     to: 'js/admin/[name].[ext]',
   })
   .setPublicPath('/bundles/pimareabricks')
