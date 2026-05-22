@@ -20,22 +20,22 @@ document.addEventListener(pimcore.events.prepareAssetTreeContextMenu, function (
             var result = Ext.decode(response.responseText)
             if (result.success) {
               pimcore.helpers.showNotification(
-                t('jwPimAreas.contextMenuTheme.success.title'),
-                t('jwPimAreas.contextMenuTheme.success.message').replace('%folder%', asset.data.text),
+                t('jwPimAreas.contextMenuTheme.import.success.title'),
+                t('jwPimAreas.contextMenuTheme.import.success.message').replace('%folder%', asset.data.text),
                 'success',
               )
             } else {
               pimcore.helpers.showNotification(
-                t('jwPimAreas.contextMenuTheme.error.title'),
-                t('jwPimAreas.contextMenuTheme.error.message').replace('%folder%', asset.data.text).replace('%message%', result.message),
+                t('jwPimAreas.contextMenuTheme.import.error.title'),
+                t('jwPimAreas.contextMenuTheme.import.error.message').replace('%folder%', asset.data.text).replace('%message%', result.message),
                 'error',
               )
             }
           },
           failure: function (response) {
             pimcore.helpers.showNotification(
-              t('jwPimAreas.contextMenuTheme.failure.title'),
-              t('jwPimAreas.contextMenuTheme.failure.message').replace('%folder%', asset.data.text).replace('%status%', response.status),
+              t('jwPimAreas.contextMenuTheme.import.failure.title'),
+              t('jwPimAreas.contextMenuTheme.import.failure.message').replace('%folder%', asset.data.text).replace('%status%', response.status),
               'error',
             )
           },
