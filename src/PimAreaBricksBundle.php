@@ -38,6 +38,7 @@ class PimAreaBricksBundle extends AbstractPimcoreBundle
      */
     public function getJsPaths(): array
     {
+        dump($this->getPath());
         return [
             '/bundles/pimareabricks/js/admin/theme-context-menu.js'
         ];
