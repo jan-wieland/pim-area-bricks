@@ -23,10 +23,6 @@ class TemplateService
 
         $customThemeDirectory = $document?->getProperty('jwPimAreas.customThemeDirectory');
 
-        if ($property instanceof Folder) {
-            $folderId = $property->getId();
-        }
-
         return [
             'jwPimAreas' => [
                 # Data from page properties:
