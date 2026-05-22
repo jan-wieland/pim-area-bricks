@@ -16,6 +16,13 @@ class PimAreaBricksExtension extends Extension implements PrependExtensionInterf
             new FileLocator(__DIR__ . '/../../config'),
         );
         $loader->load('services.yaml');
+
+        if (!$container->hasParameter('pimcore_uuid.instance_identifier')) {
+            $container->setParameter(
+                'pimcore_uuid.instance_identifier',
+                hash('sha256', $container->getParameter('kernel.project_dir'))
+            );
+        }
     }
 
     public function prepend(ContainerBuilder $container): void
