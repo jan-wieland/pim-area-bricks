@@ -206,3 +206,17 @@ jwPimAreas:
     headFootInPim:
       name: "JW Header & Footer in the PIM"
       description: "Display header and footer in Pimcore /admin"
+  contextMenuTheme:
+    label: "JW Theme Import"
+    title: "Theme import"
+    folder: "Import the theme from the directory '%folder%'."
+    import:
+      success:
+        title: "Theme imported"
+        message: "The theme from '%folder%' was successfully imported."
+      error:
+        title: "Failed!"
+        message: "The theme from '%folder%' could not be imported: %message%."
+      failure:
+        title: "Error!"
+        message: "The theme from '%folder%' could not be imported: #%status%"

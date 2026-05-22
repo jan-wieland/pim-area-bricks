@@ -3,6 +3,7 @@ namespace JanWieland\PimAreaBricks\Service;
 
 use Pimcore\Model\Document;
 use Pimcore\Model\Document\Link;
+use Pimcore\Model\Asset\Folder;
 
 class TemplateService
 {
@@ -20,6 +21,12 @@ class TemplateService
         $cssKeyBundle = (string) self::getPageProperty($document, 'cssKey.bundle') ?: '_default';
         $hasCssKeyBundle = $cssKeyBundle !== '_default' && \Pimcore::getKernel()->hasBundle($cssKeyBundle);
 
+        $customThemeDirectory = $page->getProperty('jwPimAreas.customThemeDirectory');
+
+        if ($property instanceof Folder) {
+            $folderId = $property->getId();
+        }
+
         return [
             'jwPimAreas' => [
                 # Data from page properties:
@@ -31,6 +38,7 @@ class TemplateService
                 'themeColor' => (string) self::getPageProperty($document, 'themeColor') ?: '#000',
                 'customTheme' =>  $hasCustomThemeBundle ? ((string) self::getPageProperty($document, 'customTheme') ?: null) : null,
                 'customThemeBundle' => $hasCustomThemeBundle ? $customThemeBundle : null,
+                'customThemeId' => $customThemeDirectory instanceof Folder ? $customThemeDirectory->getUuid() ? null,
                 'fontFamilySans' => (string) self::getPageProperty($document, 'fontFamilySans') ?: 'Merriweather Sans',
                 'fontFamilySerif' => (string) self::getPageProperty($document, 'fontFamilySerif') ?: 'Merriweather',
                 'bodyFontFamily' => (string) self::getPageProperty($document, 'bodyFontFamily') ?: 'font-sans',
