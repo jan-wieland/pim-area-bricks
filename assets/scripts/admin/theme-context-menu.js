@@ -1,4 +1,5 @@
 document.addEventListener('pimcoreReady', function () {
+  console.log('pimcoreReady fired', typeof pimcore.asset.tree.panel)
   pimcore.asset.tree.panel.prototype.onNodeContextmenu = pimcore.asset.tree.panel.prototype.onNodeContextmenu.sequence(function (node, event) {
     if (node.data.type !== 'folder') return
     var menu = event.contextmenu
