@@ -6,7 +6,7 @@ document.addEventListener(pimcore.events.preMenuBuild, function (e) {
     items: [
       {
         text: t('jwPimAreas.adminMenuDocs.item'),
-        iconCls: 'pimcore_icon_info',
+        iconCls: 'pimcore_icon_text',
         handler: function () {
           pimcore.helpers.openGenericIframeWindow('jwPimAreas_docs', '/admin/jwAreaBricks/docs', 'pimcore_icon_info', t('jwPimAreas.adminMenuDocs.docs'))
         },
