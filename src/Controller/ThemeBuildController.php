@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Pimcore\Model\Asset\Folder;
 use Pimcore\Model\Tool\SettingsStore;
 use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class ThemeBuildController extends UserAwareController
 {
@@ -21,7 +22,8 @@ class ThemeBuildController extends UserAwareController
 
     private TranslatorInterface $translator;
 
-    public function __construct(TranslatorInterface $translator)
+    #[Required]
+    public function setTranslator(TranslatorInterface $translator): void
     {
         $this->translator = $translator;
     }
