@@ -7,6 +7,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Pimcore\Extension\Bundle\PimcoreBundleAdminClassicInterface;
 use Pimcore\Extension\Bundle\Traits\BundleAdminClassicTrait;
+use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 class PimAreaBricksBundle extends AbstractPimcoreBundle implements PimcoreBundleAdminClassicInterface
 {
@@ -64,5 +65,10 @@ class PimAreaBricksBundle extends AbstractPimcoreBundle implements PimcoreBundle
     public function getEditmodeCssPaths(): array
     {
         return [];
+    }
+
+    public function configureRoutes(RoutingConfigurator $routes): void
+    {
+        $routes->import('../src/Controller/', 'attribute');
     }
 }
