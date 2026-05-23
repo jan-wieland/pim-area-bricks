@@ -92,7 +92,9 @@ class ThemeBuildController extends UserAwareController
         }
 
         foreach ($properties as $key => $value) {
-            $this->theme->root[$key] = $value;
+            if (!empty($value)) {
+                $this->theme->root[$key] = ltrim($value, '-');
+            }
         }
 
         try {
