@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Pimcore\Model\Asset\Folder;
 use Pimcore\Model\Tool\SettingsStore;
-use Pimcore\Tool\Admin;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class ThemeBuildController extends UserAwareController
 {
@@ -18,6 +18,13 @@ class ThemeBuildController extends UserAwareController
     private string $language;
 
     private const SUPPORTED_LANGUAGES = ['de', 'en'];
+
+    private TranslatorInterface $translator;
+
+    public function __construct(TranslatorInterface $translator)
+    {
+        $this->translator = $translator;
+    }
 
     /**
      * @param Request $request
@@ -110,7 +117,7 @@ class ThemeBuildController extends UserAwareController
      */
     private function getMessage(string $adminTransKey): string
     {
-        return Admin::getTranslate()->trans(
+        return $this->translator->trans(
             $adminTransKey,
             [],
             'admin',
