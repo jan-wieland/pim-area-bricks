@@ -223,5 +223,6 @@ jwPimAreas:
       error: "Fehler beim Speichern"
   adminMenuDocs:
     label: "JW PimAreasBricks"
+    item: "JA PimAreaBricks Doku"
     docs: "Dokumentation"
     title: "JW PimAreaBricks Doku"

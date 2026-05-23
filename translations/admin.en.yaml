@@ -227,5 +227,6 @@ jwPimAreas:
       error: "Error during saving"
   adminMenuDocs:
     label: "JW PimAreasBricks"
+    item: "JA PimAreaBricks docs"
     docs: "Documentation"
     title: "JW PimAreaBricks docs"
