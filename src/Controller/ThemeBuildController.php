@@ -78,7 +78,7 @@ class ThemeBuildController extends UserAwareController
         $properties = (object)[];
 
         foreach ($listing as $asset) {
-            if (pathinfo($asset->getFilename(), PATHINFO_EXTENSION) !== 'properties') {
+            if (pathinfo($asset->getFilename(), PATHINFO_EXTENSION) !== 'txt') {
                 continue;
             }
 
