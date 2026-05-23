@@ -13,11 +13,11 @@ class PimAreaBricksLoader extends Loader
 
     public function load(mixed $resource, string $type = null): RouteCollection
     {
-        if ($this->loaded) {
-            throw new \RuntimeException('Do not add this loader twice');
-        }
-
         $routes = new RouteCollection();
+
+        if ($this->loaded) {
+            return $routes;
+        }
 
         $routes->add('jw_area_bricks_run_theme_import', new Route(
             '/admin/jwAreaBricks/run-theme-import',
