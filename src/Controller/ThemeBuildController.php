@@ -43,7 +43,7 @@ class ThemeBuildController extends UserAwareController
             'message' => $this->getMessage('jwPimAreas.contextMenuTheme.result.forbidden'),
         ];
 
-        if (!$this->getAdminUser()) {
+        if (!$this->getPimcoreUser()) {
             return new JsonResponse($this->result);
         }
 
