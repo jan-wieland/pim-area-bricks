@@ -216,3 +216,8 @@ jwPimAreas:
       failure:
         title: "Fehler!"
         message: "Das Theme aus '%folder%' konnte nicht importiert werden: #%status%"
+    result:
+      forbidden: "Zugriff verweigert!"
+      invalidFolder: "Ungültiger Ordner"
+      success: "Erfolgreich gespeichert"
+      error: "Fehler beim Speichern"

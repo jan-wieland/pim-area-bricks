@@ -220,3 +220,8 @@ jwPimAreas:
       failure:
         title: "Error!"
         message: "The theme from '%folder%' could not be imported: #%status%"
+    result:
+      forbidden: "Access denied!"
+      invalidFolder: "Invalid folder"
+      success: "Saved successfully"
+      error: "Error during saving"

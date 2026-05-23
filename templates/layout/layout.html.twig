@@ -58,6 +58,16 @@
         {% if editmode %}
             {{ encore_entry_link_tags('pimAreaBricksEditmode', null, 'pimareabricks') }}
         {% endif %}
+
+        {% if jwPimAreas.customThemeData is not null and jwPimAreas.customThemeData is not empty %}
+            <style>
+            :root {
+                {% for key, value in jwPimAreas.customThemeData %}
+                --{{ key }}: {{ value }};
+                {% endfor %}
+            }
+            </style>
+        {% endif %}
     {% endblock %}
 </head>
 <body class="jwpimareas-page-id-{{ jwPimAreas.pageId }} {{ jwPimAreas.bodyFontFamily }} {{ jwPimAreas.bodyFontWeight }}{{ jwPimAreas.bodyAntialiased ? ' antialiased' : '' }} bg-jwpimareas-body text-jwpimareas-body-text{{ editmode ? ' editmode' : '' }}">

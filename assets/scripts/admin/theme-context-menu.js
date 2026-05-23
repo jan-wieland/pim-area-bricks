@@ -14,7 +14,8 @@ document.addEventListener(pimcore.events.prepareAssetTreeContextMenu, function (
           url: '/admin/jwAreaBricks/run-theme-import',
           method: 'POST',
           params: {
-            folderId: asset.data.id,
+            assetFolderId: asset.data.id,
+            language: pimcore.settings.language,
           },
           success: function (response) {
             var result = Ext.decode(response.responseText)
