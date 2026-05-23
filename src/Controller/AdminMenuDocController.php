@@ -22,7 +22,7 @@ class AdminMenuDocController extends UserAwareController
         $language = $this->getPimcoreUser()?->getLanguage() ?? 'en';
         $language = in_array($language, self::SUPPORTED_LANGUAGES) ? $language : 'en';
 
-        return $this->render('doc/documentation.html.twig', [
+        return $this->render('docs/documentation.html.twig', [
             'language' => $language,
         ]);
     }
