@@ -16,6 +16,7 @@ class PimAreaBricksExtension extends Extension implements PrependExtensionInterf
             new FileLocator(__DIR__ . '/../../config'),
         );
         $loader->load('services.yaml');
+        $loader->load('routes.yaml');
     }
 
     public function prepend(ContainerBuilder $container): void
