@@ -2,4 +2,5 @@ pimcore:
   bundles:
     PimAreaBricksBundle:
       admin_js:
+        - /bundles/pimareabricks/js/admin/admin-menu-doc.js
         - /bundles/pimareabricks/js/admin/theme-context-menu.js

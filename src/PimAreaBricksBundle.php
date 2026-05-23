@@ -48,7 +48,8 @@ class PimAreaBricksBundle extends AbstractPimcoreBundle implements PimcoreBundle
     public function getJsPaths(): array
     {
         return [
-            '/bundles/pimareabricks/js/admin/theme-context-menu.js'
+            '/bundles/pimareabricks/js/admin/theme-context-menu.js',
+            '/bundles/pimareabricks/js/admin/admin-menu-doc.js',
         ];
     }
 

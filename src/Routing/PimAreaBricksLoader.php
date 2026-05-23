@@ -29,6 +29,11 @@ class PimAreaBricksLoader extends Loader
             ['POST']
         ));
 
+        $routes->add('jw_area_bricks_docs', new Route(
+            '/admin/jwAreaBricks/docs',
+            ['_controller' => 'JanWieland\PimAreaBricks\Controller\AdminMenuDocController::adminMenuDocAction'],
+        ));
+
         $this->loaded = true;
         return $routes;
     }

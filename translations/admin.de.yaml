@@ -221,3 +221,7 @@ jwPimAreas:
       invalidFolder: "Ungültiger Ordner"
       success: "Erfolgreich gespeichert"
       error: "Fehler beim Speichern"
+  adminMenuDocs:
+    label: "JW PimAreasBricks"
+    docs: "Dokumentation"
+    title: "JW PimAreaBricks Doku"

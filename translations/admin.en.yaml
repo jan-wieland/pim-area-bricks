@@ -225,3 +225,7 @@ jwPimAreas:
       invalidFolder: "Invalid folder"
       success: "Saved successfully"
       error: "Error during saving"
+  adminMenuDocs:
+    label: "JW PimAreasBricks"
+    docs: "Documentation"
+    title: "JW PimAreaBricks docs"
