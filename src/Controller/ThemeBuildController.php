@@ -72,7 +72,7 @@ class ThemeBuildController extends UserAwareController
     {
         $listing = new \Pimcore\Model\Asset\Listing();
         $listing->setCondition(
-            "path LIKE ? AND type = 'document'",
+            "path LIKE ?",
             [$assetFolder->getFullPath() . '/%']
         );
         $properties = (object)[];
