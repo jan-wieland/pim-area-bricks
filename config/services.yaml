@@ -13,3 +13,6 @@ services:
     public: true
     arguments:
       $bundle: "@=service('kernel').getBundle('PimAreaBricksBundle')"
+  JanWieland\PimAreaBricks\Routing\PimAreaBricksLoader:
+    tags:
+      - { name: routing.loader }
