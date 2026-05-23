@@ -8,7 +8,7 @@ document.addEventListener(pimcore.events.preMenuBuild, function (e) {
         label: t('jwPimAreas.adminMenuDocs.docs'),
         iconCls: 'pimcore_icon_info',
         handler: function () {
-          pimcore.helpers.openGenericIframeWindow('jwPimAreas_docs', '/admin/jwAreaBricks/docs', 'pimcore_icon_info', t('jwPimAreas.menu.docs'))
+          pimcore.helpers.openGenericIframeWindow('jwPimAreas_docs', '/admin/jwAreaBricks/docs', 'pimcore_icon_info', t('jwPimAreas.adminMenuDocs.docs'))
         },
       },
     ],
