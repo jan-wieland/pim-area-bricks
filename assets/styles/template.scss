@@ -1,8 +1,3 @@
-:root {
-    --jwpimareas-shadow-header: 0 -1px 5px 3px #00000034;
-    --font-family-sans: "Merriweather Sans";
-    --font-family-serif: "Merriweather";
-}
 @theme {
     --height-jwpimareas-header: 5rem;
     --height-jwpimareas-header-scrolled: 3.5rem;
@@ -20,13 +15,34 @@
     --color-jwpimareas-error-text: #a12133;
     --color-jwpimareas-footer-bg: #faca40;
     --color-jwpimareas-footer-text: #000;
-    --font-sans:
-        var(--font-family-sans), ui-sans-serif, system-ui, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
-    --font-serif:
-        var(--font-family-serif), ui-serif, Georgia, Cambria, "Times New Roman",
-        Times, serif;
+    --font-sans: var(--font-family-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: var(--font-family-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+:root {
+    --jwpimareas-h1-font-size: 48px;
+    --jwpimareas-h1-font-weight: 400;
+    --jwpimareas-h1-letter-spacing: 0.03em;
+    --jwpimareas-h1-margin: 5px 0 19px;
+    --jwpimareas-h1-color: var(--color-jwpimareas-body-text);
+    --jwpimareas-h2-font-size: 40px;
+    --jwpimareas-h2-font-weight: 400;
+    --jwpimareas-h2-letter-spacing: 0.02em;
+    --jwpimareas-h2-margin: 28px 0 16px;
+    --jwpimareas-h2-color: var(--color-jwpimareas-body-text);
+    --jwpimareas-h3-font-size: 30px;
+    --jwpimareas-h3-font-weight: 400;
+    --jwpimareas-h3-letter-spacing: 0.03em;
+    --jwpimareas-h3-margin: 24px 0 15px;
+    --jwpimareas-h3-color: var(--color-jwpimareas-body-text);
+    --jwpimareas-h4-font-size: 24px;
+    --jwpimareas-h4-font-weight: 400;
+    --jwpimareas-h4-letter-spacing: 0.03em;
+    --jwpimareas-h4-margin: 21px 0 14px;
+    --jwpimareas-h4-color: var(--color-jwpimareas-body-text);
+    --jwpimareas-p-tag-lh: 1.38;
+    --jwpimareas-shadow-header: 0 -1px 5px 3px #00000034;
+    --font-family-sans: "Merriweather Sans";
+    --font-family-serif: "Merriweather";
 }
 @utility flex-full {
     flex: 0 0 100%;
@@ -55,35 +71,64 @@
     .jwpimareas-shadow-header {
         box-shadow: var(--jwpimareas-shadow-header);
     }
+    h1,
+    .h1 {
+        font-size: var(--jwpimareas-h1-font-size);
+        font-weight: var(--jwpimareas-h1-font-weight);
+        margin: var(--jwpimareas-h1-margin);
+        letter-spacing: var(--jwpimareas-h1-letter-spacing);
+        color: var(--jwpimareas-h1-color);
+    }
+    h2,
+    .h2 {
+        font-size: var(--jwpimareas-h2-font-size);
+        font-weight: var(--jwpimareas-h2-font-weight);
+        margin: var(--jwpimareas-h2-margin);
+        letter-spacing: var(--jwpimareas-h2-letter-spacing);
+        color: var(--jwpimareas-h2-color);
+    }
+    h3,
+    .h3 {
+        font-size: var(--jwpimareas-h3-font-size);
+        font-weight: var(--jwpimareas-h3-font-weight);
+        margin: var(--jwpimareas-h3-margin);
+        letter-spacing: var(--jwpimareas-h3-letter-spacing);
+        color: var(--jwpimareas-h3-color);
+    }
+    h4,
+    .h4 {
+        font-size: var(--jwpimareas-h4-font-size);
+        font-weight: var(--jwpimareas-h4-font-weight);
+        margin: var(--jwpimareas-h4-margin);
+        letter-spacing: var(--jwpimareas-h4-letter-spacing);
+        color: var(--jwpimareas-h4-color);
+    }
     p {
         margin-bottom: var(--spacing-jwpimareas-p-tag);
+        line-height: var(--jwpimareas-p-tag-lh);
     }
 }
 @font-face {
     font-family: "Merriweather";
-    src: url("/assets/fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf")
-        format("truetype");
+    src: url("/assets/fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf") format("truetype");
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Merriweather";
-    src: url("/assets/fonts/Merriweather/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf")
-        format("truetype");
+    src: url("/assets/fonts/Merriweather/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf") format("truetype");
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: "Merriweather Sans";
-    src: url("/assets/fonts/Merriweather/MerriweatherSans-VariableFont_wght.ttf")
-        format("truetype");
+    src: url("/assets/fonts/Merriweather/MerriweatherSans-VariableFont_wght.ttf") format("truetype");
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Merriweather Sans";
-    src: url("/assets/fonts/Merriweather/MerriweatherSans-Italic-VariableFont_wght.ttf")
-        format("truetype");
+    src: url("/assets/fonts/Merriweather/MerriweatherSans-Italic-VariableFont_wght.ttf") format("truetype");
     font-style: italic;
     font-display: swap;
 }
