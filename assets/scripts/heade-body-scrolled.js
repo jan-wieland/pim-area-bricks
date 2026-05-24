@@ -1,8 +1,8 @@
 let jwScrollSmall = false,
-    jwScrollLast = 0,
-    jwScrollDown = -1,
-    jwScrollMinimum = 0,
-    jwScrollMaximum = 0
+  jwScrollLast = 0,
+  jwScrollDown = -1,
+  jwScrollMinimum = 0,
+  jwScrollMaximum = 0
 
 document.addEventListener('scroll', () => {
   let jwScrollPos = window.scrollY
@@ -13,7 +13,7 @@ document.addEventListener('scroll', () => {
     if (jwScrollPos < jwScrollMinimum) {
       jwScrollMinimum = jwScrollPos
     }
-    if (scrollDown === -1) {
+    if (jwScrollDown === -1) {
       jwScrollDown = 1
       jwScrollMinimum = jwScrollPos
       jwScrollMaximum = jwScrollPos
@@ -21,14 +21,14 @@ document.addEventListener('scroll', () => {
       document.body.classList.add('jw-state-scrolled')
     }
     if (jwScrollDown === 1) {
-      if (jwScrollSmall && jwScrollPos < (jwScrollMaximum - 68)) {
+      if (jwScrollSmall && jwScrollPos < jwScrollMaximum - 68) {
         jwScrollDown = 0
         jwScrollMinimum = jwScrollPos
         jwScrollSmall = false
         document.body.classList.remove('jw-state-scrolled')
       }
     } else {
-      if (!jwScrollSmall && jwScrollPos > (jwScrollMinimum + 68)) {
+      if (!jwScrollSmall && jwScrollPos > jwScrollMinimum + 68) {
         jwScrollDown = 1
         jwScrollMaximum = jwScrollPos
         jwScrollSmall = true
@@ -36,10 +36,10 @@ document.addEventListener('scroll', () => {
       }
     }
   }
-  if (scrollSmall && scrollPos < 1) {
-    scrollDown = -1
-    scrollSmall = false
+  if (jwScrollSmall && jwScrollPos < 1) {
+    jwScrollDown = -1
+    jwScrollSmall = false
     document.body.classList.remove('jw-state-scrolled')
   }
-  scrollLast = scrollPos
+  jwScrollLast = jwScrollPos
 })
