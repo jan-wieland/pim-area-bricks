@@ -231,4 +231,4 @@ jwPimAreas:
     docs: "Documentation"
     title: "JW PimAreaBricks docs"
   docsTexts:
-    introduction: "This documentation is written in abbreviated form and assumes knowledge of editorial work with CMS systems and Pimcore. The goal of this "JW Pim-Area-Bricks" bundle is to simplify the integration of page elements for developers and to give editors the greatest possible independent design freedom."
+    introduction: "This documentation is written in abbreviated form and assumes knowledge of editorial work with CMS systems and Pimcore. The goal of this &quot;JW Pim-Area-Bricks&quot; bundle is to simplify the integration of page elements for developers and to give editors the greatest possible independent design freedom."
