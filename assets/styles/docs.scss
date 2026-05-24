@@ -33,6 +33,20 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+.jwpimareasdocs-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 16px 32px;
+}
+.jwpimareasdocs-container {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
 @font-face {
     font-family: "Merriweather";
     src: url("/assets/fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf") format("truetype");
