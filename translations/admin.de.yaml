@@ -229,5 +229,5 @@ jwPimAreas:
   docsTexts:
     introduction: "<p>Diese Dokumentation ist in Kurzform verfasst und setzt Kenntnisse in redaktioneller Arbeit mit CMS-Systemen und Pimcore voraus. Das Ziel dieses Bundles &quot;JW Pim-Area-Bricks&quot; ist es, die Integration von Seitenelementen für Entwickler zu vereinfachen und Redakteuren die größtmögliche unabhängige Gestaltungsmöglichkeit zu geben.</p>
       <p>Voraussetzung, um das Ganze einfach und übersichtlich zu halten, ist ein gewisser Kompromiss zwischen absolut frei gestaltbaren Elementen und einem klaren Konzept, das somit beherrschbar bleibt. Um die gestalterische Vielfalt zu erhöhen, gibt es an einigen Stellen die Auswahl zwischen einer Mehrzahl an Stilvarianten.</p>"
-    flexHead: "Flexboxen und Grid"
+    flexHead: "Flexboxen und Grids"
     flexText: "<p>Eine Besonderheit und eigene Entwicklung ist die Organisation der Seiteninhalte als Flexboxen, die im Prinzip ein Grid unnötig machen. So kann jedem Seiteninhalt eine Breite definiert werden, die sie dann über definierte Breakpoints hinweg, z.B. erst ½, dann ⅓ und schließlich ¼ der Contentbreiten einnehmen lässt.</p>"
