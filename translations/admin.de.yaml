@@ -3,7 +3,7 @@ jwPimAreas:
     images: "Bilder"
     layout: "Layout-Elemente"
     options: "Optionen"
-    pageContent: "Seiteninhalt"
+    pageContent: "Seiteninhalte"
     structure: "Struktur"
     vueApp: "VUE-Apps"
   prams:
@@ -227,7 +227,6 @@ jwPimAreas:
     docs: "Dokumentation"
     title: "JW PimAreaBricks Doku"
   docsTexts:
-    introduction: "<p>Diese Dokumentation ist in Kurzform verfasst und setzt Kenntnisse in redaktioneller Arbeit mit CMS-Systemen und Pimcore voraus. Das Ziel dieses Bundles &quot;JW Pim-Area-Bricks&quot; ist es, die Integration von Seitenelementen für Entwickler zu vereinfachen und Redakteuren die größtmögliche unabhängige Gestaltungsmöglichkeit zu geben.</p>
-      <p>Voraussetzung, um das Ganze einfach und übersichtlich zu halten, ist ein gewisser Kompromiss zwischen absolut frei gestaltbaren Elementen und einem klaren Konzept, das somit beherrschbar bleibt. Um die gestalterische Vielfalt zu erhöhen, gibt es an einigen Stellen die Auswahl zwischen einer Mehrzahl an Stilvarianten.</p>"
+    introduction: "<p>Diese Dokumentation ist in Kurzform verfasst und setzt Kenntnisse in redaktioneller Arbeit mit CMS-Systemen und Pimcore voraus. Das Ziel dieses Bundles &quot;JW Pim-Area-Bricks&quot; ist es, die Integration von Seitenelementen für Entwickler zu vereinfachen und Redakteuren die größtmögliche unabhängige Gestaltungsmöglichkeit zu geben.</p><p>Voraussetzung, um das Ganze einfach und übersichtlich zu halten, ist ein gewisser Kompromiss zwischen absolut frei gestaltbaren Elementen und einem klaren Konzept, das somit beherrschbar bleibt. Um die gestalterische Vielfalt zu erhöhen, gibt es an einigen Stellen die Auswahl zwischen einer Mehrzahl an Stilvarianten.</p><h2>Seiteninhalte</h2><p>Damit maximale Flexibilität erhalten bleibt, gibt es einzelne Areas unter &quot;Layout-Elemente&quot;. Es wird jedoch empfohlen, die &quot;Seiteninhalte&quot; zu verwenden. Außerdem ist es möglich sich aus Layout-Elementen mit &quot;Struktur&quot; ➔ &quot;Eigener Seiteninhalt&quot; einen Seiteninhalt selbst zu kreieren, der sich dann in der Flexbox als einer verhält.</p>"
     flexHead: "Flexboxen und Grids"
-    flexText: "<p>Eine Besonderheit und eigene Entwicklung ist die Organisation der Seiteninhalte als Flexboxen, die im Prinzip ein Grid unnötig machen. So kann jedem Seiteninhalt eine Breite definiert werden, die sie dann über definierte Breakpoints hinweg, z.B. erst ½, dann ⅓ und schließlich ¼ der Contentbreiten einnehmen lässt.</p>"
+    flexText: "<p>Eine Besonderheit und eigene Entwicklung ist die Organisation der Seiteninhalte als Flexboxen, die im Prinzip ein Grid unnötig machen. So kann jedem Seiteninhalt eine Breite definiert werden, die sie dann über definierte Breakpoints hinweg, z.B. erst ½, dann ⅓ und schließlich ¼ der Contentbreiten einnehmen lässt.</p><p>Im Gegensatz zu einem klassischem Grid könne so Seitenelemente so als Grid dargestellt werden, ohne ein Grid-Rahmenelement drumherum zu benötigen. So ein &quot;Grid&quot; steht dennoch auch zur Verfügung.</p>"
