@@ -70,9 +70,9 @@
         {% endif %}
     {% endblock %}
 </head>
-<body class="jwpimareas-page-id-{{ jwPimAreas.pageId }} {{ jwPimAreas.bodyFontFamily }} {{ jwPimAreas.bodyFontWeight }}{{ jwPimAreas.bodyAntialiased ? ' antialiased' : '' }} bg-jwpimareas-body text-jwpimareas-body-text{{ editmode ? ' editmode' : '' }}">
+<body class="jwpimareas-page-id-{{ jwPimAreas.pageId }} {{ jwPimAreas.bodyFontFamily }} {{ jwPimAreas.bodyFontWeight }}{{ jwPimAreas.bodyAntialiased ? ' antialiased' : '' }} bg-jwpimareas-body text-jwpimareas-body-text{{ editmode ? ' editmode' : '' }} group/jw-body">
 {% if not editmode or jwPimAreas.headFootInPim %}
-    <div class="fixed top-0 left-0 h-jwpimareas-header w-screen max-w-screen bg-jwpimareas-header text-jwpimareas-header-text jwpimareas-shadow-header z-40 transition-[height] duration-500">
+    <div class="fixed top-0 left-0 h-jwpimareas-header group-[.jw-state-scrolled]/jw-body:h-jwpimareas-header-scrolled w-screen max-w-screen bg-jwpimareas-header text-jwpimareas-header-text jwpimareas-shadow-header z-40 transition-[height] duration-500">
         <header>
             <div class="flex">
                 <div class="jwpimareas-page-side"></div>

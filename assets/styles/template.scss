@@ -1,112 +1,142 @@
 @theme {
-    --height-jwpimareas-header: 5rem;
-    --height-jwpimareas-header-scrolled: 3.5rem;
-    --spacing-jwpimareas-p-tag: 0.8125rem;
-    --spacing-jwpimareas-footer-space: 2.5rem;
-    --spacing-jwpimareas-footer-t: 1.3125rem;
-    --spacing-jwpimareas-footer-b: 0.8125rem;
-    --color-jwpimareas-header: #1378b1;
-    --color-jwpimareas-header-text: #fff;
-    --color-jwpimareas-body: #f0eee9;
-    --color-jwpimareas-body-text: #263238;
-    --color-jwpimareas-dark-bg: #4db6e6;
-    --color-jwpimareas-dark-text: #000;
-    --color-jwpimareas-error-bg: #fff;
-    --color-jwpimareas-error-text: #a12133;
-    --color-jwpimareas-footer-bg: #faca40;
-    --color-jwpimareas-footer-text: #000;
-    --font-sans: var(--font-family-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-serif: var(--font-family-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --height-jwpimareas-header: 5rem;
+  --height-jwpimareas-header-scrolled: 3.5rem;
+
+  --spacing-jwpimareas-p-tag: 0.8125rem;
+  --spacing-jwpimareas-footer-space: 2.5rem;
+  --spacing-jwpimareas-footer-t: 1.3125rem;
+  --spacing-jwpimareas-footer-b: 0.8125rem;
+
+  --color-jwpimareas-header: #1378b1;
+  --color-jwpimareas-header-text: #fff;
+  --color-jwpimareas-body: #f0eee9;
+  --color-jwpimareas-body-text: #263238;
+  --color-jwpimareas-dark-bg: #4db6e6;
+  --color-jwpimareas-dark-text: #000;
+  --color-jwpimareas-error-bg: #fff;
+  --color-jwpimareas-error-text: #a12133;
+  --color-jwpimareas-footer-bg: #faca40;
+  --color-jwpimareas-footer-text: #000;
+  --color-jwpimareas-link: #1271a6;
+  --color-jwpimareas-link-hover: #a12133;
+  --color-jwpimareas-link-line: #d95c3d;
+
+  --font-sans: var(--font-family-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: var(--font-family-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 :root {
-    --jwpimareas-h1-font-size: 48px;
-    --jwpimareas-h1-font-weight: 400;
-    --jwpimareas-h1-letter-spacing: 0.03em;
-    --jwpimareas-h1-margin: 5px 0 19px;
-    --jwpimareas-h1-color: var(--color-jwpimareas-body-text);
-    --jwpimareas-h2-font-size: 40px;
-    --jwpimareas-h2-font-weight: 400;
-    --jwpimareas-h2-letter-spacing: 0.02em;
-    --jwpimareas-h2-margin: 28px 0 16px;
-    --jwpimareas-h2-color: var(--color-jwpimareas-body-text);
-    --jwpimareas-h3-font-size: 30px;
-    --jwpimareas-h3-font-weight: 400;
-    --jwpimareas-h3-letter-spacing: 0.03em;
-    --jwpimareas-h3-margin: 24px 0 15px;
-    --jwpimareas-h3-color: var(--color-jwpimareas-body-text);
-    --jwpimareas-h4-font-size: 24px;
-    --jwpimareas-h4-font-weight: 400;
-    --jwpimareas-h4-letter-spacing: 0.03em;
-    --jwpimareas-h4-margin: 21px 0 14px;
-    --jwpimareas-h4-color: var(--color-jwpimareas-body-text);
-    --jwpimareas-p-tag-lh: 1.38;
-    --jwpimareas-shadow-header: 0 -1px 5px 3px #00000034;
-    --font-family-sans: "Merriweather Sans";
-    --font-family-serif: "Merriweather";
+  --jwpimareas-h1-font-size: 48px;
+  --jwpimareas-h1-font-weight: 400;
+  --jwpimareas-h1-letter-spacing: 0.03em;
+  --jwpimareas-h1-margin: 5px 0 19px;
+  --jwpimareas-h1-color: var(--color-jwpimareas-body-text);
+
+  --jwpimareas-h2-font-size: 40px;
+  --jwpimareas-h2-font-weight: 400;
+  --jwpimareas-h2-letter-spacing: 0.02em;
+  --jwpimareas-h2-margin: 28px 0 16px;
+  --jwpimareas-h2-color: var(--color-jwpimareas-body-text);
+
+  --jwpimareas-h3-font-size: 30px;
+  --jwpimareas-h3-font-weight: 400;
+  --jwpimareas-h3-letter-spacing: 0.03em;
+  --jwpimareas-h3-margin: 24px 0 15px;
+  --jwpimareas-h3-color: var(--color-jwpimareas-body-text);
+
+  --jwpimareas-h4-font-size: 24px;
+  --jwpimareas-h4-font-weight: 400;
+  --jwpimareas-h4-letter-spacing: 0.03em;
+  --jwpimareas-h4-margin: 21px 0 14px;
+  --jwpimareas-h4-color: var(--color-jwpimareas-body-text);
+
+  --leading-p-tag: 1.38;
+  --jwpimareas-shadow-header: 0 -1px 5px 3px #00000034;
+
+  --font-family-sans: "Merriweather Sans";
+  --font-family-serif: "Merriweather";
 }
 @utility flex-full {
-    flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 @layer components {
-    .jwpimareas-page {
-        width: min(100%, 100vw);
-        max-width: min(100%, 100vw);
-        min-height: min(100%, 100vh);
+  .jwpimareas-page {
+    width: min(100%, 100vw);
+    max-width: min(100%, 100vw);
+    min-height: min(100%, 100vh);
+  }
+  .jwpimareas-page-side {
+    flex: 0 0 5vw;
+    @variant xl {
+      @apply flex-1;
     }
-    .jwpimareas-page-side {
-        flex: 0 0 5vw;
-        @variant xl {
-            @apply flex-1;
-        }
+  }
+  .jwpimareas-page-flex {
+    @apply flex-1;
+    @variant xl {
+      flex: 0 0 1280px;
     }
-    .jwpimareas-page-flex {
-        @apply flex-1;
-        @variant xl {
-            flex: 0 0 1280px;
-        }
-    }
-    .jwpimareas-flexbox-0 {
-        @apply flex-full;
-    }
-    .jwpimareas-shadow-header {
-        box-shadow: var(--jwpimareas-shadow-header);
-    }
-    h1,
-    .h1 {
-        font-size: var(--jwpimareas-h1-font-size);
-        font-weight: var(--jwpimareas-h1-font-weight);
-        margin: var(--jwpimareas-h1-margin);
-        letter-spacing: var(--jwpimareas-h1-letter-spacing);
-        color: var(--jwpimareas-h1-color);
-    }
-    h2,
-    .h2 {
-        font-size: var(--jwpimareas-h2-font-size);
-        font-weight: var(--jwpimareas-h2-font-weight);
-        margin: var(--jwpimareas-h2-margin);
-        letter-spacing: var(--jwpimareas-h2-letter-spacing);
-        color: var(--jwpimareas-h2-color);
-    }
-    h3,
-    .h3 {
-        font-size: var(--jwpimareas-h3-font-size);
-        font-weight: var(--jwpimareas-h3-font-weight);
-        margin: var(--jwpimareas-h3-margin);
-        letter-spacing: var(--jwpimareas-h3-letter-spacing);
-        color: var(--jwpimareas-h3-color);
-    }
-    h4,
-    .h4 {
-        font-size: var(--jwpimareas-h4-font-size);
-        font-weight: var(--jwpimareas-h4-font-weight);
-        margin: var(--jwpimareas-h4-margin);
-        letter-spacing: var(--jwpimareas-h4-letter-spacing);
-        color: var(--jwpimareas-h4-color);
-    }
-    p {
-        margin-bottom: var(--spacing-jwpimareas-p-tag);
-        line-height: var(--jwpimareas-p-tag-lh);
-    }
+  }
+  .jwpimareas-flexbox-0 {
+    @apply flex-full;
+  }
+  .jwpimareas-shadow-header {
+    box-shadow: var(--jwpimareas-shadow-header);
+  }
+  h1,
+  .h1 {
+    font-size: var(--jwpimareas-h1-font-size);
+    font-weight: var(--jwpimareas-h1-font-weight);
+    margin: var(--jwpimareas-h1-margin);
+    letter-spacing: var(--jwpimareas-h1-letter-spacing);
+    color: var(--jwpimareas-h1-color);
+  }
+  h2,
+  .h2 {
+    font-size: var(--jwpimareas-h2-font-size);
+    font-weight: var(--jwpimareas-h2-font-weight);
+    margin: var(--jwpimareas-h2-margin);
+    letter-spacing: var(--jwpimareas-h2-letter-spacing);
+    color: var(--jwpimareas-h2-color);
+  }
+  h3,
+  .h3 {
+    font-size: var(--jwpimareas-h3-font-size);
+    font-weight: var(--jwpimareas-h3-font-weight);
+    margin: var(--jwpimareas-h3-margin);
+    letter-spacing: var(--jwpimareas-h3-letter-spacing);
+    color: var(--jwpimareas-h3-color);
+  }
+  h4,
+  .h4 {
+    font-size: var(--jwpimareas-h4-font-size);
+    font-weight: var(--jwpimareas-h4-font-weight);
+    margin: var(--jwpimareas-h4-margin);
+    letter-spacing: var(--jwpimareas-h4-letter-spacing);
+    color: var(--jwpimareas-h4-color);
+  }
+  p {
+    margin-bottom: var(--spacing-jwpimareas-p-tag);
+    line-height: var(--leading-p-tag);
+  }
+  .jwpimareas-page-content a:active,
+  .jwpimareas-page-content a {
+    text-decoration: none;
+    text-decoration-color: var(--color-jwpimareas-link-line);
+    text-underline-offset: 3px;
+    outline: none;
+    color: var(--color-jwpimareas-link);
+    -webkit-transition: color 0.3s, text-decoration 0.3s;
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+  .jwpimareas-page-content a:hover {
+    text-decoration: none;
+    outline: none;
+    color: var(--color-jwpimareas-link-hover);
+  }
+  .jwpimareas-page-content a:focus {
+    text-decoration: underline;
+    outline: none;
+  }
 }
 @font-face {
     font-family: "Merriweather";

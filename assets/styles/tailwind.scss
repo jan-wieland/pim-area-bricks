@@ -1,39 +1,39 @@
 @theme {
-    --breakpoint-xs: 480px; /* Between smartphones and tablets */
-    --breakpoint-sm: 768px; /* Tablets */
-    --breakpoint-md: 1040px; /* Greater than tablets (deliberately more than 1024 px) */
-    --breakpoint-lg: 1280px; /* Notebooks */
-    --breakpoint-xl: 1422px; /* Small screens */
-    --breakpoint-2xl: 1920px; /* Normal screens */
-    --breakpoint-3xl: 2560px; /* Bigger screens */
+  --breakpoint-xs: 480px; /* Between smartphones and tablets */
+  --breakpoint-sm: 768px; /* Tablets */
+  --breakpoint-md: 1040px; /* Greater than tablets (deliberately more than 1024 px) */
+  --breakpoint-lg: 1280px; /* Notebooks */
+  --breakpoint-xl: 1422px; /* Small screens */
+  --breakpoint-2xl: 1920px; /* Normal screens */
+  --breakpoint-3xl: 2560px; /* Bigger screens */
 
-    --font-weight-normal: var(--font-weight);
-    --font-weight-semibold: var(--font-weight-semibold);
-    --font-weight-bold: var(--font-weight-bold);
-    --font-weight-extra-bold: var(--font-weight-extrabold);
+  --font-weight-normal: var(--font-weight);
+  --font-weight-semibold: var(--font-weight-semibold);
+  --font-weight-bold: var(--font-weight-bold);
+  --font-weight-extra-bold: var(--font-weight-extrabold);
 }
 /* Additional Flexbox Widths */
 @utility flex-2 {
-    flex: 2;
+  flex: 2;
 }
 @utility flex-3 {
-    flex: 3;
+  flex: 3;
 }
 @utility flex-4 {
-    flex: 4;
+  flex: 4;
 }
 @utility flex-5 {
-    flex: 5;
+  flex: 5;
 }
 @utility flex-6 {
-    flex: 6;
+  flex: 6;
 }
 @utility flex-7 {
-    flex: 7;
+  flex: 7;
 }
 @utility flex-8 {
-    flex: 8;
+  flex: 8;
 }
 @utility flex-9 {
-    flex: 9;
+  flex: 9;
 }
