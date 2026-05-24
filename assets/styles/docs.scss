@@ -1,0 +1,59 @@
+@charset "UTF-8";
+*,
+header *,
+nav *,
+main *,
+footer *,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+img {
+    border: none;
+}
+body {
+    background: #eceff1;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #263238;
+    -ms-overflow-style: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+@font-face {
+    font-family: "Merriweather";
+    src: url("/assets/fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Merriweather";
+    src: url("/assets/fonts/Merriweather/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Merriweather Sans";
+    src: url("/assets/fonts/Merriweather/MerriweatherSans-VariableFont_wght.ttf") format("truetype");
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Merriweather Sans";
+    src: url("/assets/fonts/Merriweather/MerriweatherSans-Italic-VariableFont_wght.ttf") format("truetype");
+    font-style: italic;
+    font-display: swap;
+}

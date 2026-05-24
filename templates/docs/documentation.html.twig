@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex,nofollow">
+    <meta name="robots" content="noindex,nofollow,noodp,noydir,noarchive">
     <title>{{ 'jwPimAreas.adminMenuDocs.title' | trans({}, 'admin') }}</title>
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('pimAreaBricksDocs', null, 'pimareabricks') }}
+    {% endblock %}
 </head>
 <body>
     {{ 'jwPimAreas.adminMenuDocs.docs' | trans({}, 'admin') }}

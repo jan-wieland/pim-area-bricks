@@ -10,6 +10,7 @@ Encore.setOutputPath('public/')
 
   .addEntry('pimAreaBricksApp', './assets/app.js')
   .addEntry('pimAreaBricksEditmode', './assets/editmode.js')
+  .addEntry('pimAreaBricksDocs', './assets/docs.js')
 
   .disableSingleRuntimeChunk()
   .cleanupOutputBeforeBuild()
