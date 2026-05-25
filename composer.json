@@ -4,7 +4,7 @@
   "type": "pimcore-bundle",
   "license": "MIT",
   "require": {
-    "php": ">=8.3",
+    "php": ">=8.2",
     "pimcore/pimcore": "^11.0"
   },
   "autoload": {
