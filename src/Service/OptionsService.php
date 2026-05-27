@@ -18,7 +18,7 @@ class OptionsService
 
         $hasAllItems = fn(array $keys) => !array_diff($keys, array_keys($editables));
 
-        if ($hasAllItems(['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
+        #if ($hasAllItems(['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
             $hSize = $document->getEditable('headlineSize')?->getData() ?: 'h2';
             $style = $document->getEditable('headlineStyle')?->getData() ?: 'auto';
             $subStyle = $document->getEditable('headlineSubSize')?->getData() ?: 'auto';
@@ -36,7 +36,7 @@ class OptionsService
                     ' class="%s"',
                     $subStyle === 'auto' ? 'h' . (int)substr($hSize, 1) + 1 : $subStyle,
                 ) : '';
-        }
+                #}
 
         return $result;
     }
