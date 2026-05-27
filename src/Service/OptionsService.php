@@ -31,7 +31,7 @@ class OptionsService
                     ($style !== 'auto' ? $style : ''),
                     (Editable::isInEditMode() ? ' m-0' : '')
                 ) : '';
-            $result{'subClass'} = $style !== 'auto' ?
+            $result->subClass = $style !== 'auto' ?
                 sprintf(
                     ' class="%s"',
                     $subStyle === 'auto' ? 'h' . (int)substr($hSize, 1) + 1 : $subStyle,
