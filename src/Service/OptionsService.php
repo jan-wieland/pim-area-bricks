@@ -10,7 +10,7 @@ class OptionsService
      * @param Info $info
      * @return object
      */
-    public function getOptionsByInfo(Info $info): object
+    public static function getOptionsByInfo(Info $info): object
     {
         $document = $info->getDocument();
         $editables = $document->getEditables();
