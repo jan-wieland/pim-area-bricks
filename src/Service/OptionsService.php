@@ -6,9 +6,13 @@ use Pimcore\Model\Document\Editable\Area\Info;
 
 class OptionsService
 {
+    private EditmodeResolver $editmodeResolver;
+
     public function __construct(
-        private readonly EditmodeResolver $editmodeResolver,
-    ) {}
+        private readonly EditmodeResolver $editmodeResolver
+    ) {
+        $this->editmodeResolver = $editmodeResolver;
+    }
 
     /**
      * @param Info $info
@@ -22,6 +26,8 @@ class OptionsService
         $result = (object)[];
 
         $hasAllItems = fn(array $keys) => !array_diff($keys, array_keys($editables));
+
+        $result->editablesList = $editables;
 
         #if ($hasAllItems(['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
             $hSize = $document->getEditable('headlineSize')?->getData() ?: 'h2';
