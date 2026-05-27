@@ -52,12 +52,7 @@ class OptionsService
         $prefix = $info->getParam('name');
         $editables = $info->getDocument()->getEditables();
         foreach ($keys as $key) {
-            if (!array_key_exists(
-            sprintf(
-                '%s.%s',
-                $prefix,
-                $key
-            ), $editables)) {
+            if (!array_key_exists(sprintf('%s.%s',$prefix,$key), $editables)) {
                 return false;
             }
         }
