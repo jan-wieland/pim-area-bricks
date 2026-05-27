@@ -51,7 +51,7 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
             $info->setParam($key, $value);
         }
 
-        $info->setParam('editibalesList', var_dump($info->getDocument()->getEditables()));
+        $info->setParam('editibalesList', var_dump($info->getEditables()));
         /*
         $document = $info->getDocument();
 
