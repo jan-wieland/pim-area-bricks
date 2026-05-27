@@ -12,6 +12,10 @@ use JanWieland\PimAreaBricks\Service\OptionsService;
 
 class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
 {
+    public function __construct(private readonly OptionsService $optionsService) {
+        parent::__construct();
+    }
+
     /**
      * @return string
      */
@@ -42,8 +46,7 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
      */
     public function action(Info $info): ?Response
     {
-        $params = OptionsService::getOptionsByInfo($info);
-
+        $params = $this->optionsService->getOptionsByInfo($info);
         foreach ($params as $key => $value) {
             $info->setParam($key, $value);
         }
