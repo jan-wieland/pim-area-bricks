@@ -17,7 +17,7 @@
 
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
     {%- if editmode or not headlineTitle.isEmpty() -%}
-        <div class="jwpimareas-h-title{{ editmode ? ' pb-2>' : '' }}">{{ headlineSub | raw }}</div>
+        <div class="jwpimareas-h-title{{ editmode ? ' pb-2>' : '' }}">{{ headlineTitle | raw }}</div>
     {%- endif -%}
     <{{ hSize }}{{ hClass | raw }}>{{ headline | raw }}</{{ hSize }}>
     {%- if editmode or not headlineSub.isEmpty() -%}
