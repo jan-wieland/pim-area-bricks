@@ -2,6 +2,7 @@
 namespace JanWieland\PimAreaBricks\Service;
 
 use Pimcore\Model\Document\Editable\Area\Info;
+use Pimcore\Model\Document\Editable;
 
 class OptionsService
 {
@@ -22,23 +23,19 @@ class OptionsService
             $style = $document->getEditable('headlineStyle')?->getData() ?: 'auto';
             $subStyle = $document->getEditable('headlineSubSize')?->getData() ?: 'auto';
 
-            $result{'hSize'} = $hSize;
-            $result{'hSubSize'} = 'h' . ((int) (substr($hSize, 1) + 1));
-            $result{'hClass'} = $style !== 'auto' || Editable::isInEditMode() ?
+            $result->hSize = $hSize;
+            $result->hSubSize = 'h' . ((int) (substr($hSize, 1) + 1));
+            $result->hClass = $style !== 'auto' || Editable::isInEditMode() ?
                 sprintf(
                     ' class="%s%s"',
                     ($style !== 'auto' ? $style : ''),
                     (Editable::isInEditMode() ? ' m-0' : '')
-                ) : '')
-            );
-            $result{'subClass'} = $style !== 'auto'
-                ? sprintf(
+                ) : '';
+            $result{'subClass'} = $style !== 'auto' ?
+                sprintf(
                     ' class="%s"',
-                    $subStyle === 'auto'
-                        ? 'h' . ((int) substr($style, 1) + 1)
-                        : $subStyle,
-                ) : '',
-            );
+                    $subStyle === 'auto' ? 'h' . (int)substr($hSize, 1) + 1 : $subStyle,
+                ) : '';
         }
 
         return $result;
