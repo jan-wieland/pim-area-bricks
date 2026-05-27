@@ -12,9 +12,9 @@ use JanWieland\PimAreaBricks\Service\OptionsService;
 
 class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
 {
-    public function __construct(private readonly OptionsService $optionsService) {
-        parent::__construct();
-    }
+    public function __construct(
+        private readonly OptionsService $optionsService
+    ) {}
 
     /**
      * @return string
