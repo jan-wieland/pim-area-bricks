@@ -50,6 +50,8 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
         foreach ($params as $key => $value) {
             $info->setParam($key, $value);
         }
+
+        $info->setParam('editibalesList', var_dump($info->getDocument()->getEditables()));
         /*
         $document = $info->getDocument();
 
