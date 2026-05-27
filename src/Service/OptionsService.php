@@ -1,11 +1,15 @@
 <?php
 namespace JanWieland\PimAreaBricks\Service;
 
+use Pimcore\Http\Request\Resolver\EditmodeResolver;
 use Pimcore\Model\Document\Editable\Area\Info;
-use Pimcore\Model\Document\Editable;
 
 class OptionsService
 {
+    public function __construct(
+        private readonly EditmodeResolver $editmodeResolver,
+    ) {}
+
     /**
      * @param Info $info
      * @return object
@@ -14,6 +18,7 @@ class OptionsService
     {
         $document = $info->getDocument();
         $editables = $document->getEditables();
+        $isEditMode = $this->editmodeResolver->isEditmode();
         $result = (object)[];
 
         $hasAllItems = fn(array $keys) => !array_diff($keys, array_keys($editables));
@@ -25,7 +30,7 @@ class OptionsService
 
             $result->hSize = $hSize;
             $result->hSubSize = 'h' . ((int) (substr($hSize, 1) + 1));
-            $result->hClass = $style !== 'auto' || Editable::isInEditMode() ?
+            $result->hClass = $style !== 'auto' || $isEditMode ?
                 sprintf(
                     ' class="%s%s"',
                     ($style !== 'auto' ? $style : ''),
