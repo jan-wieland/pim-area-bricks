@@ -50,6 +50,7 @@ jwPimAreas:
     name: "Aside part"
   headline:
     name: "Headline"
+    headlineTitle: "Heading title"
     subheadline: "Subheading (optional)"
     seo:
       label: "Headline SEO"

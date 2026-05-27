@@ -50,6 +50,7 @@ jwPimAreas:
     name: "Ergänzung"
   headline:
     name: "Überschrift"
+    headlineTitle: "Überschrifts-Titel"
     subheadline: "Unterüberschrift (optional)"
     seo:
       label: "Überschrift SEO"

@@ -8,6 +8,7 @@ use Pimcore\Model\Document\Editable;
 use Pimcore\Model\Document\Editable\Area\Info;
 use Symfony\Component\HttpFoundation\Response;
 use JanWieland\PimAreaBricks\Service\BricksService;
+use JanWieland\PimAreaBricks\Service\OptionsService;
 
 class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
 {
@@ -41,17 +42,27 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
      */
     public function action(Info $info): ?Response
     {
+        $params = OptionsService::getOptionsByInfo($info);
+
+        foreach ($params as $key => $value) {
+            $info->setParam($key, $value);
+        }
+        /*
         $document = $info->getDocument();
 
-        $size = $document->getEditable('headlineSize')?->getData() ?: 'h2';
+        $hSize = $document->getEditable('headlineSize')?->getData() ?: 'h2';
         $style = $document->getEditable('headlineStyle')?->getData() ?: 'auto';
         $subStyle = $document->getEditable('headlineSubSize')?->getData() ?: 'auto';
 
-        $info->setParam('size', $size);
-        $info->setParam('subSize', 'h' . ((int) substr($size, 1) + 1));
+        $info->setParam('hSize', $hSize);
+        $info->setParam('hSubSize', 'h' . ((int) substr(hSize, 1) + 1));
         $info->setParam(
             'hClass',
-            $style !== 'auto' ? sprintf(' class="%s"', $style) : '',
+            $style !== 'auto' || Editable::isInEditMode() ? sprintf(
+                ' class="%s%s"',
+                ($style !== 'auto' ? $style : ''),
+                (Editable::isInEditMode() ? ' m-0' : '')
+            ) : '')
         );
         $info->setParam(
             'subClass',
@@ -64,6 +75,7 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
                 )
                 : '',
         );
+        */
 
         return null;
     }
