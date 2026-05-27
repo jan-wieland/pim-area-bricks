@@ -8,9 +8,8 @@ class OptionsService
 {
     private EditmodeResolver $editmodeResolver;
 
-    public function __construct(
-        private readonly EditmodeResolver $editmodeResolver
-    ) {
+    public function __construct(EditmodeResolver $editmodeResolver)
+    {
         $this->editmodeResolver = $editmodeResolver;
     }
 
