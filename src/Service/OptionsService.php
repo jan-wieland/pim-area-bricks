@@ -3,7 +3,6 @@ namespace JanWieland\PimAreaBricks\Service;
 
 use Pimcore\Http\Request\Resolver\EditmodeResolver;
 use Pimcore\Model\Document\Editable\Area\Info;
-
 class OptionsService
 {
     private EditmodeResolver $editmodeResolver;
@@ -20,22 +19,15 @@ class OptionsService
     public function getOptionsByInfo(Info $info): object
     {
         $document = $info->getDocument();
-        $editables = $document->getEditables();
         $isEditMode = $this->editmodeResolver->isEditmode();
         $result = (object)[];
-
-        $hasAllItems = fn(array $keys) => !array_diff($keys, array_keys($editables));
-
-        $result->editablesList = $editables;
-
-        #if ($hasAllItems(['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
-            $hSize = $document->getEditable('headlineSize')?->getData() ?: 'h2';
-            $style = $document->getEditable('headlineStyle')?->getData() ?: 'auto';
+        if ($this->hasEditables($info, ['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
+            $hSize    = $document->getEditable('headlineSize')?->getData() ?: 'h2';
+            $style    = $document->getEditable('headlineStyle')?->getData() ?: 'auto';
             $subStyle = $document->getEditable('headlineSubSize')?->getData() ?: 'auto';
-
-            $result->hSize = $hSize;
-            $result->hSubSize = 'h' . ((int) (substr($hSize, 1) + 1));
-            $result->hClass = $style !== 'auto' || $isEditMode ?
+            $result->hSize    = $hSize;
+            $result->hSubSize = 'h' . ((int)(substr($hSize, 1) + 1));
+            $result->hClass   = $style !== 'auto' || $isEditMode ?
                 sprintf(
                     ' class="%s%s"',
                     ($style !== 'auto' ? $style : ''),
@@ -46,8 +38,30 @@ class OptionsService
                     ' class="%s"',
                     $subStyle === 'auto' ? 'h' . (int)substr($hSize, 1) + 1 : $subStyle,
                 ) : '';
-                #}
-
+        }
         return $result;
+    }
+
+    /**
+     * @param Info $info
+     * @param array $keys
+     * @return bool
+     */
+    private function hasEditables(Info $info, array $keys): bool
+    {
+        $prefix = $info->getParam('name');
+        $editables = $info->getDocument()->getEditables();
+        foreach ($keys as $key) {
+            if (!array_key_exists(
+            sprintf(
+                '%s.%s',
+                $prefix,
+                $key
+            ), $editables)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
