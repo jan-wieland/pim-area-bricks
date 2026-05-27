@@ -23,7 +23,7 @@ class OptionsService
             $subStyle = $document->getEditable('headlineSubSize')?->getData() ?: 'auto';
 
             $result{'hSize'} = $hSize;
-            $result{'hSubSize'} = 'h' . ((int) substr($hSize, 1) + 1));
+            $result{'hSubSize'} = 'h' . ((int) (substr($hSize, 1) + 1));
             $result{'hClass'} = $style !== 'auto' || Editable::isInEditMode() ?
                 sprintf(
                     ' class="%s%s"',
@@ -31,7 +31,7 @@ class OptionsService
                     (Editable::isInEditMode() ? ' m-0' : '')
                 ) : '')
             );
-            $result{'subClass'} =$style !== 'auto'
+            $result{'subClass'} = $style !== 'auto'
                 ? sprintf(
                     ' class="%s"',
                     $subStyle === 'auto'
