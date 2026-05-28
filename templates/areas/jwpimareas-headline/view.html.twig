@@ -17,10 +17,16 @@
 
 {%- if headlineData is defined -%}
     <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
-    {{ dump(_self) }}
-    {#
-
-        {% include (_self|split('/')|slice(0, -1)|join('/') ~ '/headline.html.twig') %}
-        #}
+        <header>
+            {%- if editmode or not headlineTitle.isEmpty() -%}
+                <div class="jwpimareas-h-title{{ editmode ? ' pb-3>' : '' }}">{{ headlineTitle | raw }}</div>
+            {%- endif -%}
+            <{{ headlineData.hSize }} {{ headlineData.hClass | raw }}>{{ headline | raw }}</{{ headlineData.hSize }}>
+            {%- if editmode or not headlineSub.isEmpty() -%}
+                {{ editmode ? '<div class="pt-2">' : '' }}
+                <{{ headlineData.hSubSize }} {{ headlineData.subClass | raw }}>{{ headlineSub | raw }}</{{ headlineData.hSubSize }}>
+                {{ editmode ? '</div>' : '' }}
+            {%- endif -%}
+        </header>
     </div>
 {%- endif -%}
