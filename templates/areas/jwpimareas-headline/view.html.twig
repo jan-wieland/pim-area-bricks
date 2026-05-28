@@ -15,7 +15,7 @@
  class="{{ macrosJwpimaresLayout.macro_gridColumns() }}"
 #}
 
-<div>{{ dump }}</div>
+<div>{{ dump() }}</div>
 {%- if headlineData is defined -%}
     <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
         {%- if editmode or not headlineTitle.isEmpty() -%}
