@@ -20,25 +20,25 @@ class OptionsService
     public function getOptionsByInfo(Info $info): object
     {
         $document = $info->getDocument();
+        $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
         $isEditMode = $this->editmodeResolver->isEditmode();
         $result = (object)[];
 
-        $this->getParamsHeadline($info, $document, $result, $isEditMode);
+        $this->getParamsHeadline($info, $document, $areaKey, $result, $isEditMode);
 
-        $areablock = (array)$info->getEditable();
-        $key = $areablock["\0*\0currentIndex"]['key'];
-        dump($areablock, $key);
+        dump($result);
         return $result;
     }
 
     /**
      * @param Info $info
      * @param Document $document
+     * @param string $areaKey
      * @param object $result
      * @param bool $isEditMode
      * @return void
      */
-    private function getParamsHeadline(Info $info, Document $document, object &$result, bool $isEditMode): void
+    private function getParamsHeadline(Info $info, Document $document, string $areaKey, object &$result, bool $isEditMode): void
     {
         if ($this->hasEditables($info, ['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
             $hSize = $document->getEditable('headlineSize')?->getData() ?: 'h2';
@@ -65,12 +65,13 @@ class OptionsService
 
     /**
      * @param Info $info
+     * @param string $areaKey
      * @param array $keys
      * @return bool
      */
-    private function hasEditables(Info $info, array $keys): bool
+    private function hasEditables(Info $info, $areaKey, array $keys): bool
     {
-        $prefix = $info->getEditable()->getName() . ':' . $info->getIndex();
+        $prefix = $info->getEditable()->getName() . ':' . $areaKey;
         $editables = $info->getDocument()->getEditables();
         foreach ($keys as $key) {
             if (!array_key_exists(sprintf('%s.%s', $prefix, $key), $editables)) {
