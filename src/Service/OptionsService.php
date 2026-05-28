@@ -25,7 +25,7 @@ class OptionsService
 
         $this->getParamsHeadline($info, $document, $result, $isEditMode);
 
-        dump($info->getDocumentElement()->getName());
+        dump($result);
         return $result;
     }
 
@@ -68,7 +68,7 @@ class OptionsService
      */
     private function hasEditables(Info $info, array $keys): bool
     {
-        $prefix = $info->getParam('name');
+        $prefix = $info->getEditable()->getName() . ':' . $info->getIndex();
         $editables = $info->getDocument()->getEditables();
         foreach ($keys as $key) {
             if (!array_key_exists(sprintf('%s.%s', $prefix, $key), $editables)) {
