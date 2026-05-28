@@ -29,6 +29,7 @@ class PimAreaBricksExtension extends Extension implements PrependExtensionInterf
         $container->prependExtensionConfig('twig', [
             'paths' => [
                 \dirname(__DIR__, 2) . '/templates' => 'PimAreaBricks',
+                \dirname(__DIR__, 2) . '/templates' => null,
             ],
         ]);
 
