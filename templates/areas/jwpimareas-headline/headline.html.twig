@@ -1,3 +1,13 @@
+{% set headlineTitle = pimcore_input('headlineTitle', {
+    placeholder: 'jwPimAreas.headline.headlineTitle' | trans({}, 'admin'),
+}) %}
+{% set headline = pimcore_input('headline', {
+    placeholder: 'jwPimAreas.headline.name' | trans({}, 'admin'),
+}) %}
+{% set headlineSub = pimcore_input('headlineSub', {
+    placeholder: 'jwPimAreas.headline.subheadline' | trans({}, 'admin'),
+}) %}
+
 <header>
     {%- if editmode or not headlineTitle.isEmpty() -%}
         <div class="jwpimareas-h-title{{ editmode ? ' pb-3>' : '' }}">{{ headlineTitle | raw }}</div>

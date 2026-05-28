@@ -1,20 +1,5 @@
 {% set anchor = pimcore_input('anchor').getData() %}
 
-{% set headlineTitle = pimcore_input('headlineTitle', {
-    placeholder: 'jwPimAreas.headline.headlineTitle' | trans({}, 'admin'),
-}) %}
-{% set headline = pimcore_input('headline', {
-    placeholder: 'jwPimAreas.headline.name' | trans({}, 'admin'),
-}) %}
-{% set headlineSub = pimcore_input('headlineSub', {
-    placeholder: 'jwPimAreas.headline.subheadline' | trans({}, 'admin'),
-}) %}
-
-{#
-{% import 'macros/jwpimares-layout.html.twig' as macrosJwpimaresLayout %}
- class="{{ macrosJwpimaresLayout.macro_gridColumns() }}"
-#}
-
 {%- if headlineData is defined -%}
     <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
        {% include 'areas/jwpimareas-headline/headline.html.twig' %}
