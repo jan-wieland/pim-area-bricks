@@ -23,7 +23,7 @@ class OptionsService
         $isEditMode = $this->editmodeResolver->isEditmode();
         $result = (object)[];
 
-        $this->getParamsHeadline($info, $document, $result, $isEditMode);
+        #$this->getParamsHeadline($info, $document, $result, $isEditMode);
 
         dump($result);
         return $result;
