@@ -17,16 +17,6 @@
 
 {%- if headlineData is defined -%}
     <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
-        <header>
-            {%- if editmode or not headlineTitle.isEmpty() -%}
-                <div class="jwpimareas-h-title{{ editmode ? ' pb-3>' : '' }}">{{ headlineTitle | raw }}</div>
-            {%- endif -%}
-            <{{ headlineData.hSize }} {{ headlineData.hClass | raw }}>{{ headline | raw }}</{{ headlineData.hSize }}>
-            {%- if editmode or not headlineSub.isEmpty() -%}
-                {{ editmode ? '<div class="pt-2">' : '' }}
-                <{{ headlineData.hSubSize }} {{ headlineData.subClass | raw }}>{{ headlineSub | raw }}</{{ headlineData.hSubSize }}>
-                {{ editmode ? '</div>' : '' }}
-            {%- endif -%}
-        </header>
+        {% include '@PimAreaBricks/areas/jwpimareas-headline/headline.html.twig' %}
     </div>
 {%- endif -%}
