@@ -1,0 +1,3 @@
+#twig:
+#  file_system_loader:
+#    follow_symlinks: true
