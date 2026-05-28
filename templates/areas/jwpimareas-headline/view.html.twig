@@ -19,12 +19,10 @@
     {%- if editmode or not headlineTitle.isEmpty() -%}
         <div class="jwpimareas-h-title{{ editmode ? ' pb-2>' : '' }}">{{ headlineTitle | raw }}</div>
     {%- endif -%}
-    <{{ hSize }}{{ hClass | raw }}>{{ headline | raw }}</{{ hSize }}>
+    <{{ headlineData.hSize }}{{ headlineData.hClass | raw }}>{{ headline | raw }}</{{ headlineData.hSize }}>
     {%- if editmode or not headlineSub.isEmpty() -%}
         {{ editmode ? '<div class="pt-2">' : '' }}
-        <{{ hSubSize }}{{ subClass | raw }}>{{ headlineSub | raw }}</{{ hSubSize }}>
+        <{{ headlineData.hSubSize }}{{ headlineData.subClass | raw }}>{{ headlineSub | raw }}</{{ headlineData.hSubSize }}>
         {{ editmode ? '</div>' : '' }}
     {%- endif -%}
 </div>
-<div>
-{{ dump(editibalesList) }}

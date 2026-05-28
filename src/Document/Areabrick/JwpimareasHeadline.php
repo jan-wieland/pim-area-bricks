@@ -51,37 +51,6 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
             $info->setParam($key, $value);
         }
 
-        $info->setParam('editibalesList', var_dump($info->getEditables()));
-        /*
-        $document = $info->getDocument();
-
-        $hSize = $document->getEditable('headlineSize')?->getData() ?: 'h2';
-        $style = $document->getEditable('headlineStyle')?->getData() ?: 'auto';
-        $subStyle = $document->getEditable('headlineSubSize')?->getData() ?: 'auto';
-
-        $info->setParam('hSize', $hSize);
-        $info->setParam('hSubSize', 'h' . ((int) substr(hSize, 1) + 1));
-        $info->setParam(
-            'hClass',
-            $style !== 'auto' || Editable::isInEditMode() ? sprintf(
-                ' class="%s%s"',
-                ($style !== 'auto' ? $style : ''),
-                (Editable::isInEditMode() ? ' m-0' : '')
-            ) : '')
-        );
-        $info->setParam(
-            'subClass',
-            $style !== 'auto'
-                ? sprintf(
-                    ' class="%s"',
-                    $subStyle === 'auto'
-                        ? 'h' . ((int) substr($style, 1) + 1)
-                        : $subStyle,
-                )
-                : '',
-        );
-        */
-
         return null;
     }
 
