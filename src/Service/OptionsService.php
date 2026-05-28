@@ -25,7 +25,7 @@ class OptionsService
 
         $this->getParamsHeadline($info, $document, $result, $isEditMode);
 
-        dump($document->getEditables());
+        dump($info->getEditable()->getCurrentIndex());
         return $result;
     }
 
