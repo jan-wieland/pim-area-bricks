@@ -47,7 +47,7 @@ class OptionsService
                 'hSubSize' => 'h' . ((int)(substr($hSize, 1) + 1)),
                 'hClass' => sprintf(
                     ' class="%s%s"',
-                    ($style !== 'auto' ? $hSize : $style),
+                    ($style === 'auto' ? $hSize : $style),
                     ($this->isEditMode ? ' m-0' : '')
                 ),
                 'subClass' => sprintf(
