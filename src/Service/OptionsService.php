@@ -40,7 +40,7 @@ class OptionsService
      */
     private function getParamsHeadline(Info $info, Document $document, string $areaKey, object &$result, bool $isEditMode): void
     {
-        if ($this->hasEditables($info, ['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
+        if ($this->hasEditables($info, $areaKey, ['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
             $hSize = $document->getEditable('headlineSize')?->getData() ?: 'h2';
             $style = $document->getEditable('headlineStyle')?->getData() ?: 'auto';
             $subStyle = $document->getEditable('headlineSubSize')?->getData() ?: 'auto';
