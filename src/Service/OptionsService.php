@@ -25,6 +25,7 @@ class OptionsService
 
         $this->getParamsHeadline($info, $document, $result, $isEditMode);
 
+        dump($result);
         return $result;
     }
 
