@@ -25,7 +25,9 @@ class OptionsService
 
         $this->getParamsHeadline($info, $document, $result, $isEditMode);
 
-        dump($info->getEditable()->getCurrentIndex()['key']);
+        $areablock = (array)$info->getEditable();
+        $key = $areablock["\0*\0currentIndex"]['key'];
+        dump($areablock, $key);
         return $result;
     }
 
