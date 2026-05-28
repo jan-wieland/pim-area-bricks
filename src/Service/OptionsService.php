@@ -45,17 +45,15 @@ class OptionsService
             $result->headlineData = [
                 'hSize' => $hSize,
                 'hSubSize' => 'h' . ((int)(substr($hSize, 1) + 1)),
-                'hClass' => $style !== 'auto' || $this->isEditMode ?
-                    sprintf(
-                        ' class="%s%s"',
-                        ($style !== 'auto' ? '' : $style),
-                        ($this->isEditMode ? ' m-0' : '')
-                    ) : '',
-                'subClass' => $style !== 'auto' ?
-                    sprintf(
-                        ' class="%s"',
-                        $subStyle === 'auto' ? 'h' . (int)substr($hSize, 1) + 1 : $subStyle,
-                    ) : '',
+                'hClass' => sprintf(
+                    ' class="%s%s"',
+                    ($style !== 'auto' ? $hSize : $style),
+                    ($this->isEditMode ? ' m-0' : '')
+                ),
+                'subClass' => sprintf(
+                    ' class="%s"',
+                    $subStyle === 'auto' ? 'h' . (int)substr($hSize, 1) + 1 : $subStyle,
+                ),
             ];
         }
     }
