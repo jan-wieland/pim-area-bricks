@@ -20,13 +20,14 @@ class OptionsService
     public function getOptionsByInfo(Info $info): object
     {
         $document = $info->getDocument();
+        # Within the Area Brick, this key is automatically known, but outside, within this service, it must first be determined:
         $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
+
         $isEditMode = $this->editmodeResolver->isEditmode();
         $result = (object)[];
 
         $this->getParamsHeadline($info, $document, $areaKey, $result, $isEditMode);
 
-        dump($result);
         return $result;
     }
 
@@ -64,12 +65,13 @@ class OptionsService
     }
 
     /**
+     * A helper function that determines whether certain editables or options exist in the calling area?
      * @param Info $info
      * @param string $areaKey
      * @param array $keys
      * @return bool
      */
-    private function hasEditables(Info $info, $areaKey, array $keys): bool
+    private function hasEditables(Info $info, string $areaKey, array $keys): bool
     {
         $prefix = $info->getEditable()->getName() . ':' . $areaKey;
         $editables = $info->getDocument()->getEditables();
