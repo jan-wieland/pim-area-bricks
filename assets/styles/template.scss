@@ -61,7 +61,9 @@
   --jwpimareas-h6-margin: 17px 0 12px;
   --jwpimareas-h6-color: var(--color-jwpimareas-body-text);
 
+  --jwpimareas-h-title-font-size: 16px;
   --jwpimareas-h-title-mb: 8px;
+  --jwpimareas-h-sub-mt: -21px;
 
   --leading-p-tag: 1.38;
   --jwpimareas-shadow-header: 0 -1px 5px 3px #00000034;
@@ -162,6 +164,9 @@
   }
   .jwpimareas-h-title {
     margin-bottom: var(--jwpimareas-h-title-mb);
+  }
+  .-mt-h-sub {
+    margin-bottom: var(--jwpimareas-h-sub-mt);
   }
   p {
     margin-bottom: var(--spacing-jwpimareas-p-tag);

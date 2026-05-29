@@ -53,7 +53,7 @@ class OptionsService
                 'subClass' => sprintf(
                     'class="%s%s%s"',
                     $subStyle === 'auto' ? 'h' . (int)substr($hSize, 1) + 1 : $subStyle,
-                    ' -mt-6',
+                    ' -mt-h-sub',
                     ($this->isEditMode ? ' m-0' : ''),
                 ),
             ];
