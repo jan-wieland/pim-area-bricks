@@ -25,36 +25,42 @@
   --font-serif: var(--font-family-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 :root {
+  --jwpimareas-h1-font-family: var(--font-family-sans);
   --jwpimareas-h1-font-size: 48px;
   --jwpimareas-h1-font-weight: 400;
   --jwpimareas-h1-letter-spacing: 0.03em;
   --jwpimareas-h1-margin: 5px 0 19px;
   --jwpimareas-h1-color: var(--color-jwpimareas-body-text);
 
+  --jwpimareas-h2-font-family: var(--font-family-sans);
   --jwpimareas-h2-font-size: 40px;
   --jwpimareas-h2-font-weight: 400;
   --jwpimareas-h2-letter-spacing: 0.02em;
   --jwpimareas-h2-margin: 28px 0 16px;
   --jwpimareas-h2-color: var(--color-jwpimareas-body-text);
 
+  --jwpimareas-h3-font-family: var(--font-family-sans);
   --jwpimareas-h3-font-size: 30px;
   --jwpimareas-h3-font-weight: 400;
   --jwpimareas-h3-letter-spacing: 0.01em;
   --jwpimareas-h3-margin: 24px 0 15px;
   --jwpimareas-h3-color: var(--color-jwpimareas-body-text);
 
+  --jwpimareas-h4-font-family: var(--font-family-sans);
   --jwpimareas-h4-font-size: 24px;
   --jwpimareas-h4-font-weight: 400;
   --jwpimareas-h4-letter-spacing: 0.01em;
   --jwpimareas-h4-margin: 21px 0 14px;
   --jwpimareas-h4-color: var(--color-jwpimareas-body-text);
 
+  --jwpimareas-h5-font-family: var(--font-family-sans);
   --jwpimareas-h5-font-size: 21px;
   --jwpimareas-h5-font-weight: 400;
   --jwpimareas-h5-letter-spacing: 0.01em;
   --jwpimareas-h5-margin: 19px 0 13px;
   --jwpimareas-h5-color: var(--color-jwpimareas-body-text);
 
+  --jwpimareas-h6-font-family: var(--font-family-sans);
   --jwpimareas-h6-font-size: 19px;
   --jwpimareas-h6-font-weight: 400;
   --jwpimareas-h6-letter-spacing: 0.01em;
@@ -100,6 +106,7 @@
   }
   h1,
   .h1 {
+    font-family: var(--jwpimareas-h1-font-family);
     font-size: var(--jwpimareas-h1-font-size);
     font-weight: var(--jwpimareas-h1-font-weight);
     margin: var(--jwpimareas-h1-margin);
@@ -108,6 +115,7 @@
   }
   h2,
   .h2 {
+    font-family: var(--jwpimareas-h2-font-family);
     font-size: var(--jwpimareas-h2-font-size);
     font-weight: var(--jwpimareas-h2-font-weight);
     margin: var(--jwpimareas-h2-margin);
@@ -116,6 +124,7 @@
   }
   h3,
   .h3 {
+    font-family: var(--jwpimareas-h3-font-family);
     font-size: var(--jwpimareas-h3-font-size);
     font-weight: var(--jwpimareas-h3-font-weight);
     margin: var(--jwpimareas-h3-margin);
@@ -124,6 +133,7 @@
   }
   h4,
   .h4 {
+    font-family: var(--jwpimareas-h4-font-family);
     font-size: var(--jwpimareas-h4-font-size);
     font-weight: var(--jwpimareas-h4-font-weight);
     margin: var(--jwpimareas-h4-margin);
@@ -132,6 +142,7 @@
   }
   h5,
   .h5 {
+    font-family: var(--jwpimareas-h5-font-family);
     font-size: var(--jwpimareas-h5-font-size);
     font-weight: var(--jwpimareas-h5-font-weight);
     margin: var(--jwpimareas-h5-margin);
@@ -140,6 +151,7 @@
   }
   h6,
   .h6 {
+    font-family: var(--jwpimareas-h6-font-family);
     font-size: var(--jwpimareas-h6-font-size);
     font-weight: var(--jwpimareas-h6-font-weight);
     margin: var(--jwpimareas-h6-margin);
@@ -165,8 +177,8 @@
   .jwpimareas-h-title {
     margin-bottom: var(--jwpimareas-h-title-mb);
   }
-  .jwpimareas-header .-mt-h-sub,
-  .-mt-h-sub {
+  .jwpimareas-header .jwpimareas-h-sub-mt,
+  .jwpimareas-h-sub-mt {
     margin-top: var(--jwpimareas-h-sub-mt);
   }
   p {

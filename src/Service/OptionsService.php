@@ -53,7 +53,7 @@ class OptionsService
                 'subClass' => sprintf(
                     'class="%s%s%s"',
                     $subStyle === 'auto' ? 'h' . (int)substr($hSize, 1) + 1 : $subStyle,
-                    ' -mt-h-sub',
+                    ' jwpimareas-h-sub-mt',
                     ($this->isEditMode ? ' m-0' : ''),
                 ),
             ];
