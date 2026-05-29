@@ -28,32 +28,38 @@
   --jwpimareas-h1-font-size: 48px;
   --jwpimareas-h1-font-weight: 400;
   --jwpimareas-h1-letter-spacing: 0.03em;
-  --jwpimareas-h1-mb: 19px;
+  --jwpimareas-h1-margin: 5px 0 19px;
   --jwpimareas-h1-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h2-font-size: 40px;
   --jwpimareas-h2-font-weight: 400;
   --jwpimareas-h2-letter-spacing: 0.02em;
-  --jwpimareas-h2-mb: 16px;
+  --jwpimareas-h2-margin: 28px 0 16px;
   --jwpimareas-h2-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h3-font-size: 30px;
   --jwpimareas-h3-font-weight: 400;
   --jwpimareas-h3-letter-spacing: 0.01em;
-  --jwpimareas-h3-mb: 15px;
+  --jwpimareas-h3-margin: 24px 0 15px;
   --jwpimareas-h3-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h4-font-size: 24px;
   --jwpimareas-h4-font-weight: 400;
   --jwpimareas-h4-letter-spacing: 0.01em;
-  --jwpimareas-h4-mb: 14px;
+  --jwpimareas-h4-margin: 21px 0 14px;
   --jwpimareas-h4-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h5-font-size: 21px;
   --jwpimareas-h5-font-weight: 400;
   --jwpimareas-h5-letter-spacing: 0.01em;
-  --jwpimareas-h5-mb: 13px;
+  --jwpimareas-h5-margin: 19px 0 13px;
   --jwpimareas-h5-color: var(--color-jwpimareas-body-text);
+
+  --jwpimareas-h6-font-size: 19px;
+  --jwpimareas-h6-font-weight: 400;
+  --jwpimareas-h6-letter-spacing: 0.01em;
+  --jwpimareas-h6-margin: 17px 0 12px;
+  --jwpimareas-h6-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h-title-mb: 8px;
 
@@ -94,7 +100,7 @@
   .h1 {
     font-size: var(--jwpimareas-h1-font-size);
     font-weight: var(--jwpimareas-h1-font-weight);
-    margin-bottom: var(--jwpimareas-h1-mb);
+    margin: var(--jwpimareas-h1-margin);
     letter-spacing: var(--jwpimareas-h1-letter-spacing);
     color: var(--jwpimareas-h1-color);
   }
@@ -102,7 +108,7 @@
   .h2 {
     font-size: var(--jwpimareas-h2-font-size);
     font-weight: var(--jwpimareas-h2-font-weight);
-    margin-bottom: var(--jwpimareas-h2-mb);
+    margin: var(--jwpimareas-h2-margin);
     letter-spacing: var(--jwpimareas-h2-letter-spacing);
     color: var(--jwpimareas-h2-color);
   }
@@ -110,7 +116,7 @@
   .h3 {
     font-size: var(--jwpimareas-h3-font-size);
     font-weight: var(--jwpimareas-h3-font-weight);
-    margin-bottom: var(--jwpimareas-h3-mb);
+    margin: var(--jwpimareas-h3-margin);
     letter-spacing: var(--jwpimareas-h3-letter-spacing);
     color: var(--jwpimareas-h3-color);
   }
@@ -118,7 +124,7 @@
   .h4 {
     font-size: var(--jwpimareas-h4-font-size);
     font-weight: var(--jwpimareas-h4-font-weight);
-    margin-bottom: var(--jwpimareas-h4-mb);
+    margin: var(--jwpimareas-h4-margin);
     letter-spacing: var(--jwpimareas-h4-letter-spacing);
     color: var(--jwpimareas-h4-color);
   }
@@ -126,9 +132,33 @@
   .h5 {
     font-size: var(--jwpimareas-h5-font-size);
     font-weight: var(--jwpimareas-h5-font-weight);
-    margin-bottom: var(--jwpimareas-h5-mb);
+    margin: var(--jwpimareas-h5-margin);
     letter-spacing: var(--jwpimareas-h5-letter-spacing);
     color: var(--jwpimareas-h5-color);
+  }
+  h6,
+  .h6 {
+    font-size: var(--jwpimareas-h6-font-size);
+    font-weight: var(--jwpimareas-h6-font-weight);
+    margin: var(--jwpimareas-h6-margin);
+    letter-spacing: var(--jwpimareas-h6-letter-spacing);
+    color: var(--jwpimareas-h6-color);
+  }
+  .jwpimareas-header {
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      margin-top: 0;
+    }
   }
   .jwpimareas-h-title {
     margin-bottom: var(--jwpimareas-h-title-mb);
