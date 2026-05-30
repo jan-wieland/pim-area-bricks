@@ -35,9 +35,11 @@ class BricksService
                         ['3', self::transAdmin('jwPimAreas.prams.gridColumns.options.3')],
                         ['4', self::transAdmin('jwPimAreas.prams.gridColumns.options.4')],
                         ['5', self::transAdmin('jwPimAreas.prams.gridColumns.options.5')],
+                        ['6', self::transAdmin('jwPimAreas.prams.gridColumns.options.6')],
                         ['auto', self::transAdmin('jwPimAreas.prams.gridColumns.options.auto')],
                     ],
                     'defaultValue' => 'none',
+                    'width' => 300,
                 ],
             ],
             [
@@ -51,6 +53,7 @@ class BricksService
                         ['bottom', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.bottom')],
                     ],
                     'defaultValue' => 'none',
+                    'width' => 300,
                 ],
             ],
             [
@@ -190,10 +193,10 @@ class BricksService
     /**
      * @return array
      */
-    public static function itemsImageSlide(): array {
+    public static function tabImageSlide(): array {
         return [[
             'type' => 'panel',
-            'title' => BricksService::transAdmin('jwPimAreas.groups.options'),
+            'title' => BricksService::transAdmin('jwPimAreas.groups.imageSlide'),
             'items' => [
                 [
                     'type' => 'checkbox',
@@ -260,57 +263,60 @@ class BricksService
     /**
      * @return array
      */
-     public static function itemsHeadline(): array {
+     public static function tabHeadline(): array {
          return [[
-             'type' => 'select',
-             'name' => 'headlineSize',
-             'label' => self::transAdmin('jwPimAreas.headline.seo.label'),
-             'config' => [
-                 'store' => [
-                     ['h1', 'H1'],
-                     ['h2', self::transAdmin('jwPimAreas.headline.seo.options.h2')],
-                     ['h3', 'H3'],
-                     ['h4', 'H4'],
-                     ['h5', 'H5'],
-                     ['h6', 'H6'],
-                 ],
-                 'defaultValue' => 'h2',
-             ],
-         ],
-         [
-             'type' => 'select',
-             'name' => 'headlineStyle',
-             'label' => self::transAdmin('jwPimAreas.headline.style.label'),
-             'config' => [
-                 'store' => [
-                     ['auto', self::transAdmin('jwPimAreas.headline.style.options.auto')],
-                     ['h1', 'H1'],
-                     ['h2', 'H2'],
-                     ['h3', 'H3'],
-                     ['h4', 'H4'],
-                     ['h5', 'H5'],
-                     ['h6', 'H6'],
-                 ],
-                 'defaultValue' => 'auto',
-                 'width' => 300,
-             ],
-         ],
-         [
-             'type' => 'select',
-             'name' => 'headlineSubSize',
-             'label' => self::transAdmin('jwPimAreas.headline.subSize.label'),
-             'config' => [
-                 'store' => [
-                     ['auto', self::transAdmin('jwPimAreas.headline.subSize.options.auto')],
-                     ['h1', 'H1'],
-                     ['h2', 'H2'],
-                     ['h3', 'H3'],
-                     ['h4', 'H4'],
-                     ['h5', 'H5'],
-                     ['h6', 'H6'],
-                 ],
-                 'defaultValue' => 'auto',
-                 'width' => 300,
+            'type' => 'panel',
+            'title' => BricksService::transAdmin('jwPimAreas.groups.headline'),
+            'items' => [
+                'type' => 'select',
+                'name' => 'headlineSize',
+                'label' => self::transAdmin('jwPimAreas.headline.seo.label'),
+                'config' => [
+                    'store' => [
+                        ['h1', 'H1'],
+                        ['h2', self::transAdmin('jwPimAreas.headline.seo.options.h2')],
+                        ['h3', 'H3'],
+                        ['h4', 'H4'],
+                        ['h5', 'H5'],
+                    ],
+                    'defaultValue' => 'h2',
+                ],
+            ],
+            [
+                'type' => 'select',
+                'name' => 'headlineStyle',
+                'label' => self::transAdmin('jwPimAreas.headline.style.label'),
+                'config' => [
+                    'store' => [
+                        ['auto', self::transAdmin('jwPimAreas.headline.style.options.auto')],
+                        ['h1', 'H1'],
+                        ['h2', 'H2'],
+                        ['h3', 'H3'],
+                        ['h4', 'H4'],
+                        ['h5', 'H5'],
+                    ],
+                    'defaultValue' => 'auto',
+                    'width' => 300,
+                ],
+            ],
+            [
+                'type' => 'select',
+                'name' => 'headlineSubSize',
+                'label' => self::transAdmin('jwPimAreas.headline.subSize.label'),
+                'config' => [
+                    'store' => [
+                        ['auto', self::transAdmin('jwPimAreas.headline.subSize.options.auto')],
+                        ['h1', 'H1'],
+                        ['h2', 'H2'],
+                        ['h3', 'H3'],
+                        ['h4', 'H4'],
+                        ['h5', 'H5'],
+                        ['h5', 'H5'],
+                        ['h6', 'H6'],
+                    ],
+                    'defaultValue' => 'auto',
+                    'width' => 300,
+                ],
              ],
          ]];
     }

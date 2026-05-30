@@ -89,15 +89,7 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
         $config->setItems([
             'type' => 'tabpanel',
             'items' => array_merge(
-                [
-                    [
-                        'type' => 'panel',
-                        'title' => BricksService::transAdmin(
-                            'jwPimAreas.groups.options',
-                        ),
-                        'items' => BricksService::itemsHeadline(),
-                    ],
-                ],
+                BricksService::tabHeadline(),
                 BricksService::tabLayout(),
             ),
         ]);

@@ -71,7 +71,7 @@ class JwpimareasImage extends AbstractTemplateAreabrick implements EditableDialo
             'type' => 'tabpanel',
             'items' => array_merge(
                 BricksService::tabImages(),
-                BricksService::itemsImageSlide(),
+                BricksService::tabImageSlide(),
                 BricksService::tabLayout(),
             ),
         ]);

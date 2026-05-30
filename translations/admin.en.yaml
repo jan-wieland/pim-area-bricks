@@ -1,6 +1,8 @@
 jwPimAreas:
   groups:
+    headline: "Headline"
     images: "Images"
+    imageSlide: "Images slider"
     layout: "Layout elements"
     options: "Optionen"
     pageContent: "Page contents"
@@ -12,9 +14,10 @@ jwPimAreas:
       options:
         none: "None (100%)"
         2: "2 columns (50%)"
-        3: "3 columns (33,3%)"
+        3: "3 columns (33.3%)"
         4: "4 columns (25%)"
         5: "5 columns (20%)"
+        6: "6 Spalten (16.7%)"
         auto: "Remaining width"
     gridItemVertical:
       label: "Align vertically"
@@ -55,19 +58,16 @@ jwPimAreas:
     seo:
       label: "Headline SEO"
       options:
-        h1: "H1"
         h2: "H2 (default)"
-        h3: "H3"
     style:
       label: "display as"
       options:
+        auto: "automatically (like SEO size)"
+        h2: "H2 (default)"
     subSize:
       label: "Subheading as (optional)"
       options:
-        auto: "automatically (like SEO size)"
-        h1: "H1"
-        h2: "H2"
-        h3: "H3"
+        auto: "automatically (one size smaller)"
   image:
     name: "Image"
     plural: "Images"

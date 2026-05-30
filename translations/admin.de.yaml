@@ -1,6 +1,8 @@
 jwPimAreas:
   groups:
+    headline: "Überschrift"
     images: "Bilder"
+    imageSlide: "Bild Slider"
     layout: "Layout-Elemente"
     options: "Optionen"
     pageContent: "Seiteninhalte"
@@ -15,6 +17,7 @@ jwPimAreas:
         3: "3 Spalten (33,3%)"
         4: "4 Spalten (25%)"
         5: "5 Spalten (20%)"
+        6: "6 Spalten (16,7%)"
         auto: "Restliche Breite"
     gridItemVertical:
       label: "Vertikal ausrichten"
@@ -55,11 +58,12 @@ jwPimAreas:
     seo:
       label: "Überschrift SEO"
       options:
-        h2: "H2 (default)"
+        h2: "H2 (Default)"
     style:
       label: "anzeigen als"
       options:
         auto: "automatisch (wie SEO-Größe)"
+        h2: "H2 (Default)"
     subSize:
       label: "Unterüberschrift als (optional)"
       options:
