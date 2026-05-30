@@ -268,56 +268,57 @@ class BricksService
             'type' => 'panel',
             'title' => BricksService::transAdmin('jwPimAreas.groups.headline'),
             'items' => [
-                'type' => 'select',
-                'name' => 'headlineSize',
-                'label' => self::transAdmin('jwPimAreas.headline.seo.label'),
-                'config' => [
-                    'store' => [
-                        ['h1', 'H1'],
-                        ['h2', self::transAdmin('jwPimAreas.headline.seo.options.h2')],
-                        ['h3', 'H3'],
-                        ['h4', 'H4'],
-                        ['h5', 'H5'],
+                [
+                    'type' => 'select',
+                    'name' => 'headlineSize',
+                    'label' => self::transAdmin('jwPimAreas.headline.seo.label'),
+                    'config' => [
+                        'store' => [
+                            ['h1', 'H1'],
+                            ['h2', self::transAdmin('jwPimAreas.headline.seo.options.h2')],
+                            ['h3', 'H3'],
+                            ['h4', 'H4'],
+                            ['h5', 'H5'],
+                        ],
+                        'defaultValue' => 'h2',
+                ],
+                [
+                    'type' => 'select',
+                    'name' => 'headlineStyle',
+                    'label' => self::transAdmin('jwPimAreas.headline.style.label'),
+                    'config' => [
+                        'store' => [
+                            ['auto', self::transAdmin('jwPimAreas.headline.style.options.auto')],
+                            ['h1', 'H1'],
+                            ['h2', 'H2'],
+                            ['h3', 'H3'],
+                            ['h4', 'H4'],
+                            ['h5', 'H5'],
+                        ],
+                        'defaultValue' => 'auto',
+                        'width' => 300,
                     ],
-                    'defaultValue' => 'h2',
+                ],
+                [
+                    'type' => 'select',
+                    'name' => 'headlineSubSize',
+                    'label' => self::transAdmin('jwPimAreas.headline.subSize.label'),
+                    'config' => [
+                        'store' => [
+                            ['auto', self::transAdmin('jwPimAreas.headline.subSize.options.auto')],
+                            ['h1', 'H1'],
+                            ['h2', 'H2'],
+                            ['h3', 'H3'],
+                            ['h4', 'H4'],
+                            ['h5', 'H5'],
+                            ['h5', 'H5'],
+                            ['h6', 'H6'],
+                        ],
+                        'defaultValue' => 'auto',
+                        'width' => 300,
+                    ],
                 ],
             ],
-            [
-                'type' => 'select',
-                'name' => 'headlineStyle',
-                'label' => self::transAdmin('jwPimAreas.headline.style.label'),
-                'config' => [
-                    'store' => [
-                        ['auto', self::transAdmin('jwPimAreas.headline.style.options.auto')],
-                        ['h1', 'H1'],
-                        ['h2', 'H2'],
-                        ['h3', 'H3'],
-                        ['h4', 'H4'],
-                        ['h5', 'H5'],
-                    ],
-                    'defaultValue' => 'auto',
-                    'width' => 300,
-                ],
-            ],
-            [
-                'type' => 'select',
-                'name' => 'headlineSubSize',
-                'label' => self::transAdmin('jwPimAreas.headline.subSize.label'),
-                'config' => [
-                    'store' => [
-                        ['auto', self::transAdmin('jwPimAreas.headline.subSize.options.auto')],
-                        ['h1', 'H1'],
-                        ['h2', 'H2'],
-                        ['h3', 'H3'],
-                        ['h4', 'H4'],
-                        ['h5', 'H5'],
-                        ['h5', 'H5'],
-                        ['h6', 'H6'],
-                    ],
-                    'defaultValue' => 'auto',
-                    'width' => 300,
-                ],
-             ],
          ]];
     }
 
