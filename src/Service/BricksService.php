@@ -281,6 +281,7 @@ class BricksService
                             ['h5', 'H5'],
                         ],
                         'defaultValue' => 'h2',
+                    ],
                 ],
                 [
                     'type' => 'select',
