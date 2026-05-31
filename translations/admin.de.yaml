@@ -23,11 +23,11 @@ jwPimAreas:
       label: "Area  beendet Grid-Zeile?"
       options:
         yes: "Ja, danach neue Zeile"
-        no: "Nein (Default)"
+        no: "Nein (default)"
     gridItemVertical:
       label: "Vertikal ausrichten"
       options:
-        none: "Ohne (empfohlener default)"
+        none: "Ohne (empfohlener Default)"
         top: "Oben bündig (in der Zeile)"
         bottom: "Unten bündig (in der Zeile)"
     boxStyle:
@@ -63,12 +63,12 @@ jwPimAreas:
     seo:
       label: "Überschrift SEO"
       options:
-        h2: "H2 (Default)"
+        h2: "H2 (default)"
     style:
       label: "anzeigen als"
       options:
         auto: "automatisch (wie SEO-Größe)"
-        h2: "H2 (Default)"
+        h2: "H2 (default)"
     subSize:
       label: "Unterüberschrift als (optional)"
       options:
@@ -96,7 +96,7 @@ jwPimAreas:
       options:
         before: "Ganz oben"
         after: "Nach Überschrift"
-        introduction: "Nach Einleitung (empfohlener default)"
+        introduction: "Nach Einleitung (empfohlener Default)"
     imageProportion:
       label: "Bildproportionen (B x H)"
       options:
