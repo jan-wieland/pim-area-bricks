@@ -44,6 +44,19 @@ class BricksService
             ],
             [
                 'type' => 'select',
+                'name' => 'endsGridRow',
+                'label' => self::transAdmin('jwPimAreas.prams.endsGridRow.label'),
+                'config' => [
+                    'store' => [
+                        ['yes', self::transAdmin('jwPimAreas.prams.endsGridRow.options.yes')],
+                        ['no', self::transAdmin('jwPimAreas.prams.endsGridRow.options.no')],
+                    ],
+                    'defaultValue' => 'no',
+                    'width' => 300,
+                ],
+            ],
+            [
+                'type' => 'select',
                 'name' => 'gridItemVertical',
                 'label' => self::transAdmin('jwPimAreas.prams.gridItemVertical.label'),
                 'config' => [

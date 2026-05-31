@@ -3,7 +3,7 @@ jwPimAreas:
     headline: "Überschrift"
     images: "Bilder"
     imageSlide: "Bild Slider"
-    layout: "Layout-Elemente"
+    layout: "Layout"
     options: "Optionen"
     pageContent: "Seiteninhalte"
     structure: "Struktur"
@@ -19,6 +19,11 @@ jwPimAreas:
         5: "5 Spalten (20%)"
         6: "6 Spalten (16,7%)"
         auto: "Restliche Breite"
+    endsGridRow:
+      label: "Area  beendet Grid-Zeile?"
+      options:
+        yes: "Ja, danach neue Zeile"
+        no: "Nein (Default)"
     gridItemVertical:
       label: "Vertikal ausrichten"
       options:
@@ -35,8 +40,8 @@ jwPimAreas:
         tile: "Kachel (Hintergrundbild)"
         rotating-tile: "Drehende Kachel (2 Seiten)"
     space:
-      before: "Leerraum davor"
-      after: "Leerraum danach"
+      before: "Abstand davor"
+      after: "Abstand danach"
       options:
         none: "Ohne (default)"
         extra-small: "Sehr klein"

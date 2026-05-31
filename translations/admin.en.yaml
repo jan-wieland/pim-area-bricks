@@ -3,7 +3,7 @@ jwPimAreas:
     headline: "Headline"
     images: "Images"
     imageSlide: "Images slider"
-    layout: "Layout elements"
+    layout: "Layout"
     options: "Optionen"
     pageContent: "Page contents"
     structure: "Structure"
@@ -19,6 +19,11 @@ jwPimAreas:
         5: "5 columns (20%)"
         6: "6 Spalten (16.7%)"
         auto: "Remaining width"
+    endsGridRow:
+      label: "Area ends the grid row?"
+      options:
+        yes: "Yes, then a new line"
+        no: "No (default)"
     gridItemVertical:
       label: "Align vertically"
       options:
