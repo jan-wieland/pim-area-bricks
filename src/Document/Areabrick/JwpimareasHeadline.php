@@ -46,12 +46,7 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
      */
     public function action(Info $info): ?Response
     {
-        $areablockName = $info->getEditable()->getName();
-        $brickIndex = $info->getIndex();
-        $brickId = $this->getId();
-        $brickIdPrefix = $areablockName . ':' . $brickIndex . '.' . $brickId . '.';
-        dump($brickIdPrefix);
-        $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
+        # $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
 
         $prefix = $info->getEditable()->getName() . ':' . $areaKey;
         $editables = $info->getDocument()->getEditables();

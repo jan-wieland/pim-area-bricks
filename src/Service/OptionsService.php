@@ -37,6 +37,15 @@ class OptionsService
      */
     private function getParamsHeadline(Info $info, object &$result): void
     {
+        $areaKey = sprintf(
+            '%s:%s:%s.',
+            $info->getEditable()->getName(),
+            $info->getIndex(),
+            $this->getId()
+        );
+        $editables = $info->getDocument()->getEditables();
+        dump($areaKey, $editables);
+
         if ($this->hasEditables($info, ['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
             $hSize = $this->document->getEditable('headlineSize')?->getData() ?: 'h2';
             $style = $this->document->getEditable('headlineStyle')?->getData() ?: 'auto';
