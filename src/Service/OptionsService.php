@@ -9,7 +9,6 @@ use Pimcore\Model\Document\Editable\Area\Info;
 class OptionsService
 {
     private EditmodeResolver $editmodeResolver;
-    private Document\PageSnippet $document;
     private array $editables = [];
     private bool $isEditMode;
 
@@ -24,13 +23,12 @@ class OptionsService
      */
     public function getOptionsByInfo(Info $info): object
     {
-        $this->document = $info->getDocument();
         $this->isEditMode = $this->editmodeResolver->isEditmode();
         $result = (object)[];
 
+        # Extract data for different topics, if available:
         $this->getParamsHeadline($info, $result);
 
-        dump($result);
         return $result;
     }
 
@@ -74,23 +72,6 @@ class OptionsService
     }
 
     /**
-     * Looks up an editable by its short key (without area prefix) from $this->editables.
-     *
-     * @param string $key
-     * @return Document\Editable|null
-     */
-    private function getEditable(string $key): ?Document\Editable
-    {
-        foreach ($this->editables as $fullKey => $editable) {
-            if (str_ends_with($fullKey, '.' . $key)) {
-                return $editable;
-            }
-        }
-
-        return null;
-    }
-
-    /**
      * Checks whether all given editable keys exist in the current area context.
      *
      * @param array $keys
@@ -106,4 +87,21 @@ class OptionsService
 
         return true;
     }
+
+    /**
+     * Looks up an editable by its short key (without area prefix) from $this->editables.
+     *
+     * @param string $key
+     * @return Document\Editable|null
+     */
+    private function getEditable(string $key): ?Document\Editable
+    {
+        $matches = array_filter(
+            $this->editables,
+            static fn(string $k): bool => str_ends_with($k, '.' . $key),
+            ARRAY_FILTER_USE_KEY
+        );
+
+        return array_values($matches)[0] ?? null;
+     }
 }
