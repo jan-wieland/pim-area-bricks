@@ -1,13 +1,16 @@
 <?php
+
 namespace JanWieland\PimAreaBricks\Service;
 
 use Pimcore\Http\Request\Resolver\EditmodeResolver;
 use Pimcore\Model\Document;
 use Pimcore\Model\Document\Editable\Area\Info;
+
 class OptionsService
 {
     private EditmodeResolver $editmodeResolver;
     private Document\PageSnippet $document;
+    private array $editables = [];
     private bool $isEditMode;
 
     public function __construct(EditmodeResolver $editmodeResolver)
@@ -27,6 +30,7 @@ class OptionsService
 
         $this->getParamsHeadline($info, $result);
 
+        dump($result);
         return $result;
     }
 
@@ -38,23 +42,18 @@ class OptionsService
     private function getParamsHeadline(Info $info, object &$result): void
     {
         $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
-        $areaPrefix = sprintf(
-            '%s:%s.',
-            $info->getEditable()->getName(),
-            $areaKey
-        );
-        $editables = $info->getDocument()->getEditables();
-        $filteredEditables = array_filter(
-            $editables,
+        $areaPrefix = sprintf('%s:%s.', $info->getEditable()->getName(), $areaKey);
+
+        $this->editables = array_filter(
+            $info->getDocument()->getEditables(),
             static fn(string $key): bool => str_starts_with($key, $areaPrefix),
             ARRAY_FILTER_USE_KEY
         );
-        dump($filteredEditables);
 
-        if ($this->hasEditables($info, ['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
-            $hSize = $this->document->getEditable('headlineSize')?->getData() ?: 'h2';
-            $style = $this->document->getEditable('headlineStyle')?->getData() ?: 'auto';
-            $subStyle = $this->document->getEditable('headlineSubSize')?->getData() ?: 'auto';
+        if ($this->hasEditables(['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
+            $hSize = $this->getEditable('headlineSize')?->getData() ?: 'h2';
+            $style = $this->getEditable('headlineStyle')?->getData() ?: 'auto';
+            $subStyle = $this->getEditable('headlineSubSize')?->getData() ?: 'auto';
 
             $result->headlineData = [
                 'hSize' => $hSize,
@@ -75,19 +74,32 @@ class OptionsService
     }
 
     /**
+     * Looks up an editable by its short key (without area prefix) from $this->editables.
+     *
+     * @param string $key
+     * @return Document\Editable|null
+     */
+    private function getEditable(string $key): ?Document\Editable
+    {
+        foreach ($this->editables as $fullKey => $editable) {
+            if (str_ends_with($fullKey, '.' . $key)) {
+                return $editable;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * Checks whether all given editable keys exist in the current area context.
-     * @param Info $info
+     *
      * @param array $keys
      * @return bool
      */
-    private function hasEditables(Info $info, array $keys): bool
+    private function hasEditables(array $keys): bool
     {
-        $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
-
-        $prefix = $info->getEditable()->getName() . ':' . $areaKey;
-        $editables = $info->getDocument()->getEditables();
         foreach ($keys as $key) {
-            if (!array_key_exists(sprintf('%s.%s', $prefix, $key), $editables)) {
+            if ($this->getEditable($key) === null) {
                 return false;
             }
         }
