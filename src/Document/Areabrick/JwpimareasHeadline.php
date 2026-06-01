@@ -47,6 +47,8 @@ class JwpimareasHeadline extends AbstractTemplateAreabrick implements EditableDi
     public function action(Info $info): ?Response
     {
         dump($info->getDocument()->getEditables());
+        dump($info->getDocument()->getEditable('sonstewas'));
+        dump($info->getDocument()->getEditable('headlineSize'));
 
         $params = $this->optionsService->getOptionsByInfo($info);
         foreach ($params as $key => $value) {

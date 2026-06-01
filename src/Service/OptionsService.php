@@ -38,6 +38,8 @@ class OptionsService
     private function getParamsHeadline(Info $info, object &$result): void
     {
         dump($info->getDocument()->getEditables());
+        dump($info->getDocument()->getEditable('sonstewas'));
+        dump($info->getDocument()->getEditable('headlineSize'));
 
         if ($this->hasEditables($info, ['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
             $hSize = $this->document->getEditable('headlineSize')?->getData() ?: 'h2';
