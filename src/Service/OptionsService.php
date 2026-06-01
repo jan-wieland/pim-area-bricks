@@ -39,13 +39,17 @@ class OptionsService
     {
         $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
         $areaPrefix = sprintf(
-            '%s:%s:%s.',
+            '%s:%s.',
             $info->getEditable()->getName(),
-            $info->getIndex(),
             $areaKey
         );
         $editables = $info->getDocument()->getEditables();
-        dump($areaKey, $areaPrefix, $editables);
+        $filteredEditables = array_filter(
+            $editables,
+            static fn(string $key): bool => str_starts_with($key, $areaPrefix),
+            ARRAY_FILTER_USE_KEY
+        );
+        dump($filteredEditables);
 
         if ($this->hasEditables($info, ['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
             $hSize = $this->document->getEditable('headlineSize')?->getData() ?: 'h2';
