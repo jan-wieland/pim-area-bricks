@@ -5,9 +5,19 @@ use Pimcore\Model\Document;
 use Pimcore\Model\Document\Link;
 use Pimcore\Model\Asset\Folder;
 use Pimcore\Model\Tool\SettingsStore;
+use Pimcore\Tool\Authentication;
 
 class TemplateService
 {
+    private const SUPPORTED_LANGUAGES = ['de', 'en'];
+    private static string $language = 'en';
+
+    public function __construct()
+    {
+        $language = Authentication::authenticateSession()?->getLanguage() ?? 'en';
+        self::$language = in_array($language, self::SUPPORTED_LANGUAGES, true) ? $language : 'en';
+    }
+
     /**
      * @param Document $document
      * @return array
@@ -60,6 +70,7 @@ class TemplateService
                     && $document->getId() === self::getPageProperty($document, 'rootNav')?->getId(),
                 'pageId' => (string) ($document ? $document->getId() : '0'),
                 'language' => (string) $document?->getProperty('language') ?: 'de',
+                'editorLanguage' => (string) self::$language,
             ],
         ];
     }
