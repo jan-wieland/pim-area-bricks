@@ -64,6 +64,8 @@ jwPimAreas:
     name: "Artikel"
   aside:
     name: "Ergänzung"
+  custom:
+    name: "Eigenes Seitenelement"
   headline:
     name: "Überschrift"
     headlineTitle: "Überschrifts-Titel"
