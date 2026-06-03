@@ -63,7 +63,7 @@ class TemplateService
                     && $document->getId() === self::getPageProperty($document, 'rootNav')?->getId(),
                 'pageId' => (string) ($document ? $document->getId() : '0'),
                 'language' => (string) $document?->getProperty('language') ?: 'de',
-                'editorLanguage' => self::getEditorLanguage(),
+                'editorLanguage' => 'en',
             ],
         ];
     }
