@@ -19,7 +19,7 @@ class BricksService
      * @param string $transKey
      * @return string
      */
-    public function transAdmin(string $transKey): string
+    public static function transAdmin(string $transKey): string
     {
         return \Pimcore::getContainer()->get('translator')->trans($transKey, [], 'admin', $this->language);
     }
