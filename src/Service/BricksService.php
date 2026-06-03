@@ -2,16 +2,26 @@
 namespace JanWieland\PimAreaBricks\Service;
 
 use Pimcore\Model\Document\Editable\Area\Info;
+use Pimcore\Tool\Authentication;
 
 class BricksService
 {
+    private const SUPPORTED_LANGUAGES = ['de', 'en'];
+    private string $language = 'en';
+
+    public function __construct()
+    {
+        $language = Authentication::authenticateSession()?->getLanguage() ?? 'en';
+        $this->language = in_array($language, self::SUPPORTED_LANGUAGES, true) ? $language : 'en';
+    }
+
     /**
      * @param string $transKey
      * @return string
      */
-    public static function transAdmin(string $transKey): string
+    public function transAdmin(string $transKey): string
     {
-        return \Pimcore::getContainer()->get('translator')->trans($transKey, [], 'admin');
+        return \Pimcore::getContainer()->get('translator')->trans($transKey, [], 'admin', $this->language);
     }
 
     /**
