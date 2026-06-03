@@ -1,5 +1,5 @@
 {% set anchor = pimcore_input('anchor').getData() %}
 
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
-    {% include 'areablocks/custom.html.twig' %}
+    {% include 'areablocks/custom.html.twig' with {'infoId': info.getId()} %}
 </div>
