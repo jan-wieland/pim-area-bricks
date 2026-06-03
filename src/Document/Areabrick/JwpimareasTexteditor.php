@@ -50,6 +50,8 @@ class JwpimareasTexteditor extends AbstractTemplateAreabrick implements Editable
         foreach ($params as $key => $value) {
             $info->setParam($key, $value);
         }
+
+        return null;
     }
 
     /**
