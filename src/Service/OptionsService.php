@@ -9,12 +9,18 @@ use Pimcore\Model\Document\Editable\Area\Info;
 class OptionsService
 {
     private EditmodeResolver $editmodeResolver;
+
+    private const SUPPORTED_LANGUAGES = ['de', 'en'];
+    private static string $language = 'en';
+
     private array $editables = [];
     private bool $isEditMode;
 
     public function __construct(EditmodeResolver $editmodeResolver)
     {
         $this->editmodeResolver = $editmodeResolver;
+        $language = Authentication::authenticateSession()?->getLanguage() ?? 'en';
+        $this->language = in_array($language, self::SUPPORTED_LANGUAGES, true) ? $language : 'en';
     }
 
     /**
@@ -24,8 +30,9 @@ class OptionsService
     public function getOptionsByInfo(Info $info): object
     {
         $this->isEditMode = $this->editmodeResolver->isEditmode();
-        dump($info->getDocument());
-        $result = (object)[];
+        $result = (object)[
+            'editorLanguage' => $this->language,
+        ];
 
         # Get all editables from the calling area:
         $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];

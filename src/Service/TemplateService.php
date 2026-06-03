@@ -9,8 +9,6 @@ use Pimcore\Tool\Authentication;
 
 class TemplateService
 {
-    private const SUPPORTED_LANGUAGES = ['de', 'en'];
-
     /**
      * @param Document $document
      * @return array
@@ -63,18 +61,8 @@ class TemplateService
                     && $document->getId() === self::getPageProperty($document, 'rootNav')?->getId(),
                 'pageId' => (string) ($document ? $document->getId() : '0'),
                 'language' => (string) $document?->getProperty('language') ?: 'de',
-                'editorLanguage' => 'en',
             ],
         ];
-    }
-
-    /**
-     * @return string
-     */
-    private static function getEditorLanguage(): string
-    {
-        $language = Authentication::authenticateSession()?->getLanguage() ?? 'en';
-        return in_array($language, self::SUPPORTED_LANGUAGES, true) ? $language : 'en';
     }
 
     /**
