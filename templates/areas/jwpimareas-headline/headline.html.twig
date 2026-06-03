@@ -1,11 +1,11 @@
 {% set headlineTitle = pimcore_input('headlineTitle', {
-    placeholder: 'jwPimAreas.headline.headlineTitle' | trans({}, 'admin'),
+    placeholder: 'jwPimAreas.headline.headlineTitle' | trans({}, 'admin', editorLanguage),
 }) %}
 {% set headline = pimcore_input('headline', {
-    placeholder: 'jwPimAreas.headline.name' | trans({}, 'admin'),
+    placeholder: 'jwPimAreas.headline.name' | trans({}, 'admin', editorLanguage),
 }) %}
 {% set headlineSub = pimcore_input('headlineSub', {
-    placeholder: 'jwPimAreas.headline.subheadline' | trans({}, 'admin'),
+    placeholder: 'jwPimAreas.headline.subheadline' | trans({}, 'admin', editorLanguage),
 }) %}
 
 <header class="jwpimareas-header">

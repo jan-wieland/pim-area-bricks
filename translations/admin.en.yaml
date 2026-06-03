@@ -36,8 +36,8 @@ jwPimAreas:
       label: "Align vertically"
       options:
         none: "Without (default recommended)"
-        top: "top aligned (in the row)"
-        bottom: "bottom aligned (in the row)"
+        top: "Top aligned (in the row)"
+        bottom: "Bottom aligned (in the row)"
     boxStyle:
       label: "Box-style"
       options:
@@ -77,9 +77,9 @@ jwPimAreas:
       options:
         h2: "H2 (default)"
     style:
-      label: "display as"
+      label: "Display as"
       options:
-        auto: "automatically (like SEO size)"
+        auto: "Automatically (like SEO size)"
         h2: "H2 (default)"
     subSize:
       label: "Subheading as (optional)"
@@ -104,11 +104,11 @@ jwPimAreas:
         float-left: "Floating, image on left"
         float-right: "Floating, image on right"
     imagePosRelativeH:
-      label: "Positionierung zur Überschrift"
+      label: "Position relative to the heading"
       options:
-        before: "Ganz oben"
-        after: "Nach Überschrift"
-        introduction: "Nach Einleitung (empfohlener default)"
+        before: "At the top"
+        after: "After the headline"
+        introduction: "After the introduction (recommended default)"
     imageProportion:
       label: "Bildproportionen (B x H)"
       options:
