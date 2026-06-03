@@ -66,6 +66,8 @@ jwPimAreas:
     name: "Aside part"
   custom:
     name: "Custom page element"
+    start: "Custom page element – start …"
+    end: "… End"
   headline:
     name: "Headline"
     headlineTitle: "Heading title"
