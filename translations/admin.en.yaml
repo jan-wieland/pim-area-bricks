@@ -1,9 +1,11 @@
 jwPimAreas:
   groups:
+    design: "Gestaltung"
     headline: "Headline"
     images: "Images"
     imageSlide: "Images slider"
     layout: "Layout"
+    layoutElements: "Layout elements"
     options: "Optionen"
     pageContent: "Page contents"
     structure: "Structure"
@@ -19,6 +21,12 @@ jwPimAreas:
         5: "5 columns (20%)"
         6: "6 Spalten (16.7%)"
         auto: "Remaining width"
+    girdBreakpoints:
+      label: "Breakpoints are triggered"
+      options:
+        early: "Earlier"
+        normal: "Normal (default)"
+        late: "Later"
     endsGridRow:
       label: "Area ends the grid row?"
       options:
@@ -56,6 +64,8 @@ jwPimAreas:
     name: "Article"
   aside:
     name: "Aside part"
+  custom:
+    name: "Custom page element"
   headline:
     name: "Headline"
     headlineTitle: "Heading title"

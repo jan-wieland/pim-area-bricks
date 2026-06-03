@@ -26,8 +26,18 @@ class OptionsService
         $this->isEditMode = $this->editmodeResolver->isEditmode();
         $result = (object)[];
 
+        # Get all editables from the calling area:
+        $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
+        $areaPrefix = sprintf('%s:%s.', $info->getEditable()->getName(), $areaKey);
+        $this->editables = array_filter(
+            $info->getDocument()->getEditables(),
+            static fn(string $key): bool => str_starts_with($key, $areaPrefix),
+            ARRAY_FILTER_USE_KEY
+        );
+
         # Extract data for different topics, if available:
         $this->getParamsHeadline($info, $result);
+        $this->getParamsLayout($info, $result);
 
         return $result;
     }
@@ -39,15 +49,6 @@ class OptionsService
      */
     private function getParamsHeadline(Info $info, object &$result): void
     {
-        $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
-        $areaPrefix = sprintf('%s:%s.', $info->getEditable()->getName(), $areaKey);
-
-        $this->editables = array_filter(
-            $info->getDocument()->getEditables(),
-            static fn(string $key): bool => str_starts_with($key, $areaPrefix),
-            ARRAY_FILTER_USE_KEY
-        );
-
         if ($this->hasEditables(['headlineSize', 'headlineStyle', 'headlineSubSize'])) {
             $hSize = $this->getEditable('headlineSize')?->getData() ?: 'h2';
             $style = $this->getEditable('headlineStyle')?->getData() ?: 'auto';
@@ -68,6 +69,19 @@ class OptionsService
                     ($this->isEditMode ? ' m-0' : ''),
                 ),
             ];
+        }
+    }
+
+    /**
+     * @param Info $info
+     * @param object $result
+     * @return void
+     */
+    private function getParamsLayout(Info $info, object &$result): void
+    {
+        if ($this->hasEditables(['gridColumns', 'girdBreakpoints', 'endsGridRow', 'gridItemVertical', 'boxStyle'])) {
+        }
+        if ($this->hasEditables(['spaceBefore', 'spaceAfter'])) {
         }
     }
 

@@ -18,6 +18,37 @@ class BricksService
      * @param bool $short
      * @return array
      */
+    public static function tabDesign(bool $short = false): array
+    {
+        return [[
+            'type' => 'panel',
+            'title' => self::transAdmin('jwPimAreas.groups.design'),
+            'items' => [
+                [
+                    'type' => 'select',
+                    'name' => 'boxStyle',
+                    'label' => self::transAdmin('jwPimAreas.prams.boxStyle.label'),
+                    'config' => [
+                        'store' => [
+                            ['none', self::transAdmin('jwPimAreas.prams.boxStyle.options.none')],
+                            ['default', self::transAdmin('jwPimAreas.prams.boxStyle.options.default')],
+                            ['image-left', self::transAdmin('jwPimAreas.prams.boxStyle.options.image-left')],
+                            ['image-right', self::transAdmin('jwPimAreas.prams.boxStyle.options.image-right')],
+                            ['tile', self::transAdmin('jwPimAreas.prams.boxStyle.options.tile')],
+                            ['rotating-tile', self::transAdmin('jwPimAreas.prams.boxStyle.options.rotating-tile')],
+                        ],
+                        'defaultValue' => 'none',
+                        'width' => 300,
+                    ],
+            ],
+            ],
+        ]];
+    }
+
+    /**
+     * @param bool $short
+     * @return array
+     */
     public static function tabLayout(bool $short = false): array
     {
         return [[
@@ -44,6 +75,20 @@ class BricksService
             ],
             [
                 'type' => 'select',
+                'name' => 'girdBreakpoints',
+                'label' => self::transAdmin('jwPimAreas.prams.girdBreakpoints.label'),
+                'config' => [
+                    'store' => [
+                        ['early', self::transAdmin('jwPimAreas.prams.girdBreakpoints.options.early')],
+                        ['normal', self::transAdmin('jwPimAreas.prams.girdBreakpoints.options.normal')],
+                        ['late', self::transAdmin('jwPimAreas.prams.girdBreakpoints.options.late')],
+                    ],
+                    'defaultValue' => 'normal',
+                    'width' => 300,
+                ],
+            ],
+            [
+                'type' => 'select',
                 'name' => 'endsGridRow',
                 'label' => self::transAdmin('jwPimAreas.prams.endsGridRow.label'),
                 'config' => [
@@ -64,23 +109,6 @@ class BricksService
                         ['none', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.none')],
                         ['top', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.top')],
                         ['bottom', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.bottom')],
-                    ],
-                    'defaultValue' => 'none',
-                    'width' => 300,
-                ],
-            ],
-            [
-                'type' => 'select',
-                'name' => 'boxStyle',
-                'label' => self::transAdmin('jwPimAreas.prams.boxStyle.label'),
-                'config' => [
-                    'store' => [
-                        ['none', self::transAdmin('jwPimAreas.prams.boxStyle.options.none')],
-                        ['default', self::transAdmin('jwPimAreas.prams.boxStyle.options.default')],
-                        ['image-left', self::transAdmin('jwPimAreas.prams.boxStyle.options.image-left')],
-                        ['image-right', self::transAdmin('jwPimAreas.prams.boxStyle.options.image-right')],
-                        ['tile', self::transAdmin('jwPimAreas.prams.boxStyle.options.tile')],
-                        ['rotating-tile', self::transAdmin('jwPimAreas.prams.boxStyle.options.rotating-tile')],
                     ],
                     'defaultValue' => 'none',
                     'width' => 300,

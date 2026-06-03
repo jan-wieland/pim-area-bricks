@@ -1,9 +1,11 @@
 jwPimAreas:
   groups:
+    design: "Gestaltung"
     headline: "Überschrift"
     images: "Bilder"
     imageSlide: "Bild Slider"
     layout: "Layout"
+    layoutElements: "Layout-Elemente"
     options: "Optionen"
     pageContent: "Seiteninhalte"
     structure: "Struktur"
@@ -19,6 +21,12 @@ jwPimAreas:
         5: "5 Spalten (20%)"
         6: "6 Spalten (16,7%)"
         auto: "Restliche Breite"
+    girdBreakpoints:
+      label: "Breakpoints greifen"
+      options:
+        early: "Früher"
+        normal: "Normal (default)"
+        late: "Später"
     endsGridRow:
       label: "Area  beendet Grid-Zeile?"
       options:
