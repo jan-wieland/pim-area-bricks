@@ -5,13 +5,14 @@ namespace JanWieland\PimAreaBricks\Service;
 use Pimcore\Http\Request\Resolver\EditmodeResolver;
 use Pimcore\Model\Document;
 use Pimcore\Model\Document\Editable\Area\Info;
+use Pimcore\Tool\Authentication;
 
 class OptionsService
 {
     private EditmodeResolver $editmodeResolver;
 
     private const SUPPORTED_LANGUAGES = ['de', 'en'];
-    private static string $language = 'en';
+    private string $language = 'en';
 
     private array $editables = [];
     private bool $isEditMode;
