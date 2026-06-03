@@ -24,6 +24,7 @@ class OptionsService
     public function getOptionsByInfo(Info $info): object
     {
         $this->isEditMode = $this->editmodeResolver->isEditmode();
+        dump($info->getDocument->getProperty('editorLanguage'));
         $result = (object)[];
 
         # Get all editables from the calling area:
