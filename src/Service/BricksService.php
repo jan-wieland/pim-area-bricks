@@ -21,7 +21,7 @@ class BricksService
      */
     public static function transAdmin(string $transKey): string
     {
-        return \Pimcore::getContainer()->get('translator')->trans($transKey, [], 'admin', 'en');
+        return \Pimcore::getContainer()->get('translator')->trans($transKey, [], 'admin', self::$language);
     }
 
     /**
