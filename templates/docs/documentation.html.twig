@@ -14,9 +14,9 @@
     <div class="jwpimareasdocs-page">
         <div class="jwpimareasdocs-container">
             <h1>{{ 'jwPimAreas.adminMenuDocs.docs' | trans({}, 'admin') }}</h1>
-            {{ 'jwPimAreas.docsTexts.introduction' | trans({}, 'admin') | raw }}
-            <h2>{{ 'jwPimAreas.docsTexts.flexHead' | trans({}, 'admin') }}</h2>
-            {{ 'jwPimAreas.docsTexts.flexText' | trans({}, 'admin') | raw }}
+            {{ trans.introduction | default('') | raw }}
+            <h2>{{ trans.flexHead | default('') }}</h2>
+            {{ trans.flexText | default('') | raw }}
         </div>
     </div>
 </body>
