@@ -2,7 +2,7 @@
 {% set anchor = pimcore_input('anchor').getData() %}
 
 {% set textblock = pimcore_wysiwyg('textblock', {
-    placeholder: 'jwPimAreas.texteditor.name' | trans({}, 'admin'),
+    placeholder: 'jwPimAreas.texteditor.name' | trans({}, 'admin', editorLanguage),
 }) %}
 
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}{{ columnCount ? ' class="jwpimareas-wysiwyg-column-count"' : '' }}>

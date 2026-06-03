@@ -5,14 +5,14 @@
 {% if editmode %}
     <div class="flex">
         <div class="pr-3">
-            {{ 'jwPimAreas.vueApp.name' | trans({}, 'admin') }}:
+            {{ 'jwPimAreas.vueApp.name' | trans({}, 'admin', editorLanguage) }}:
         </div>
         <div class="flex-1 font-extra-bold">
             {{ vueAppKey.getData() | raw }}
         </div>
         {% if anchor is not empty %}
             <div class="pl-4 pr-3">
-                {{ 'jwPimAreas.anchor.name' | trans({}, 'admin') }}:
+                {{ 'jwPimAreas.anchor.name' | trans({}, 'admin', editorLanguage) }}:
             </div>
             <div class="flex-1 font-extra-bold">
                 #{{ anchor | raw }}

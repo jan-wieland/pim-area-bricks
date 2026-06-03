@@ -3,7 +3,7 @@
 
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}{{ asFlexboxGrid ? ' class=""' : '' }}>
     {% if editmode %}
-        <div class="pb-2">{{ 'jwPimAreas.snippet.label'' | trans([], 'admin') }}</div>
+        <div class="pb-2">{{ 'jwPimAreas.snippet.label'' | trans([], 'admin', editorLanguage) }}</div>
         {{ pimcore_relation('snippet', {
             'types': ['document'],
             'subtypes': {

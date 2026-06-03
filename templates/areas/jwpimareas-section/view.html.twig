@@ -2,7 +2,7 @@
 
 {% if editmode %}
     <div class="mt-3 mb-1 border-b">
-        <small>{{ 'jwPimAreas.section.name' | trans({}, 'admin') }}</small>
+        <small>{{ 'jwPimAreas.section.name' | trans({}, 'admin', editorLanguage) }}</small>
     </div>
 {% endif %}
 <section{{ anchor is not empty ? ' id=' ~ anchor : '' }} class="jwpimareas-flexbox-0 flex flex-wrap content-stretch">
