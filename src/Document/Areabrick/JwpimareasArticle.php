@@ -2,10 +2,16 @@
 namespace JanWieland\PimAreaBricks\Document\Areabrick;
 
 use Pimcore\Extension\Document\Areabrick\AbstractTemplateAreabrick;
+use Pimcore\Model\Document\Editable\Area\Info;
+use Symfony\Component\HttpFoundation\Response;
 use JanWieland\PimAreaBricks\Service\BricksService;
+use JanWieland\PimAreaBricks\Service\OptionsService;
 
 class JwpimareasArticle extends AbstractTemplateAreabrick
 {
+    public function __construct(
+        private readonly OptionsService $optionsService
+    ) {}
 
     /**
      * @return string
@@ -29,6 +35,20 @@ class JwpimareasArticle extends AbstractTemplateAreabrick
     public function getIcon(): string
     {
         return '/bundles/pimareabricks/images/editmode/text-box-outline.svg';
+    }
+
+    /**
+     * @param Info $info
+     * @return Response|null
+     */
+    public function action(Info $info): ?Response
+    {
+        $params = $this->optionsService->getOptionsByInfo($info);
+        foreach ($params as $key => $value) {
+            $info->setParam($key, $value);
+        }
+
+        return null;
     }
 
     /**

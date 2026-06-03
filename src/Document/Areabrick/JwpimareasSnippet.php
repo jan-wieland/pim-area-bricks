@@ -6,10 +6,15 @@ use Pimcore\Extension\Document\Areabrick\EditableDialogBoxConfiguration;
 use Pimcore\Extension\Document\Areabrick\EditableDialogBoxInterface;
 use Pimcore\Model\Document\Editable;
 use Pimcore\Model\Document\Editable\Area\Info;
+use Symfony\Component\HttpFoundation\Response;
 use JanWieland\PimAreaBricks\Service\BricksService;
+use JanWieland\PimAreaBricks\Service\OptionsService;
 
 class JwpimareasSnippet extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
 {
+    public function __construct(
+        private readonly OptionsService $optionsService
+    ) {}
 
     /**
      * @return string
@@ -41,6 +46,20 @@ class JwpimareasSnippet extends AbstractTemplateAreabrick implements EditableDia
     public function getIcon(): string
     {
         return '/bundles/pimareabricks/images/editmode/code-braces-box.svg';
+    }
+
+    /**
+     * @param Info $info
+     * @return Response|null
+     */
+    public function action(Info $info): ?Response
+    {
+        $params = $this->optionsService->getOptionsByInfo($info);
+        foreach ($params as $key => $value) {
+            $info->setParam($key, $value);
+        }
+
+        return null;
     }
 
     /**

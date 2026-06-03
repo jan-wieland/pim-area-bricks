@@ -6,11 +6,16 @@ use Pimcore\Extension\Document\Areabrick\EditableDialogBoxConfiguration;
 use Pimcore\Extension\Document\Areabrick\EditableDialogBoxInterface;
 use Pimcore\Model\Document\Editable;
 use Pimcore\Model\Document\Editable\Area\Info;
-use JanWieland\PimAreaBricks\Service\BricksService;
 use Symfony\Component\HttpFoundation\Response;
+use JanWieland\PimAreaBricks\Service\BricksService;
+use JanWieland\PimAreaBricks\Service\OptionsService;
 
 class JwpimareasImage extends AbstractTemplateAreabrick implements EditableDialogBoxInterface
 {
+    public function __construct(
+        private readonly OptionsService $optionsService
+    ) {}
+
     /**
      * @return string
      */
@@ -41,7 +46,10 @@ class JwpimareasImage extends AbstractTemplateAreabrick implements EditableDialo
      */
     public function action(Info $info): ?Response
     {
-        $document = $info->getDocument();
+        $params = $this->optionsService->getOptionsByInfo($info);
+        foreach ($params as $key => $value) {
+            $info->setParam($key, $value);
+        }
 
         return null;
     }
