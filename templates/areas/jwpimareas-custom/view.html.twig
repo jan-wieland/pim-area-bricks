@@ -2,7 +2,7 @@
 
 {% if editmode %}
     <div class="mt-3 mb-1 border-b">
-        <small>{{ 'jwPimAreas.custom.start' | trans({}, 'admin', editorLanguage) }}</small>
+        <small>{{ 'jwPimAreas.custom.start' | trans({}, 'admin', jwPimAreas.editorLanguage) }}</small>
     </div>
 {% endif %}
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}>
@@ -10,6 +10,6 @@
 </div>
 {% if editmode %}
     <div class="mt-3 mb-1 border-b">
-        <small>{{ 'jwPimAreas.custom.end' | trans({}, 'admin', editorLanguage) }}</small>
+        <small>{{ 'jwPimAreas.custom.end' | trans({}, 'admin', jwPimAreas.editorLanguage) }}</small>
     </div>
 {% endif %}
