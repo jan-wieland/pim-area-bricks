@@ -4,6 +4,7 @@
 {{ pimcore_areablock("content_" ~ infoId, {
     'allowed': [
         'jwpimareas-text-and-image',
+        'jwpimareas-custom',
         'jwpimareas-headline',
         'jwpimareas-texteditor',
         'jwpimareas-plain-html',
@@ -14,9 +15,9 @@
     'group': {
         ('jwPimAreas.groups.pageContent' | trans({}, 'admin')): [
             'jwpimareas-text-and-image',
+            'jwpimareas-custom',
         ],
         ('jwPimAreas.groups.layoutElements' | trans({}, 'admin')): [
-            'jwpimareas-custom',
             'jwpimareas-headline',
             'jwpimareas-texteditor',
             'jwpimareas-plain-html',
