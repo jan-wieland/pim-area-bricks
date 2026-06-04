@@ -66,6 +66,7 @@ class OptionsService
             $result->headlineData = [
                 'hSize' => $hSize,
                 'hSubSize' => 'h' . ((int)(substr($hSize, 1) + 1)),
+                'hKey' => $style === 'auto' ? $hSize : $style,
                 'hClass' => sprintf(
                     'class="%s%s"',
                     ($style === 'auto' ? $hSize : $style),
