@@ -76,6 +76,7 @@
   --jwpimareas-h-title-font-size: 19px;
   --jwpimareas-h-title-font-weight: 500;
   --jwpimareas-h-title-mb: 8px;
+  --jwpimareas-h-title-mb-h1: 10px;
   --jwpimareas-h-titl-color: var(--color-jwpimareas-body-text);
   --jwpimareas-h-sub-mt: -21px;
 
@@ -203,6 +204,9 @@
     font-weight: var(--jwpimareas-h-title-font-weight);
     margin-bottom: var(--jwpimareas-h-title-mb);
     color: var(--jwpimareas-h-titl-color);
+    .jwpimareas-mt-h1 & {
+      margin-bottom: var(--jwpimareas-h-title-mb-h1);
+    }
   }
   .jwpimareas-header .jwpimareas-h-sub-mt,
   .jwpimareas-h-sub-mt {

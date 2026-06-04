@@ -8,7 +8,7 @@
     placeholder: 'jwPimAreas.headline.subheadline' | trans({}, 'admin', editorLanguage),
 }) %}
 
-<header class="jwpimareas-header">
+<header class="jwpimareas-header jwpimareas-header-{{ headlineData.hKey }}">
     {%- if editmode or not headlineTitle.isEmpty() -%}
         <div class="jwpimareas-h-title{{ editmode ? ' pb-3>' : '' }}">{{ headlineTitle | raw }}</div>
     {%- endif -%}
