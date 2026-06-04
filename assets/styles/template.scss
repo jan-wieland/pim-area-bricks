@@ -80,6 +80,7 @@
   --jwpimareas-h-titl-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h-sub-mt: -21px;
+  --jwpimareas-h-sub-pb-add: 2px;
 
   --leading-p-tag: 1.38;
   --jwpimareas-shadow-header: 0 -1px 5px 3px #00000034;
@@ -212,6 +213,9 @@
   .jwpimareas-header .jwpimareas-h-sub-mt,
   .jwpimareas-h-sub-mt {
     margin-top: var(--jwpimareas-h-sub-mt);
+  }
+  .jwpimareas-h-sub-pb-add {
+    padding-bottom: var(--jwpimareas-h-sub-pb-add);
   }
   p {
     margin-bottom: var(--spacing-jwpimareas-p-tag);
