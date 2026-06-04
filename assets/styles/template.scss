@@ -29,7 +29,7 @@
   --jwpimareas-h1-font-size: 48px;
   --jwpimareas-h1-font-weight: 400;
   --jwpimareas-h1-letter-spacing: 0.03em;
-  --jwpimareas-h1-mt: 5px;
+  --jwpimareas-h1-mt: 12px;
   --jwpimareas-h1-margin: var(--jwpimareas-h2-mt) 0 19px;
   --jwpimareas-h1-color: var(--color-jwpimareas-body-text);
 
@@ -72,8 +72,11 @@
   --jwpimareas-h6-margin: 17px 0 12px;
   --jwpimareas-h6-color: var(--color-jwpimareas-body-text);
 
-  --jwpimareas-h-title-font-size: 16px;
+  --jwpimareas-h-title-font-family: var(--font-family-sans);
+  --jwpimareas-h-title-font-size: 19px;
+  --jwpimareas-h-title-font-weight: 500;
   --jwpimareas-h-title-mb: 8px;
+  --jwpimareas-h-titl-color: var(--color-jwpimareas-body-text);
   --jwpimareas-h-sub-mt: -21px;
 
   --leading-p-tag: 1.38;
@@ -195,7 +198,11 @@
     margin-top: var(--jwpimareas-h5-mt);
   }
   .jwpimareas-h-title {
+    font-family: var(--jwpimareas-h-title-font-family);
+    font-size: var(--jwpimareas-h-title-font-size);
+    font-weight: var(--jwpimareas-h-title-font-weight);
     margin-bottom: var(--jwpimareas-h-title-mb);
+    color: var(--jwpimareas-h-titl-color);
   }
   .jwpimareas-header .jwpimareas-h-sub-mt,
   .jwpimareas-h-sub-mt {
