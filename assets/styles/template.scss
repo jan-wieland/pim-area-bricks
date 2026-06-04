@@ -29,35 +29,40 @@
   --jwpimareas-h1-font-size: 48px;
   --jwpimareas-h1-font-weight: 400;
   --jwpimareas-h1-letter-spacing: 0.03em;
-  --jwpimareas-h1-margin: 5px 0 19px;
+  --jwpimareas-h1-mt: 5px;
+  --jwpimareas-h1-margin: var(--jwpimareas-h2-mt) 0 19px;
   --jwpimareas-h1-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h2-font-family: var(--font-family-sans);
   --jwpimareas-h2-font-size: 40px;
   --jwpimareas-h2-font-weight: 400;
   --jwpimareas-h2-letter-spacing: 0.02em;
-  --jwpimareas-h2-margin: 28px 0 16px;
+  --jwpimareas-h2-mt: 28px
+  --jwpimareas-h2-margin: var(--jwpimareas-h2-m) 0 16px;
   --jwpimareas-h2-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h3-font-family: var(--font-family-sans);
   --jwpimareas-h3-font-size: 30px;
   --jwpimareas-h3-font-weight: 400;
   --jwpimareas-h3-letter-spacing: 0.01em;
-  --jwpimareas-h3-margin: 24px 0 15px;
+  --jwpimareas-h3-mt: 24px;
+  --jwpimareas-h3-margin: var(--jwpimareas-h3-mt) 0 15px;
   --jwpimareas-h3-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h4-font-family: var(--font-family-sans);
   --jwpimareas-h4-font-size: 24px;
   --jwpimareas-h4-font-weight: 400;
   --jwpimareas-h4-letter-spacing: 0.01em;
-  --jwpimareas-h4-margin: 21px 0 14px;
+  --jwpimareas-h4-mt: 21px;
+  --jwpimareas-h4-margin: var(--jwpimareas-h4-mt) 0 14px;
   --jwpimareas-h4-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h5-font-family: var(--font-family-sans);
   --jwpimareas-h5-font-size: 21px;
   --jwpimareas-h5-font-weight: 400;
   --jwpimareas-h5-letter-spacing: 0.01em;
-  --jwpimareas-h5-margin: 19px 0 13px;
+  --jwpimareas-h5-mt: 19px;
+  --jwpimareas-h5-margin: var(--jwpimareas-h5-mt)19px 0 13px;
   --jwpimareas-h5-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h6-font-family: var(--font-family-sans);
@@ -173,6 +178,21 @@
     .h6 {
       margin-top: 0;
     }
+  }
+  .jwpimareas-mt-h1 {
+    margin-top: var(--jwpimareas-h1-mt);
+  }
+  .jwpimareas-mt-h2 {
+    margin-top: var(--jwpimareas-h2-mt);
+  }
+  .jwpimareas-mt-h3 {
+    margin-top: var(--jwpimareas-h3-mt);
+  }
+  .jwpimareas-mt-h4 {
+    margin-top: var(--jwpimareas-h4-mt);
+  }
+  .jwpimareas-mt-h5 {
+    margin-top: var(--jwpimareas-h5-mt);
   }
   .jwpimareas-h-title {
     margin-bottom: var(--jwpimareas-h-title-mb);
