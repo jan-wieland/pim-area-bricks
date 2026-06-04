@@ -27,7 +27,7 @@
 :root {
   --jwpimareas-h1-font-family: var(--font-family-sans);
   --jwpimareas-h1-font-size: 48px;
-  --jwpimareas-h1-font-weight: 400;
+  --jwpimareas-h1-font-weight: var(--font-light);
   --jwpimareas-h1-letter-spacing: 0.03em;
   --jwpimareas-h1-mt: 16px;
   --jwpimareas-h1-margin: var(--jwpimareas-h2-mt) 0 19px;
@@ -35,7 +35,7 @@
 
   --jwpimareas-h2-font-family: var(--font-family-sans);
   --jwpimareas-h2-font-size: 40px;
-  --jwpimareas-h2-font-weight: 400;
+  --jwpimareas-h2-font-weight: var(--font-light);
   --jwpimareas-h2-letter-spacing: 0.02em;
   --jwpimareas-h2-mt: 28px;
   --jwpimareas-h2-margin: var(--jwpimareas-h2-mt) 0 16px;
@@ -43,7 +43,7 @@
 
   --jwpimareas-h3-font-family: var(--font-family-sans);
   --jwpimareas-h3-font-size: 30px;
-  --jwpimareas-h3-font-weight: 400;
+  --jwpimareas-h3-font-weight: var(--font-light);
   --jwpimareas-h3-letter-spacing: 0.01em;
   --jwpimareas-h3-mt: 24px;
   --jwpimareas-h3-margin: var(--jwpimareas-h3-mt) 0 15px;
@@ -51,7 +51,7 @@
 
   --jwpimareas-h4-font-family: var(--font-family-sans);
   --jwpimareas-h4-font-size: 24px;
-  --jwpimareas-h4-font-weight: 400;
+  --jwpimareas-h4-font-weight: var(--font-light);
   --jwpimareas-h4-letter-spacing: 0.01em;
   --jwpimareas-h4-mt: 21px;
   --jwpimareas-h4-margin: var(--jwpimareas-h4-mt) 0 14px;
@@ -59,7 +59,7 @@
 
   --jwpimareas-h5-font-family: var(--font-family-sans);
   --jwpimareas-h5-font-size: 21px;
-  --jwpimareas-h5-font-weight: 400;
+  --jwpimareas-h5-font-weight: var(--font-light);
   --jwpimareas-h5-letter-spacing: 0.01em;
   --jwpimareas-h5-mt: 19px;
   --jwpimareas-h5-margin: var(--jwpimareas-h5-mt) 0 13px;
@@ -67,17 +67,18 @@
 
   --jwpimareas-h6-font-family: var(--font-family-sans);
   --jwpimareas-h6-font-size: 19px;
-  --jwpimareas-h6-font-weight: 400;
+  --jwpimareas-h6-font-weight: var(--font-light);
   --jwpimareas-h6-letter-spacing: 0.01em;
   --jwpimareas-h6-margin: 17px 0 12px;
   --jwpimareas-h6-color: var(--color-jwpimareas-body-text);
 
   --jwpimareas-h-title-font-family: var(--font-family-sans);
   --jwpimareas-h-title-font-size: 19px;
-  --jwpimareas-h-title-font-weight: 500;
+  --jwpimareas-h-title-font-weight: var(--font-normal);
   --jwpimareas-h-title-mb: 8px;
   --jwpimareas-h-title-mb-h1: 10px;
   --jwpimareas-h-titl-color: var(--color-jwpimareas-body-text);
+
   --jwpimareas-h-sub-mt: -21px;
 
   --leading-p-tag: 1.38;

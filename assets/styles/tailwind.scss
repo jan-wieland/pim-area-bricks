@@ -6,11 +6,6 @@
   --breakpoint-xl: 1422px; /* Small screens */
   --breakpoint-2xl: 1920px; /* Normal screens */
   --breakpoint-3xl: 2560px; /* Bigger screens */
-
-  --font-weight-normal: var(--font-weight);
-  --font-weight-semibold: var(--font-weight-semibold);
-  --font-weight-bold: var(--font-weight-bold);
-  --font-weight-extra-bold: var(--font-weight-extrabold);
 }
 /* Additional Flexbox Widths */
 @utility flex-2 {
