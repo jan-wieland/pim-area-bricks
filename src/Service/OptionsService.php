@@ -46,6 +46,7 @@ class OptionsService
 
         # Extract data for different topics, if available:
         $this->getParamsHeadline($info, $result);
+        $this->getParamsImages($info, $result);
         $this->getParamsLayout($info, $result);
 
         return $result;
@@ -79,6 +80,19 @@ class OptionsService
                     ($this->isEditMode ? ' m-0' : ''),
                 ),
             ];
+        }
+    }
+
+    /**
+     * @param Info $info
+     * @param object $result
+     * @return void
+     */
+    private function getParamsImages(Info $info, object &$result): void
+    {
+        if ($this->hasEditables(['gridColumns', 'girdBreakpoints', 'endsGridRow', 'gridItemVertical', 'boxStyle'])) {
+        }
+        if ($this->hasEditables(['spaceBefore', 'spaceAfter'])) {
         }
     }
 

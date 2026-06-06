@@ -10,6 +10,8 @@ jwPimAreas:
     pageContent: "Page contents"
     structure: "Structure"
     vueApp: "VUE apps"
+  yes: "Yes"
+  no: "No"
   prams:
     gridColumns:
       label: "Grid columns"
@@ -60,6 +62,9 @@ jwPimAreas:
   anchor:
     name: "Anchor"
     optional: "Anchor (optional)"
+    nav:
+      label: "Title in anchor menu"
+      hide: "Exclude from anchor menu?"
   article:
     name: "Article"
   aside:
@@ -92,6 +97,8 @@ jwPimAreas:
       label: "Image alt/title (aria-label / required)"
     imageCaption:
       label: "Image caption (optional, e.g. ©)"
+    imageGeneralhWidth:
+      label: "Width in pixels (px), 0 = full width"
     imagePos:
       label: "Positioning of the image"
       options:

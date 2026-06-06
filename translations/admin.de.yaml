@@ -10,6 +10,8 @@ jwPimAreas:
     pageContent: "Seiteninhalte"
     structure: "Struktur"
     vueApp: "VUE-Apps"
+  yes: "Ja"
+  no: "Nein"
   prams:
     gridColumns:
       label: "Grid-Spalten"
@@ -60,6 +62,9 @@ jwPimAreas:
   anchor:
     name: "Anker"
     optional: "Anker (optional)"
+    nav:
+      label: "Titel in Anker-Menü"
+      hide: "Aus Anker-Menü ausschließen?"
   article:
     name: "Artikel"
   aside:
@@ -92,6 +97,8 @@ jwPimAreas:
       label: "Bild Alt-Text/Titel (aria-label / Pflicht)"
     imageCaption:
       label: "Bildunterschrift (optional, z.B. ©)"
+    imageGeneralhWidth:
+      label: "Breite in Pixel (px), 0 = volle Breite"
     imagePos:
       label: "Positionierung des Bildes"
       options:

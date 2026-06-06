@@ -50,7 +50,7 @@ class BricksService
                         'defaultValue' => 'none',
                         'width' => 300,
                     ],
-            ],
+                ],
             ],
         ]];
     }
@@ -64,105 +64,160 @@ class BricksService
         return [[
             'type' => 'panel',
             'title' => self::transAdmin('jwPimAreas.groups.layout'),
-            'items' => array_merge(($short ? [] :
-            [[
-                'type' => 'select',
-                'name' => 'gridColumns',
-                'label' => self::transAdmin('jwPimAreas.prams.gridColumns.label'),
-                'config' => [
-                    'store' => [
-                        ['none', self::transAdmin('jwPimAreas.prams.gridColumns.options.none')],
-                        ['2', self::transAdmin('jwPimAreas.prams.gridColumns.options.2')],
-                        ['3', self::transAdmin('jwPimAreas.prams.gridColumns.options.3')],
-                        ['4', self::transAdmin('jwPimAreas.prams.gridColumns.options.4')],
-                        ['5', self::transAdmin('jwPimAreas.prams.gridColumns.options.5')],
-                        ['6', self::transAdmin('jwPimAreas.prams.gridColumns.options.6')],
-                        ['auto', self::transAdmin('jwPimAreas.prams.gridColumns.options.auto')],
+            'items' => [
+                [
+                    'type' => 'select',
+                    'name' => 'gridColumns',
+                    'label' => self::transAdmin('jwPimAreas.prams.gridColumns.label'),
+                    'config' => [
+                        'store' => [
+                            ['none', self::transAdmin('jwPimAreas.prams.gridColumns.options.none')],
+                            ['2', self::transAdmin('jwPimAreas.prams.gridColumns.options.2')],
+                            ['3', self::transAdmin('jwPimAreas.prams.gridColumns.options.3')],
+                            ['4', self::transAdmin('jwPimAreas.prams.gridColumns.options.4')],
+                            ['5', self::transAdmin('jwPimAreas.prams.gridColumns.options.5')],
+                            ['6', self::transAdmin('jwPimAreas.prams.gridColumns.options.6')],
+                            ['auto', self::transAdmin('jwPimAreas.prams.gridColumns.options.auto')],
+                        ],
+                        'defaultValue' => 'none',
+                        'width' => 300,
                     ],
-                    'defaultValue' => 'none',
-                    'width' => 300,
                 ],
-            ],
-            [
-                'type' => 'select',
-                'name' => 'girdBreakpoints',
-                'label' => self::transAdmin('jwPimAreas.prams.girdBreakpoints.label'),
-                'config' => [
-                    'store' => [
-                        ['early', self::transAdmin('jwPimAreas.prams.girdBreakpoints.options.early')],
-                        ['normal', self::transAdmin('jwPimAreas.prams.girdBreakpoints.options.normal')],
-                        ['late', self::transAdmin('jwPimAreas.prams.girdBreakpoints.options.late')],
+                [
+                    'type' => 'select',
+                    'name' => 'girdBreakpoints',
+                    'label' => self::transAdmin('jwPimAreas.prams.girdBreakpoints.label'),
+                    'config' => [
+                        'store' => [
+                            ['early', self::transAdmin('jwPimAreas.prams.girdBreakpoints.options.early')],
+                            ['normal', self::transAdmin('jwPimAreas.prams.girdBreakpoints.options.normal')],
+                            ['late', self::transAdmin('jwPimAreas.prams.girdBreakpoints.options.late')],
+                        ],
+                        'defaultValue' => 'normal',
+                        'width' => 300,
                     ],
-                    'defaultValue' => 'normal',
-                    'width' => 300,
                 ],
-            ],
-            [
-                'type' => 'select',
-                'name' => 'endsGridRow',
-                'label' => self::transAdmin('jwPimAreas.prams.endsGridRow.label'),
-                'config' => [
-                    'store' => [
-                        ['yes', self::transAdmin('jwPimAreas.prams.endsGridRow.options.yes')],
-                        ['no', self::transAdmin('jwPimAreas.prams.endsGridRow.options.no')],
+                [
+                    'type' => 'select',
+                    'name' => 'endsGridRow',
+                    'label' => self::transAdmin('jwPimAreas.prams.endsGridRow.label'),
+                    'config' => [
+                        'store' => [
+                            ['yes', self::transAdmin('jwPimAreas.prams.endsGridRow.options.yes')],
+                            ['no', self::transAdmin('jwPimAreas.prams.endsGridRow.options.no')],
+                        ],
+                        'defaultValue' => 'no',
+                        'width' => 300,
                     ],
-                    'defaultValue' => 'no',
-                    'width' => 300,
                 ],
-            ],
-            [
-                'type' => 'select',
-                'name' => 'gridItemVertical',
-                'label' => self::transAdmin('jwPimAreas.prams.gridItemVertical.label'),
-                'config' => [
-                    'store' => [
-                        ['none', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.none')],
-                        ['top', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.top')],
-                        ['bottom', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.bottom')],
+                [
+                    'type' => 'select',
+                    'name' => 'gridItemVertical',
+                    'label' => self::transAdmin('jwPimAreas.prams.gridItemVertical.label'),
+                    'config' => [
+                        'store' => [
+                            ['none', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.none')],
+                            ['top', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.top')],
+                            ['bottom', self::transAdmin('jwPimAreas.prams.gridItemVertical.options.bottom')],
+                        ],
+                        'defaultValue' => 'none',
+                        'width' => 300,
                     ],
-                    'defaultValue' => 'none',
-                    'width' => 300,
+                ],
+                [
+                    'type' => 'select',
+                    'name' => 'spaceBefore',
+                    'label' => self::transAdmin('jwPimAreas.prams.space.before'),
+                    'config' => [
+                        'store' => [
+                            ['none', self::transAdmin('jwPimAreas.prams.space.options.none')],
+                            ['extra-small', self::transAdmin('jwPimAreas.prams.space.options.extra-small')],
+                            ['small', self::transAdmin('jwPimAreas.prams.space.options.small')],
+                            ['medium', self::transAdmin('jwPimAreas.prams.space.options.medium')],
+                            ['large', self::transAdmin('jwPimAreas.prams.space.options.large')],
+                            ['extra-large', self::transAdmin('jwPimAreas.prams.space.options.extra-large')],
+                        ],
+                        'defaultValue' => 'none',
+                    ],
+                ],
+                [
+                    'type' => 'select',
+                    'name' => 'spaceAfter',
+                    'label' => self::transAdmin('jwPimAreas.prams.space.after'),
+                    'config' => [
+                        'store' => [
+                            ['none', self::transAdmin('jwPimAreas.prams.space.options.none')],
+                            ['extra-small', self::transAdmin('jwPimAreas.prams.space.options.extra-small')],
+                            ['small', self::transAdmin('jwPimAreas.prams.space.options.small')],
+                            ['medium', self::transAdmin('jwPimAreas.prams.space.options.medium')],
+                            ['large', self::transAdmin('jwPimAreas.prams.space.options.large')],
+                            ['extra-large', self::transAdmin('jwPimAreas.prams.space.options.extra-large')],
+                        ],
+                        'defaultValue' => 'none',
+                    ],
+                ],
+                [
+                    'type' => 'input',
+                    'name' => 'anchor',
+                    'label' => self::transAdmin('jwPimAreas.anchor.optional'),
+                ],
+                [
+                    'type' => 'input',
+                    'name' => 'anchorTitle',
+                    'label' => self::transAdmin('jwPimAreas.anchor.nav.label'),
+                ],
+                [
+                    'type' => 'select',
+                    'name' => 'anchorExclude',
+                    'label' => self::transAdmin('jwPimAreas.anchor.nav.hide'),
+                    'config' => [
+                        'store' => [
+                            ['yes', self::transAdmin('jwPimAreas.yes')],
+                            ['no', self::transAdmin('jwPimAreas.no')],
+                        ],
+                        'defaultValue' => 'no',
+                    ],
                 ],
             ],
-        ]),
-        [[
-            'type' => 'select',
-            'name' => 'spaceBefore',
-            'label' => self::transAdmin('jwPimAreas.prams.space.before'),
-            'config' => [
-                'store' => [
-                    ['none', self::transAdmin('jwPimAreas.prams.space.options.none')],
-                    ['extra-small', self::transAdmin('jwPimAreas.prams.space.options.extra-small')],
-                    ['small', self::transAdmin('jwPimAreas.prams.space.options.small')],
-                    ['medium', self::transAdmin('jwPimAreas.prams.space.options.medium')],
-                    ['large', self::transAdmin('jwPimAreas.prams.space.options.large')],
-                    ['extra-large', self::transAdmin('jwPimAreas.prams.space.options.extra-large')],
+        ]];
+    }
+
+    /**
+     * @return array
+     */
+    public static function tabLayoutAnchor(): array {
+        return [[
+            'type' => 'tabpanel',
+            'items' => [
+                [
+                    'type' => 'panel',
+                    'title' => self::transAdmin('jwPimAreas.groups.layout'),
+                    'items' => [
+                        [
+                            'type' => 'input',
+                            'name' => 'anchor',
+                            'label' => self::transAdmin('jwPimAreas.anchor.optional'),
+                        ],
+                        [
+                            'type' => 'input',
+                            'name' => 'anchorTitle',
+                            'label' => self::transAdmin('jwPimAreas.anchor.nav.label'),
+                        ],
+                        [
+                            'type' => 'select',
+                            'name' => 'anchorExclude',
+                            'label' => self::transAdmin('jwPimAreas.anchor.nav.hide'),
+                            'config' => [
+                                'store' => [
+                                    ['yes', self::transAdmin('jwPimAreas.yes')],
+                                    ['no', self::transAdmin('jwPimAreas.no')],
+                                ],
+                                'defaultValue' => 'no',
+                            ],
+                        ],
+                    ],
                 ],
-                'defaultValue' => 'none',
             ],
-        ],
-        [
-            'type' => 'select',
-            'name' => 'spaceAfter',
-            'label' => self::transAdmin('jwPimAreas.prams.space.after'),
-            'config' => [
-                'store' => [
-                    ['none', self::transAdmin('jwPimAreas.prams.space.options.none')],
-                    ['extra-small', self::transAdmin('jwPimAreas.prams.space.options.extra-small')],
-                    ['small', self::transAdmin('jwPimAreas.prams.space.options.small')],
-                    ['medium', self::transAdmin('jwPimAreas.prams.space.options.medium')],
-                    ['large', self::transAdmin('jwPimAreas.prams.space.options.large')],
-                    ['extra-large', self::transAdmin('jwPimAreas.prams.space.options.extra-large')],
-                ],
-                'defaultValue' => 'none',
-            ],
-        ],
-        [
-            'type' => 'input',
-            'name' => 'anchor',
-            'label' => self::transAdmin('jwPimAreas.anchor.optional'),
-        ],
-        ]),
         ]];
     }
 
@@ -175,6 +230,7 @@ class BricksService
             'type' => 'panel',
             'title' => self::transAdmin('jwPimAreas.groups.images'),
             'items' => [
+            /*
                 [
                     'type' => 'input',
                     'name' => 'imageAlt',
@@ -184,6 +240,18 @@ class BricksService
                     'type' => 'input',
                     'name' => 'imageCaption',
                     'label' => self::transAdmin('jwPimAreas.image.caption.label'),
+                ],
+                */
+                [
+                    'type' => 'numeric',
+                    'name' => 'imageGeneralhWidth',
+                    'label' => self::transAdmin('jwPimAreas.image.generalhWidth.label'),
+                    'config' => [
+                        'defaultValue' => 0,
+                        'minValue' => 0,
+                        'maxValue' => 3480,
+                        'decimalPrecision' => 0,
+                    ],
                 ],
                 [
                     'type' => 'select',
@@ -234,7 +302,7 @@ class BricksService
                             ['round', self::transAdmin('jwPimAreas.image.proportion.options.round')],
                             ['round-large', self::transAdmin('jwPimAreas.image.proportion.options.round-large')],
                         ],
-                        'defaultValue' => 'introduction',
+                        'defaultValue' => '16-9',
                     ],
                 ],
             ],
@@ -372,28 +440,6 @@ class BricksService
                 ],
             ],
          ]];
-    }
-
-    /**
-    * @return array
-    */
-    public static function tabLayoutAnchor(): array {
-        return [[
-            'type' => 'tabpanel',
-            'items' => [
-                [
-                    'type' => 'panel',
-                    'title' => self::transAdmin('jwPimAreas.groups.layout'),
-                    'items' => [
-                        [
-                            'type' => 'input',
-                            'name' => 'anchor',
-                            'label' => self::transAdmin('jwPimAreas.anchor.optional'),
-                        ],
-                    ],
-                ],
-            ],
-        ]];
     }
 
     /**

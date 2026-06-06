@@ -37,7 +37,7 @@ class JwpimareasCustom extends AbstractTemplateAreabrick implements EditableDial
      */
     public function getIcon(): string
     {
-        return '/bundles/pimareabricks/images/editmode/package-variant-closed.svg';
+        return '/bundles/pimareabricks/images/editmode/cube-outline.svg';
     }
 
     /**
