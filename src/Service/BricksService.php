@@ -247,10 +247,10 @@ class BricksService
                     'name' => 'imageGeneralhWidth',
                     'label' => self::transAdmin('jwPimAreas.image.generalhWidth.label'),
                     'config' => [
-                        'defaultValue' => 0,
                         'minValue' => 0,
                         'maxValue' => 3480,
                         'decimalPrecision' => 0,
+                        'defaultValue' => '0',
                     ],
                 ],
                 [
