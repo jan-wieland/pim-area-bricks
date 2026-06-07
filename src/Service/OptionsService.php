@@ -90,9 +90,17 @@ class OptionsService
      */
     private function getParamsImages(Info $info, object &$result): void
     {
-        if ($this->hasEditables(['gridColumns', 'girdBreakpoints', 'endsGridRow', 'gridItemVertical', 'boxStyle'])) {
+        if ($this->hasEditables(['imageGeneralhWidth', 'imagePos', 'imagePosRelativeH', 'imageProportion'])) {
+            $generalhWidth = $this->getEditable('imageGeneralhWidth')?->getData() ?: null;
+
+            $result->imageData = [
+                'generalhWidth' => is_null($generalhWidth) ? '' : stringf('%spx', $generalhWidth),
+                'imagePos' => $this->getEditable('imagePos')?->getData() ?: 'top-center',
+                'imagePosRelativeH' => $this->getEditable('imagePosRelativeH')?->getData() ?: 'introduction',
+                'imageProportion' => $this->getEditable('imageProportion')?->getData() ?: '16-9',
+            ]
         }
-        if ($this->hasEditables(['spaceBefore', 'spaceAfter'])) {
+        if ($this->hasEditables(['imagesAsSlider', 'sliderFromBreakpoint', 'sliderImages', 'sliderImagesScroll'])) {
         }
     }
 

@@ -148,6 +148,8 @@ jwPimAreas:
         3: "3 Bilder"
         4: "4 Bilder"
         5: "5 Bilder"
+    sliderImagesScroll:
+      label: "Bilder auf einmal sliden"
     sliderSpeed:
       label: "Slide-Geschwindigkeit (in Millisekunden / 300)"
     sliderAutoplay:

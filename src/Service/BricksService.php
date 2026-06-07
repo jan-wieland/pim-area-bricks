@@ -327,7 +327,7 @@ class BricksService
                 ],
                 [
                     'type' => 'select',
-                    'name' => 'sliderToBreakpoint',
+                    'name' => 'sliderFromBreakpoint',
                     'label' => self::transAdmin('jwPimAreas.image.sliderToBreakpoint.label'),
                     'config' => [
                         'store' => [
@@ -344,6 +344,21 @@ class BricksService
                     'type' => 'select',
                     'name' => 'sliderImages',
                     'label' => self::transAdmin('jwPimAreas.image.sliderImages.label'),
+                    'config' => [
+                        'store' => [
+                            ['1', self::transAdmin('jwPimAreas.image.sliderImages.options.1')],
+                            ['2', self::transAdmin('jwPimAreas.image.sliderImages.options.2')],
+                            ['3', self::transAdmin('jwPimAreas.image.sliderImages.options.3')],
+                            ['4', self::transAdmin('jwPimAreas.image.sliderImages.options.4')],
+                            ['5', self::transAdmin('jwPimAreas.image.sliderImages.options.5')],
+                        ],
+                        'defaultValue' => '1',
+                    ],
+                ],
+                [
+                    'type' => 'select',
+                    'name' => 'sliderImagesScroll',
+                    'label' => self::transAdmin('jwPimAreas.image.sliderImagesScroll.label'),
                     'config' => [
                         'store' => [
                             ['1', self::transAdmin('jwPimAreas.image.sliderImages.options.1')],
