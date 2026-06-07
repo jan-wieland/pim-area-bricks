@@ -98,7 +98,7 @@ class OptionsService
                 'imagePos' => $this->getEditable('imagePos')?->getData() ?: 'top-center',
                 'imagePosRelativeH' => $this->getEditable('imagePosRelativeH')?->getData() ?: 'introduction',
                 'imageProportion' => $this->getEditable('imageProportion')?->getData() ?: '16-9',
-            ]
+            ];
         }
         if ($this->hasEditables(['imagesAsSlider', 'sliderFromBreakpoint', 'sliderImages', 'sliderImagesScroll'])) {
         }
