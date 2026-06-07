@@ -269,6 +269,7 @@ class BricksService
                             ['float-right', self::transAdmin('jwPimAreas.image.imagePos.options.float-right')],
                         ],
                         'defaultValue' => 'top-center',
+                        'width' => 300,
                     ],
                 ],
                 [
@@ -282,6 +283,7 @@ class BricksService
                             ['introduction', self::transAdmin('jwPimAreas.image.imagePosRelativeH.options.introduction')],
                         ],
                         'defaultValue' => 'introduction',
+                        'width' => 300,
                     ],
                 ],
                 [
