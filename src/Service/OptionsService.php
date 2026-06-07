@@ -93,7 +93,7 @@ class OptionsService
         if ($this->hasEditables(['imageGeneralhWidth', 'imagePos', 'imagePosRelativeH', 'imageProportion'])) {
             $generalhWidth = $this->getEditable('imageGeneralhWidth')?->getData() ?: null;
 
-            $result->imageData = [
+            $result->imagesData = [
                 'generalhWidth' => is_null($generalhWidth) ? '' : stringf('%spx', $generalhWidth),
                 'imagePos' => $this->getEditable('imagePos')?->getData() ?: 'top-center',
                 'imagePosRelativeH' => $this->getEditable('imagePosRelativeH')?->getData() ?: 'introduction',
