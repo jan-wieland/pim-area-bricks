@@ -92,14 +92,32 @@ class OptionsService
     {
         if ($this->hasEditables(['imageGeneralhWidth', 'imagePos', 'imagePosRelativeH', 'imageProportion'])) {
             $generalhWidth = $this->getEditable('imageGeneralhWidth')?->getData();
+            $generalhWidth = empty($generalhWidth)||$generalhWidth === '0' ? '' : sprintf('%spx', $generalhWidth);
+
+            $imageProportion = $this->getEditable('imageProportion')?->getData() ?: '16-9';
+            $imagesWidth = null;
+            $imagesHeight = null;
+
+            if ((empty($generalhWidth)||$generalhWidth === '0') {
+                $imagesWidth = (int) $generalhWidth;
+                if (str_contains($imageProportion, '-')) {
+                    $proportion = explode('-'', $imageProportion);
+                    $imagesHeight = $imagesWidth / ((int) $proportion[0]) * ((int) $proportion[1]);
+                } else {
+                    $imagesHeight = $imageProportion === 'none' ? null : $imagesWidth;
+                }
+            }
 
             $result->imagesData = [
-                'generalhWidth' => empty($generalhWidth) ||$generalhWidth === '' ? '' : sprintf('%spx', $generalhWidth),
+                'generalhWidth' => $generalhWidth,
                 'imagePos' => $this->getEditable('imagePos')?->getData() ?: 'top-center',
                 'imagePosRelativeH' => $this->getEditable('imagePosRelativeH')?->getData() ?: 'introduction',
                 'imageProportion' => $this->getEditable('imageProportion')?->getData() ?: '16-9',
+                'imagesWidth' => $imagesWidth,
+                'imagesHeight' => $imagesHeight,
             ];
         }
+
         if ($this->hasEditables(['imagesAsSlider', 'sliderFromBreakpoint', 'sliderImages', 'sliderImagesScroll'])) {
         }
     }
