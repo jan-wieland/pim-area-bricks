@@ -94,7 +94,7 @@ class OptionsService
             $generalhWidth = $this->getEditable('imageGeneralhWidth')?->getData() ?: null;
 
             $result->imagesData = [
-                'generalhWidth' => is_null($generalhWidth) ? '' : spintf('%spx', $generalhWidth),
+                'generalhWidth' => is_null($generalhWidth) ? '' : sprintf('%spx', $generalhWidth),
                 'imagePos' => $this->getEditable('imagePos')?->getData() ?: 'top-center',
                 'imagePosRelativeH' => $this->getEditable('imagePosRelativeH')?->getData() ?: 'introduction',
                 'imageProportion' => $this->getEditable('imageProportion')?->getData() ?: '16-9',
