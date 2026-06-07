@@ -245,7 +245,7 @@ class BricksService
                 [
                     'type' => 'numeric',
                     'name' => 'imageGeneralhWidth',
-                    'label' => self::transAdmin('jwPimAreas.image.generalhWidth.label'),
+                    'label' => self::transAdmin('jwPimAreas.image.imageGeneralhWidth.label'),
                     'config' => [
                         'minValue' => 0,
                         'maxValue' => 3480,
