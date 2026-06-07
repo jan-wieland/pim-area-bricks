@@ -102,7 +102,7 @@ class OptionsService
                 $imagesWidth = (int) $generalhWidth;
                 if (str_contains($imageProportion, '-')) {
                     $proportion = explode('-'', $imageProportion);
-                    $imagesHeight = $imagesWidth / ((int) $proportion[0]) * ((int) $proportion[1]);
+                    $imagesHeight = $imagesWidth / $proportion[0] * $proportion[1];
                 } else {
                     $imagesHeight = $imageProportion === 'none' ? null : $imagesWidth;
                 }
