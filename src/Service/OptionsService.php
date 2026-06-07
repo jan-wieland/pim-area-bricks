@@ -101,8 +101,8 @@ class OptionsService
             if (empty($generalhWidth)||$generalhWidth === '0') {
                 $imagesWidth = (int) $generalhWidth;
                 if (str_contains($imageProportion, '-')) {
-                    $proportion = explode('-'', $imageProportion);
-                    $imagesHeight = $imagesWidth / $proportion[0] * $proportion[1];
+                    $proportion = explode('-', $imageProportion);
+                    $imagesHeight = (int) round($imagesWidth / (int) $proportion[0] * (int) $proportion[1]);
                 } else {
                     $imagesHeight = $imageProportion === 'none' ? null : $imagesWidth;
                 }
