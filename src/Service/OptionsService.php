@@ -48,7 +48,7 @@ class OptionsService
      */
     public function getOptionsByInfo(Info $info): object
     {
-        $this->prepareData(Info $info);
+        $this->prepareData($info);
         $result = (object)[
             'editorLanguage' => $this->language,
         ];
