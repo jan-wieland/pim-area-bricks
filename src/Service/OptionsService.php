@@ -26,14 +26,11 @@ class OptionsService
 
     /**
      * @param Info $info
-     * @return object
+     * @return void
      */
-    public function getOptionsByInfo(Info $info): object
+    private function prepareData(Info $info): void
     {
         $this->isEditMode = $this->editmodeResolver->isEditmode();
-        $result = (object)[
-            'editorLanguage' => $this->language,
-        ];
 
         # Get all editables from the calling area:
         $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
@@ -43,11 +40,41 @@ class OptionsService
             static fn(string $key): bool => str_starts_with($key, $areaPrefix),
             ARRAY_FILTER_USE_KEY
         );
+    }
+
+    /**
+     * @param Info $info
+     * @return object
+     */
+    public function getOptionsByInfo(Info $info): object
+    {
+        $this->prepareData(Info $info);
+        $result = (object)[
+            'editorLanguage' => $this->language,
+        ];
 
         # Extract data for different topics, if available:
         $this->getParamsHeadline($info, $result);
         $this->getParamsImages($info, $result);
         $this->getParamsLayout($info, $result);
+
+        return $result;
+    }
+
+    /**
+     * @param Info $info
+     * @return object
+     */
+    public function getOptionsImage(Info $info): object
+    {
+        $this->prepareData(Info $info);
+        $result = (object)[
+            'editorLanguage' => $this->language,
+        ];
+
+        if ($this->hasEditables(['imageAlt', 'imageCaption'])) {
+            dump($info);
+        }
 
         return $result;
     }

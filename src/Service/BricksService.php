@@ -224,13 +224,12 @@ class BricksService
     /**
      * @return array
      */
-    public static function tabImages(): array
+    public static function tabImage(): array
     {
         return [[
             'type' => 'panel',
-            'title' => self::transAdmin('jwPimAreas.groups.images'),
+            'title' => self::transAdmin('jwPimAreas.groups.imageMeta'),
             'items' => [
-            /*
                 [
                     'type' => 'input',
                     'name' => 'imageAlt',
@@ -241,7 +240,19 @@ class BricksService
                     'name' => 'imageCaption',
                     'label' => self::transAdmin('jwPimAreas.image.caption.label'),
                 ],
-                */
+                ],
+            ]];
+    }
+
+    /**
+     * @return array
+     */
+    public static function tabImages(): array
+    {
+        return [[
+            'type' => 'panel',
+            'title' => self::transAdmin('jwPimAreas.groups.images'),
+            'items' => [
                 [
                     'type' => 'numeric',
                     'name' => 'imageGeneralhWidth',

@@ -3,6 +3,7 @@ jwPimAreas:
     design: "Design"
     headline: "Headline"
     images: "Images"
+    imageMeta: "Image Metas"
     imageSlide: "Images slider"
     layout: "Layout"
     layoutElements: "Layout elements"
