@@ -35,6 +35,7 @@ class OptionsService
         # Get all editables from the calling area:
         $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
         $areaPrefix = sprintf('%s:%s.', $info->getEditable()->getName(), $areaKey);
+        dump($areaPrefix);
         $this->editables = array_filter(
             $info->getDocument()->getEditables(),
             static fn(string $key): bool => str_starts_with($key, $areaPrefix),
