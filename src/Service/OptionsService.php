@@ -68,7 +68,7 @@ class OptionsService
     public function getOptionsImage(Info $info): object
     {
         dump(((array)$info->getEditable())["\0*\0currentIndex"]);
-        $this->prepareData($info);
+        /*$this->prepareData($info);
         $result = (object)[
             'editorLanguage' => $this->language,
         ];
@@ -76,6 +76,10 @@ class OptionsService
         if ($this->hasEditables(['imageAlt', 'imageCaption'])) {
             dump($info);
         }
+        */
+        $result = (object)[
+            'editorLanguage' => $this->language,
+        ];
 
         return $result;
     }
