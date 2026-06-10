@@ -4,6 +4,22 @@
     placeholder: 'jwPimAreas.texteditor.name' | trans({}, 'admin', editorLanguage),
 }) %}
 
+
+
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}{{ columnCount is defined and columnCount ? ' class="jwpimareas-wysiwyg-column-count"' : '' }}>
-    {{ editmode ? 'image and tet' : dump(imagesData) }}
+
+    {% set jwPimAreasImages = pimcore_block('jwPimAreasImages', {
+        'manual': true,
+        'reload': true
+    }).start() %}
+    <div>
+    {% for jwPimAreasImage in jwPimAreasImages.iterator %}
+        {% do jwPimAreasImages.blockConstruct() %}
+            {% do jwPimAreasImages.blockStart() %}
+                {{ pimcore_area(''type' : 'jwpimareas-element-image') }}
+            {% do jwPimAreasImages.blockEnd() %}
+        {% do jwPimAreasImages.blockDestruct() %}
+    {% endfor %}
+    </div>
+    {% do jwPimAreasImages.end() %}
 </div>
