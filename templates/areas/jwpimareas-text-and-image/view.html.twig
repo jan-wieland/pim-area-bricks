@@ -16,6 +16,7 @@
     {% for jwPimAreasImage in jwPimAreasImages.iterator %}
         {% do jwPimAreasImages.blockConstruct() %}
             {% do jwPimAreasImages.blockStart() %}
+            {#
                 {{ pimcore_area(
                     'jwPimAreasElement-' ~ document.id ~ '-' ~ info.index ~ '-' ~ jwPimAreasImages.getCurrent(),
                     {
@@ -24,6 +25,8 @@
                             'imageIndex': info.id,
                         }
                     }) }}
+            #}
+            {{ dump(document, info, jwPimAreasImages.getCurrent())
             {% do jwPimAreasImages.blockEnd() %}
         {% do jwPimAreasImages.blockDestruct() %}
     {% endfor %}
