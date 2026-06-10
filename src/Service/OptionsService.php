@@ -48,6 +48,7 @@ class OptionsService
      */
     public function getOptionsByInfo(Info $info): object
     {
+        dump($info->getEditable());
         $this->prepareData($info);
         $result = (object)[
             'editorLanguage' => $this->language,
@@ -68,7 +69,6 @@ class OptionsService
     public function getOptionsImage(Info $info): object
     {
         dump($info->getEditable());
-        dump($info->getEditables());
         /*$this->prepareData($info);
         $result = (object)[
             'editorLanguage' => $this->language,
