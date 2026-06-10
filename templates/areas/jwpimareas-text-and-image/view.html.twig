@@ -16,10 +16,18 @@
     {% for jwPimAreasImage in jwPimAreasImages.iterator %}
         {% do jwPimAreasImages.blockConstruct() %}
             {% do jwPimAreasImages.blockStart() %}
-                {{ pimcore_area('type' : 'jwpimareas-element-image') }}
+                {{ pimcore_area(
+                    'jwPimAreasElement' ~ document.id ~ '-' info.id ~ '-' ~ jwPimAreasImages.getIndex(),
+                    {
+                        'type': 'jwpimareas-element-image',
+                        'params': {
+                            'imageIndex': info.id,
+                        }
+                    }) }}
             {% do jwPimAreasImages.blockEnd() %}
         {% do jwPimAreasImages.blockDestruct() %}
     {% endfor %}
     </div>
     {% do jwPimAreasImages.end() %}
+
 </div>
