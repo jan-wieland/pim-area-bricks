@@ -8,7 +8,7 @@
 
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}{{ columnCount is defined and columnCount ? ' class="jwpimareas-wysiwyg-column-count"' : '' }}>
 
-    {% set jwPimAreasImages = pimcore_block('jwPimAreasImages', {
+    {% set jwPimAreasImages = pimcore_block('jwPimAreasImages' ~ info.id , {
         'manual': true,
         'reload': true
     }).start() %}
