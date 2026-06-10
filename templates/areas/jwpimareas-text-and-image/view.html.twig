@@ -17,7 +17,7 @@
         {% do jwPimAreasImages.blockConstruct() %}
             {% do jwPimAreasImages.blockStart() %}
                 {{ pimcore_area(
-                    'jwPimAreasElement-' ~ document.id ~ '-' ~ info.id ~ '-' ~ jwPimAreasImages.getCurrent(),
+                    'jwPimAreasElement-' ~ document.id ~ '-' ~ info.index ~ '-' ~ jwPimAreasImages.getCurrent(),
                     {
                         'type': 'jwpimareas-element-image',
                         'params': {
