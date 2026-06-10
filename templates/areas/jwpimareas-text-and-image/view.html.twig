@@ -16,7 +16,7 @@
     {% for jwPimAreasImage in jwPimAreasImages.iterator %}
         {% do jwPimAreasImages.blockConstruct() %}
             {% do jwPimAreasImages.blockStart() %}
-                {{ pimcore_area(''type' : 'jwpimareas-element-image') }}
+                {{ pimcore_area('type' : 'jwpimareas-element-image') }}
             {% do jwPimAreasImages.blockEnd() %}
         {% do jwPimAreasImages.blockDestruct() %}
     {% endfor %}
