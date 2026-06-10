@@ -77,7 +77,7 @@ class JwpimareasElementImage extends AbstractTemplateAreabrick implements Editab
         $config->setReloadOnClose(true);
         $config->setItems([
             'type' => 'tabpanel',
-            'items' => BricksService::tabImage()[0],
+            'items' => BricksService::tabImage(),
         ]);
 
         return $config;
