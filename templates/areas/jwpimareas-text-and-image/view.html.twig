@@ -18,7 +18,7 @@
             {% do jwPimAreasImages.blockStart() %}
             {#
                 {{ pimcore_area(
-                    'jwPimAreasElement-' ~ document.id ~ '-' ~ info.index ~ '-' ~ jwPimAreasImages.getCurrent(),
+                    'jwPimAreasElement-' ~ document.id ~ '-' ~ info.getIndex() ~ '-' ~ jwPimAreasImages.getCurrent(),
                     {
                         'type': 'jwpimareas-element-image',
                         'params': {
@@ -26,7 +26,7 @@
                         }
                     }) }}
             #}
-            {{ dump(document, info, jwPimAreasImages.getCurrent()) }}
+            {{ dump('jwPimAreasElement-' ~ document.id ~ '-' ~ info.getIndex() ~ '-' ~ jwPimAreasImages.getCurrent()) }}
             {% do jwPimAreasImages.blockEnd() %}
         {% do jwPimAreasImages.blockDestruct() %}
     {% endfor %}
