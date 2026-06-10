@@ -33,6 +33,10 @@ class OptionsService
         $this->isEditMode = $this->editmodeResolver->isEditmode();
 
         # Get all editables from the calling area:
+        $areaKey = '';
+        try {
+            $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
+        } catch (Exception $e) {}
         $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
         $areaPrefix = sprintf('%s:%s.', $info->getEditable()->getName(), $areaKey);
         dump($areaPrefix);
@@ -49,7 +53,6 @@ class OptionsService
      */
     public function getOptionsByInfo(Info $info): object
     {
-        dump($info->getEditable());
         $this->prepareData($info);
         $result = (object)[
             'editorLanguage' => $this->language,
@@ -69,8 +72,7 @@ class OptionsService
      */
     public function getOptionsImage(Info $info): object
     {
-        dump($info->getEditable());
-        /*$this->prepareData($info);
+        $this->prepareData($info);
         $result = (object)[
             'editorLanguage' => $this->language,
         ];
@@ -78,10 +80,6 @@ class OptionsService
         if ($this->hasEditables(['imageAlt', 'imageCaption'])) {
             dump($info);
         }
-        */
-        $result = (object)[
-            'editorLanguage' => $this->language,
-        ];
 
         return $result;
     }
