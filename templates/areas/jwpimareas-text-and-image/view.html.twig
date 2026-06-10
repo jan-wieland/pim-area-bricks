@@ -16,7 +16,6 @@
     {% for jwPimAreasImage in jwPimAreasImages.iterator %}
         {% do jwPimAreasImages.blockConstruct() %}
             {% do jwPimAreasImages.blockStart() %}
-            {#
                 {{ pimcore_area(
                     'jwPimAreasElement-' ~ document.id ~ '-' ~ info.getIndex() ~ '-' ~ jwPimAreasImages.getCurrent(),
                     {
@@ -24,9 +23,8 @@
                         'params': {
                             'imageIndex': info.id,
                         }
-                    }) }}
-            #}
-            {{ dump('jwPimAreasElement-' ~ document.id ~ '-' ~ info.getIndex() ~ '-' ~ jwPimAreasImages.getCurrent()) }}
+                    }
+                ) }}
             {% do jwPimAreasImages.blockEnd() %}
         {% do jwPimAreasImages.blockDestruct() %}
     {% endfor %}
