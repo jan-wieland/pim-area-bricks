@@ -57,7 +57,7 @@ class JwpimareasElementImage extends AbstractTemplateAreabrick implements Editab
      */
     public function action(Info $info): ?Response
     {
-        dump($info);
+        dump($info->getParams());
 
         $params = $this->optionsService->getOptionsImage($info);
         foreach ($params as $key => $value) {
