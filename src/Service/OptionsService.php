@@ -33,10 +33,13 @@ class OptionsService
         $this->isEditMode = $this->editmodeResolver->isEditmode();
 
         # Get all editables from the calling area:
-        $areaKey = '';
-        try {
-            $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
-        } catch (Exception $e) {}
+        #areaKey = '';
+        #try {
+        #    $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
+        #} catch (Exception $e) {}
+
+        $currentIndex = ((array)$info->getEditable())["\0*\0currentIndex"] ?? [];
+        $areaKey = $currentIndex['key'] ?? '';
 
         $areaPrefix = sprintf('%s:%s.', $info->getEditable()->getName(), $areaKey);
         dump($areaPrefix);
