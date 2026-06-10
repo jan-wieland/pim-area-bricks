@@ -37,7 +37,7 @@ class OptionsService
         try {
             $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
         } catch (Exception $e) {}
-        $areaKey = ((array)$info->getEditable())["\0*\0currentIndex"]['key'];
+
         $areaPrefix = sprintf('%s:%s.', $info->getEditable()->getName(), $areaKey);
         dump($areaPrefix);
         $this->editables = array_filter(
