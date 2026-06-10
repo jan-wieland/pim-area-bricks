@@ -67,9 +67,10 @@ class OptionsService
 
     /**
      * @param Info $info
+     * @param array|null $params
      * @return object
      */
-    public function getOptionsImage(Info $info): object
+    public function getOptionsImage(Info $info, ?array $params): object
     {
         $this->prepareData($info);
         $result = (object)[
