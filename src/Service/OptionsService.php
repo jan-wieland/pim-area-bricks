@@ -48,6 +48,7 @@ class OptionsService
      */
     public function getOptionsByInfo(Info $info): object
     {
+        dump(((array)$info->getEditable())["\0*\0currentIndex"]);
         $this->prepareData($info);
         $result = (object)[
             'editorLanguage' => $this->language,
