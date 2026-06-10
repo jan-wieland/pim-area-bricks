@@ -67,7 +67,8 @@ class OptionsService
      */
     public function getOptionsImage(Info $info): object
     {
-        dump(((array)$info->getEditable())["\0*\0currentIndex"]);
+        dump($info->getEditable());
+        dump($info->getEditables());
         /*$this->prepareData($info);
         $result = (object)[
             'editorLanguage' => $this->language,
