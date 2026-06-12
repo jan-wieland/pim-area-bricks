@@ -2,7 +2,7 @@ pimcore:
   assets:
     image:
       thumbnails:
-        content-16-9:
+        JWpimAreas-content-16-9:
           group: JWpimAreas
           items:
             - { type: cover, width: 480, height: 270, positioning: center, force_resize: true }
