@@ -41,8 +41,8 @@ class PimAreaBricksExtension extends Extension implements PrependExtensionInterf
                 ],
             ],
         ]);
-var_dump(file_get_contents(__DIR__ . '/../../config/pimcore/image-thumbnails.yaml'))
         $config = Yaml::parseFile(__DIR__ . '/../../config/pimcore/image-thumbnails.yaml');
-        $container->prependExtensionConfig('pimcore', $config['pimcore']);
+        var_dump(file_get_contents(__DIR__ . '/../../config/pimcore/image-thumbnails.yaml'));
+        #$container->prependExtensionConfig('pimcore', $config['pimcore']);
     }
 }
