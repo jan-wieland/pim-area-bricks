@@ -43,7 +43,7 @@ class PimAreaBricksExtension extends Extension implements PrependExtensionInterf
 
         $loader = new YamlFileLoader(
             $container,
-            new FileLocator(__DIR__ . '../../config/pimcore'),
+            new FileLocator(__DIR__ . '/../../config/pimcore'),
         );
         $loader->load('image-thumbnails.yaml');
     }
