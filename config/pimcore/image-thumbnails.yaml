@@ -1,18 +1,19 @@
-pimcore:
+yamlpimcore:
   assets:
     image:
       thumbnails:
-        JWpimAreas-content-16-9:
-          group: JWpimAreas
-          items:
-            - { type: cover, width: 480, height: 270, positioning: center, force_resize: true }
-          medias:
-            "min-width: 480px":
-              items:
-                - { type: resize, width: 936, height: 526, force_resize: true }
-            "min-width: 1040px":
-              items:
-                - { type: resize, width: 1280, height: 720, force_resize: true }
-          format: AUTO
-          preserve_color: false
-          preserve_metadata: false
+        definitions:
+          JWpimAreas-content-16-9:
+            group: JWpimAreas
+            items:
+              - { type: cover, width: 480, height: 270, positioning: center, force_resize: true }
+            medias:
+              "min-width: 480px":
+                items:
+                  - { type: resize, width: 936, height: 526, force_resize: true }
+              "min-width: 1040px":
+                items:
+                  - { type: resize, width: 1280, height: 720, force_resize: true }
+            format: AUTO
+            preserve_color: false
+            preserve_metadata: false
