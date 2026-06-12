@@ -3,11 +3,9 @@ pimcore:
     image:
       thumbnails:
         definitions:
-          content-16-9:
+          JWpimAreas-content-16-9:
             group: JWpimAreas
             format: AUTO
-            preserve_color: false
-            preserve_metadata: false
             items:
               - method: cover
                 arguments:
@@ -17,18 +15,16 @@ pimcore:
                   forceResize: true
             medias:
               "min-width: 480px":
-                items:
-                  - method: cover
-                    arguments:
-                      width: 936
-                      height: 526
-                      positioning: center
-                      forceResize: true
+                - method: cover
+                  arguments:
+                    width: 936
+                    height: 526
+                    positioning: center
+                    forceResize: true
               "min-width: 1040px":
-                items:
-                  - method: cover
-                    arguments:
-                      width: 1280
-                      height: 720
-                      positioning: center
-                      forceResize: true
+                - method: cover
+                  arguments:
+                    width: 1280
+                    height: 720
+                    positioning: center
+                    forceResize: true
