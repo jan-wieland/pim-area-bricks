@@ -6,8 +6,8 @@
 
 
 {% if editmode %}
-    <div class="mt-3 mb-1 border-b border-dashed">
-        Image {{ 'jwPimAreas.image.elementNo' | trans({'%no%': brick.getParams().imageIndex}, 'admin', editorLanguage) }}
+    <div class="mb-1 border-b border-dashed">
+        <small>{{ 'jwPimAreas.image.elementNo' | trans({'%no%': brick.getParams().imageIndex}, 'admin', editorLanguage) }}</small>
     </div>
 {% endif %}
 
