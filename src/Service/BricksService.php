@@ -240,8 +240,8 @@ class BricksService
                     'name' => 'imageCaption',
                     'label' => self::transAdmin('jwPimAreas.image.caption.label'),
                 ],
-                ],
-            ]];
+            ],
+        ]];
     }
 
     /**
@@ -316,6 +316,7 @@ class BricksService
                             ['round_large', self::transAdmin('jwPimAreas.image.imageProportion.options.round-large')],
                         ],
                         'defaultValue' => '16-9',
+                        'width' => 300,
                     ],
                 ],
             ],
