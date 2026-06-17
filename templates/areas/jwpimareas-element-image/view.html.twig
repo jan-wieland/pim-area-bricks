@@ -1,1 +1,16 @@
-<div>Image {{ brick.getParams().imageIndex }}</div>
+{% set elementImage = pimcore_image('elementImage', {
+    'width': 640,
+    'height': 360,
+    'thumbnail': 'JWpimAreas-content-16-9',
+}) %}
+
+
+{% if editmode %}
+    <div class="mt-3 mb-1 border-b border-dashed">
+        Image {{ 'jwPimAreas.image.elementNo' | trans({'%no%': brick.getParams().imageIndex}, 'admin', editorLanguage) }}
+    </div>
+{% endif %}
+
+<div>
+    {{ elementImage | raw }}
+</div>

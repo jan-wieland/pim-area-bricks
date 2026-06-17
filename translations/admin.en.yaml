@@ -94,6 +94,7 @@ jwPimAreas:
   image:
     name: "Image"
     plural: "Images"
+    elementNo: "Image No. %no%"
     imageAlt:
       label: "Image alt/title (aria-label / required)"
     imageCaption:
