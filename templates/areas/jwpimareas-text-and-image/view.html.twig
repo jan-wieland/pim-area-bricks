@@ -3,6 +3,9 @@
 {% set textblock = pimcore_wysiwyg('textblock', {
     placeholder: 'jwPimAreas.texteditor.name' | trans({}, 'admin', editorLanguage),
 }) %}
+{% set introduction = pimcore_wysiwyg('introduction', {
+    placeholder: 'jwPimAreas.texteditor.introduction' | trans({}, 'admin', editorLanguage),
+}) %}
 
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}{{ columnCount is defined and columnCount ? ' class="jwpimareas-wysiwyg-column-count"' : '' }}>
 
@@ -11,6 +14,10 @@
             <small>{{ 'jwPimAreas.image.plural' | trans({}, 'admin', editorLanguage) }}:</small>
         </div>
         <div class="mb-1 px-2 pt-1 pb-3 border border-dashed">
+            {% include 'areas/jwpimareas-element-image/images.html.twig' %}
+        </div>
+        {% include 'areas/jwpimareas-headline/headline.html.twig' %}
+        <div>{{ introduction | raw }}</div>
     {% endif %}
 
     {% if imagesData.imagePos starts with 'top' %}
@@ -22,7 +29,7 @@
                 <div>Introduction</div>
             {% endif %}
 
-            <div>IMG</div>
+            {% include 'areas/jwpimareas-element-image/images.html.twig' %}
 
             {% if imagesData.imagePosRelativeH is same as('before') %}
                 {% include 'areas/jwpimareas-headline/headline.html.twig' %}
@@ -33,10 +40,8 @@
         </div>
     {% endif %}
 
-    {% include 'areas/jwpimareas-element-image/images.html.twig' %}
-
-    {% if editmode %}
-        </div>
+    {% if imagesData.imagePos not starts with 'top' %}
+        {% include 'areas/jwpimareas-element-image/images.html.twig' %}
     {% endif %}
 
 </div>

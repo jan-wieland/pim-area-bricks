@@ -122,6 +122,22 @@ class OptionsService
      */
     private function getParamsImages(Info $info, object &$result): void
     {
+        $hasHeadlineOrIntroduction = false;
+        if (
+            $this->hasEditables(['headlineSize', 'headlineStyle', 'headlineSubSize'])
+            && (
+                $this->getEditable('headlineTitle')?->getData()
+                ||$this->getEditable('headline')?->getData()
+                ||$this->getEditable('headlineSub')?->getData()
+            )
+        ) {
+            $hasHeadlineOrIntroduction = true;
+        }
+
+        if ($this->hasEditables(['introduction'] && $this->getEditable('introduction')?->getData())) {
+            $hasHeadlineOrIntroduction = true;
+        }
+
         if ($this->hasEditables(['imageGeneralhWidth', 'imagePos', 'imagePosRelativeH', 'imageProportion'])) {
             $generalhWidth = $this->getEditable('imageGeneralhWidth')?->getData();
             $generalhWidth = empty($generalhWidth)||$generalhWidth === '0' ? '' : sprintf('%spx', $generalhWidth);
@@ -147,6 +163,7 @@ class OptionsService
                 'imageProportion' => $this->getEditable('imageProportion')?->getData() ?: '16-9',
                 'imagesWidth' => $imagesWidth,
                 'imagesHeight' => $imagesHeight,
+                'hasHeadlineOrIntroduction' => $hasHeadlineOrIntroduction,
             ];
         }
 
