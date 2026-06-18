@@ -78,6 +78,7 @@ class JwpimareasTextAndImage extends AbstractTemplateAreabrick implements Editab
         $config->setItems([
             'type' => 'tabpanel',
             'items' => array_merge(
+                BricksService::tabHeadline(),
                 BricksService::tabTexteditor(),
                 BricksService::tabImages(),
                 BricksService::tabLayout(),
