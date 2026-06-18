@@ -134,7 +134,7 @@ class OptionsService
             $hasHeadlineOrIntroduction = true;
         }
 
-        if ($this->hasEditables(['introduction']) && $this->getEditable('introduction')?->getData())) {
+        if ($this->hasEditables(['introduction']) && $this->getEditable('introduction')?->getData()) {
             $hasHeadlineOrIntroduction = true;
         }
 
