@@ -10,14 +10,14 @@
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}{{ columnCount is defined and columnCount ? ' class="jwpimareas-wysiwyg-column-count"' : '' }}>
 
     {% if editmode %}
+        {% include 'areas/jwpimareas-headline/headline.html.twig' %}
+        <div>{{ introduction | raw }}</div>
         <div class="mt-3 border-b">
             <small>{{ 'jwPimAreas.image.plural' | trans({}, 'admin', editorLanguage) }}:</small>
         </div>
         <div class="mb-1 px-2 pt-1 pb-3 border border-dashed">
             {% include 'areas/jwpimareas-element-image/images.html.twig' %}
         </div>
-        {% include 'areas/jwpimareas-headline/headline.html.twig' %}
-        <div>{{ introduction | raw }}</div>
     {% endif %}
 
     {% if not editmode %}
