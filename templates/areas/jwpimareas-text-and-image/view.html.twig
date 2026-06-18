@@ -9,9 +9,10 @@
 <div{{ anchor ? ' id="' ~ anchor ~ '"' : '' }}{{ columnCount is defined and columnCount ? ' class="jwpimareas-wysiwyg-column-count"' : '' }}>
 
     {% if editmode %}
-        <div class="mt-3 mb-1 border-b">
+        <div class="mt-3 border-b">
             <small>{{ 'jwPimAreas.image.plural' | trans({}, 'admin', editorLanguage) }}:</small>
         </div>
+        <div class="pt-1 pb-3 pl-2 border-l">
     {% endif %}
 
     {% set jwPimAreasImages = pimcore_block('jwPimAreasImages' ~ info.id , {
@@ -40,7 +41,8 @@
     {% do jwPimAreasImages.end() %}
 
     {% if editmode %}
-        <div class="mt-3 mb-1 border-b border-dashed">
+        </div>
+        <div class="mb-1 border-b border-dashed">
             <small>{{ 'jwPimAreas.custom.end' | trans({}, 'admin', editorLanguage) }}</small>
         </div>
     {% endif %}
