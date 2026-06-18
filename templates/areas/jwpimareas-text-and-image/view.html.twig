@@ -20,7 +20,7 @@
         <div>{{ introduction | raw }}</div>
     {% endif %}
 
-    {% if editmode %}
+    {% if not editmode %}
         {% if imagesData.imagePos starts with 'top' %}
             <div>
                 {% if imagesData.imagePosRelativeH is not same as('before') %}
