@@ -15,30 +15,27 @@
         <div class="mb-1 px-2 pt-1 pb-3 border border-dashed">
     {% endif %}
 
-    {% set jwPimAreasImages = pimcore_block('jwPimAreasImages' ~ info.id , {
-        'manual': true,
-        'reload': true
-    }).start() %}
-    <div>
-    {% for jwPimAreasImage in jwPimAreasImages.iterator %}
-        {% do jwPimAreasImages.blockConstruct() %}
-            {% do jwPimAreasImages.blockStart() %}
-                {{ pimcore_area(
-                    'jwPimAreasElement-' ~ document.id ~ '-' ~ info.getIndex() ~ '-' ~ jwPimAreasImages.getCurrent(),
-                    {
-                        'type': 'jwpimareas-element-image',
-                        'params': {
-                            'jwpimareas-element-image': {
-                                'imageIndex': jwPimAreasImages.getCurrent() + 1,
-                            },
-                        }
-                    }
-                ) }}
-            {% do jwPimAreasImages.blockEnd() %}
-        {% do jwPimAreasImages.blockDestruct() %}
-    {% endfor %}
-    </div>
-    {% do jwPimAreasImages.end() %}
+    {% if imagesData.imagePos starts with 'top' %}
+        <div>
+            {% if imagesData.imagePosRelativeH is not same as('before') %}
+                {% include 'areas/jwpimareas-headline/headline.html.twig' %}
+            {% endif %}
+            {% if imagesData.imagePosRelativeH is same as('introduction') %}
+                <div>Introduction</div>
+            {% endif %}
+
+            <div>IMG</div>
+
+            {% if imagesData.imagePosRelativeH is same as('before') %}
+                {% include 'areas/jwpimareas-headline/headline.html.twig' %}
+            {% endif %}
+            {% if imagesData.imagePosRelativeH is not same as('introduction') %}
+                <div>Introduction</div>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% include 'areas/jwpimareas-image/images.html.twig' %}
 
     {% if editmode %}
         </div>
